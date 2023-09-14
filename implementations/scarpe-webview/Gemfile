@@ -1,0 +1,6 @@
+source "https://rubygems.org"
+
+gem "shoes-spec", path: "../.."
+
+# Scarpe-webview is part of the Scarpe gem
+gem "scarpe"

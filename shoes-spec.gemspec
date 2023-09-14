@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "lib/shoes/spec/version"
+require_relative "lib/shoes-spec/version"
 
 Gem::Specification.new do |spec|
   spec.name = "shoes-spec"
-  spec.version = Shoes::Spec::VERSION
+  spec.version = ShoesSpec::VERSION
   spec.authors = ["Noah Gibbs", "Scarpe Team"]
   spec.email = ["the.codefolio.guy@gmail.com"]
 
@@ -29,8 +29,8 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  # Uncomment to register a new dependency of your gem
-  # spec.add_dependency "example-gem", "~> 1.0"
+  # Use functionality from Scarpe-Components, which should be okay with other Shoes-based libs
+  spec.add_dependency "scarpe-components" #, "~> 1.0"
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html

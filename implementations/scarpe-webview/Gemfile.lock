@@ -1,0 +1,49 @@
+PATH
+  remote: ../..
+  specs:
+    shoes-spec (0.1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    bloops (0.5)
+    fastimage (2.2.7)
+    ffi (1.15.5)
+    ffi-compiler (1.0.1)
+      ffi (>= 1.0.0)
+      rake
+    lacci (0.2.2)
+    little-plugger (1.1.4)
+    logging (2.3.1)
+      little-plugger (~> 1.1)
+      multi_json (~> 1.14)
+    multi_json (1.15.0)
+    nokogiri (1.15.4-x86_64-darwin)
+      racc (~> 1.4)
+    racc (1.7.1)
+    rake (13.0.6)
+    scarpe (0.2.2)
+      bloops (~> 0.5)
+      fastimage
+      lacci
+      logging (~> 2.3.1)
+      nokogiri
+      scarpe-components
+      sqlite3
+      webview_ruby (~> 0.1.1)
+    scarpe-components (0.2.2)
+    sqlite3 (1.6.6-x86_64-darwin)
+    webview_ruby (0.1.2)
+      ffi
+      ffi-compiler
+      rake
+
+PLATFORMS
+  x86_64-darwin-22
+
+DEPENDENCIES
+  scarpe
+  shoes-spec!
+
+BUNDLED WITH
+   2.4.14

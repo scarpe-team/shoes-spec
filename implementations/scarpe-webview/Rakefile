@@ -1,0 +1,9 @@
+# frozen_string_literal: true
+
+require_relative "../../lib/shoes-spec/rake_helper"
+
+task "shoes-spec" do
+  STDERR.puts "GOT HERE"
+end
+
+task default: "shoes-spec"
