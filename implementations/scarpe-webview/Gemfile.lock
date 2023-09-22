@@ -30,7 +30,9 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    ansi (1.5.0)
     bloops (0.5)
+    builder (3.2.4)
     fastimage (2.2.7)
     ffi (1.15.5)
     ffi-compiler (1.0.1)
@@ -40,11 +42,18 @@ GEM
     logging (2.3.1)
       little-plugger (~> 1.1)
       multi_json (~> 1.14)
+    minitest (5.20.0)
+    minitest-reporters (1.6.1)
+      ansi
+      builder
+      minitest (>= 5.0)
+      ruby-progressbar
     multi_json (1.15.0)
     nokogiri (1.15.4-x86_64-darwin)
       racc (~> 1.4)
     racc (1.7.1)
     rake (13.0.6)
+    ruby-progressbar (1.13.0)
     sqlite3 (1.6.6-x86_64-darwin)
     webview_ruby (0.1.2)
       ffi
@@ -56,6 +65,8 @@ PLATFORMS
 
 DEPENDENCIES
   lacci!
+  minitest
+  minitest-reporters
   scarpe!
   scarpe-components!
   shoes-spec!

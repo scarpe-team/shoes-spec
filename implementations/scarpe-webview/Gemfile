@@ -11,3 +11,8 @@ gem "lacci", path: "#{scarpe_local_path}/lacci"
 
 # Scarpe-webview is in the Scarpe gem
 #gem "scarpe"
+
+group :test do
+  gem "minitest"
+  gem "minitest-reporters"
+end

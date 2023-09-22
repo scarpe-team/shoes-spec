@@ -13,15 +13,13 @@ task "shoes-spec" do
   scarpe_exe = which("scarpe")
 
   with_each_loaded_test(display_service: "scarpe-webview") do |metadata, app_code, test_code|
-    STDERR.puts "ARGS: #{[metadata, app_code, test_code].inspect}"
-
     with_tempfiles(
       [
         ["shoes-spec-scarpe-test-app", app_code],
         ["shoes-spec-scarpe-test-code", test_code],
       ]) do |app_file, test_code_file|
         # TODO: env vars SCARPE_LOG_CONFIG, SCARPE_TEST_RESULTS, LOCALAPPDATA=Dir.tmpdir
-        ENV["SCARPE_SHOES_SPEC_TEST"] = test_code_file
+        ENV["SHOES_SPEC_TEST"] = test_code_file
         system(RbConfig.ruby, scarpe_exe, "--dev", app_file)
     end
   end
