@@ -50,7 +50,8 @@ module ShoesSpec
     tests_by_category.values.each do |items|
       items.each do |item|
         front_matter, segmap = test_loader.front_matter_and_segments_from_file(File.read item[:file])
-        handler.call(front_matter, segmap.values[0], segmap.values[1])
+        meta = front_matter.merge("file" => item[:file], "test_name" => item[:test_name], "category" => item[:category])
+        handler.call(meta, segmap.values[0], segmap.values[1])
       end
     end
   end
