@@ -6,25 +6,16 @@ require "scarpe/components/file_helpers"
 require_relative "../../lib/shoes-spec/test_list"
 require_relative "../../lib/shoes-spec/shoes_config"
 
+require_relative "scarpe_webview_runner"
+
 include ShoesSpec
 include Scarpe::Components::FileHelpers
 
-task "shoes-spec" do
-  scarpe_exe = which("scarpe")
+include Scarpe::Webview::Runner
 
+task "shoes-spec" do
   with_each_loaded_test(display_service: "scarpe-webview") do |metadata, app_code, test_code|
-    with_tempfiles(
-      [
-        ["shoes-spec-scarpe-test-app", app_code],
-        ["shoes-spec-scarpe-test-code", test_code],
-      ]) do |app_file, test_code_file|
-        # TODO: env vars SCARPE_LOG_CONFIG, SCARPE_TEST_RESULTS, LOCALAPPDATA=Dir.tmpdir
-        ENV["SHOES_SPEC_TEST"] = test_code_file
-        ENV["SHOES_MINITEST_EXPORT_FILE"] = "sspec.json"
-        ENV["SHOES_MINITEST_CLASS_NAME"] = metadata["category"].gsub("/", "_")
-        ENV["SHOES_MINITEST_METHOD_NAME"] = metadata["test_name"]
-        system(RbConfig.ruby, scarpe_exe, "--dev", app_file)
-    end
+    run_scarpe_command_line(metadata, app_code, test_code)
   end
 end
 
