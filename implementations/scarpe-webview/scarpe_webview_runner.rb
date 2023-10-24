@@ -1,4 +1,4 @@
-class Scarpe
+module Scarpe
   module Webview
     module Runner
       def run_scarpe_command_line metadata, app_code, test_code
