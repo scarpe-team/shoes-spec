@@ -1,8 +1,12 @@
 ---
 ----------- app code
 Shoes.app do
-  button "OK"
+  @b = button "OK" do
+    @b.text = "Clicked"
+  end
 end
 
 ----------- test code
 assert_equal "OK", button().text
+button().event("click")
+assert_equal "Clicked", button().text
