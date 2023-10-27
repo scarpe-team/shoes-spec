@@ -1,22 +1,11 @@
 # frozen_string_literal: true
 
-require "rbconfig"
-
-require "scarpe/components/file_helpers"
-require_relative "../../lib/shoes-spec/test_list"
-require_relative "../../lib/shoes-spec/shoes_config"
-
-require_relative "scarpe_webview_runner"
-
-include ShoesSpec
-include Scarpe::Components::FileHelpers
-
-include Scarpe::Webview::Runner
-
 task "shoes-spec" do
-  with_each_loaded_test(display_service: "scarpe-webview") do |metadata, app_code, test_code|
-    run_scarpe_command_line(metadata, app_code, test_code)
-  end
+  require_relative "scarpe_webview_runner"
+  include Scarpe::Webview::Runner
+
+  pid = minitest_runner_process
+  Process.wait pid
 end
 
 task default: "shoes-spec"
