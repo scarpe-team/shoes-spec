@@ -1,0 +1,17 @@
+---
+----------- app code
+Shoes.app do
+  @b = button "OK" do
+    @b.text = "Clicked"
+  end
+  @b.hover do
+    @b.text = "Hovering"
+  end
+end
+
+----------- test code
+assert_equal "OK", button().text
+button().trigger_hover
+assert_equal "Hovering", button().text
+
+# TODO: more button events

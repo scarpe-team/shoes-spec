@@ -13,5 +13,3 @@ end
 assert_equal "OK", button().text
 button().trigger_click
 assert_equal "Clicked", button().text
-button().trigger_hover
-assert_equal "Hovering", button().text
