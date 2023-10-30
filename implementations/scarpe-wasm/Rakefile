@@ -1,0 +1,10 @@
+# frozen_string_literal: true
+
+task "shoes-spec" do
+  require_relative "scarpe_wasm_runner"
+  include Scarpe::Wasm::Runner
+
+  run_all_shoes_specs
+end
+
+task default: "shoes-spec"

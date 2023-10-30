@@ -1,0 +1,26 @@
+<html>
+<script src="https://cdn.jsdelivr.net/npm/@ruby/wasm-wasi@latest/dist/browser.umd.js"></script>
+<script>
+  const { DefaultRubyVM } = window["ruby-wasm-wasi"];
+  const main = async () => {
+    const response = await fetch(
+      "http://localhost:8080/packed_ruby.wasm");
+    const buffer = await response.arrayBuffer();
+    const module = await WebAssembly.compile(buffer);
+    const { vm } = await DefaultRubyVM(module);
+    window.RubyVM = vm;
+    const shoes_app = await fetch("http://localhost:8080/APP_NAME.rb");
+
+    vm.printVersion();
+    vm.eval(`require "bundler/setup"; require "scarpe/wasm_local";`);
+    shoes_code = await shoes_app.text();
+    console.log(shoes_code);
+    vm.eval(shoes_code);
+  };
+
+  main();
+</script>
+
+<body></body>
+
+</html>

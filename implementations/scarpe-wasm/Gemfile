@@ -1,0 +1,20 @@
+source "https://rubygems.org"
+
+shoes_spec_path = "../.."
+scarpe_local_path = "#{shoes_spec_path}/../scarpe"
+scarpe_wasm_local_path = "#{shoes_spec_path}/../scarpe-wasm"
+
+gem "shoes-spec", path: shoes_spec_path
+
+gem "scarpe-wasm", path: scarpe_wasm_local_path
+gem "scarpe-components", path: "#{scarpe_local_path}/scarpe-components"
+gem "lacci", path: "#{scarpe_local_path}/lacci"
+
+group :test do
+  gem "rake"
+  gem "minitest", "~> 5.0"
+  gem "minitest-reporters"
+  gem "capybara"
+  gem "selenium-webdriver"
+  gem "webrick"
+end
