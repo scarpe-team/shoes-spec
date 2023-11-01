@@ -16,6 +16,11 @@ PATH
     scarpe-components (0.3.0)
 
 PATH
+  remote: ../../../../wasify
+  specs:
+    wasify (0.1.1)
+
+PATH
   remote: ../../..
   specs:
     shoes-spec (0.1.0)
@@ -39,12 +44,16 @@ GEM
       xpath (~> 3.2)
     matrix (0.4.2)
     mini_mime (1.1.5)
+    mini_portile2 (2.8.5)
     minitest (5.20.0)
     minitest-reporters (1.6.1)
       ansi
       builder
       minitest (>= 5.0)
       ruby-progressbar
+    nokogiri (1.15.4)
+      mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
     nokogiri (1.15.4-x86_64-darwin)
       racc (~> 1.4)
     public_suffix (5.0.3)
@@ -60,7 +69,6 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    wasify (0.1.1)
     webrick (1.8.1)
     websocket (1.2.10)
     xpath (3.2.0)
@@ -79,7 +87,7 @@ DEPENDENCIES
   scarpe-wasm!
   selenium-webdriver
   shoes-spec!
-  wasify
+  wasify!
   webrick
 
 BUNDLED WITH
