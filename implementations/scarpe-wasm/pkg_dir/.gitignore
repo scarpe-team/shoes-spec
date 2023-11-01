@@ -1,3 +1,10 @@
 index-*.rb.html
 spec_*.rb
 packed_ruby.wasm
+index.html
+index.html.bak
+src/
+3_2-wasm32-unknown-wasi-full-js
+ruby-3_2-wasm32-unknown-wasi-full-js.tar.gz
+ruby.wasm
+deps
