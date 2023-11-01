@@ -26,10 +26,14 @@ module Scarpe
         Capybara.run_server = false
         Capybara.app_host = "http://localhost:#{port_num}"
 
-        Dir.chdir test_dir
-
         # Create this every time to be sure we have latest and match Gemfile.lock
-        system "scarpe-wasm --dev src-package src/APP_NAME.rb"
+        Dir.chdir __dir__ do
+          mkdir_p "pkg_dir/src"
+          touch "pkg_dir/src/APP_NAME.rb"
+          system "scarpe-wasm --dev src-package pkg_dir/ pkg_dir/"
+        end
+
+        Dir.chdir test_dir
 
         retries = 0
         httpd_pid = fork do
@@ -54,7 +58,7 @@ module Scarpe
           File.write(rb_file, app_code) # Write Ruby app-source file
 
           index_file = "index-#{test_name}.html"
-          index_contents = File.read("index_APP_NAME.rb.html").gsub("APP_NAME.rb", rb_file).gsub("8080", port_num.to_s)
+          index_contents = File.read("index.html").gsub("APP_NAME.rb", rb_file).gsub("8080", port_num.to_s)
           File.write(index_file, index_contents)
 
           test_class = get_test_class_for_category(cat)
