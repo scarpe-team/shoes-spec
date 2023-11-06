@@ -6,7 +6,7 @@ But it's hard to do more than say, "Shoes3 seemed the most mature, Shoes4 had a 
 
 The Shoes Spec, like the Ruby Spec before it, tries to try to spell out these differences and test Shoes implementations. The Shoes Spec isn't the definition -- nobody appointed me the Emperor of Shoes. Instead, it's a place to argue. If we think Shoes should do one thing or another, we can talk through it, write tests and see what current kinds of Shoes do.
 
-Shoes-Spec uses Minitest as its primary testing language, with a Shoes-specific test API for things like finding widgets, clicking buttons and so on. Shoes-spec is *also* the project of specifying that test API.
+Shoes-Spec uses Minitest as its primary testing language, with a Shoes-specific test API for things like finding widgets, clicking buttons and so on. Shoes-spec is *also* the project of specifying that test API. But each Shoes-compatible display service implements the API methods.
 
 ## Installation and Usage
 
@@ -24,7 +24,7 @@ The basic unit of Shoes-Spec is a single test -- a Shoes application with a chun
 
 You can find test cases under "cases" in this repo.
 
-TODO: sections for running locally, packaging, etc.
+For a single implementation, run "bundle exec rake shoes-spec" in its directory. Some implementations may have more than one way they can be run -- for instance, scarpe-webview can run with Calzini or Tiranti, and it's possible to run with packaged Shoes apps or dynamically.
 
 ## Contributing
 
