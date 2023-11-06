@@ -69,6 +69,7 @@ module Scarpe
 
         path = report.complete
         puts "Wrote ShoesSpec results to #{path}"
+        compare_results(display: "scarpe-webview", config: "local-calzini")
       end
 
       # No longer used
