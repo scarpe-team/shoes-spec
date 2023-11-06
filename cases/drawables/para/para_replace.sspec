@@ -1,0 +1,23 @@
+---
+----------- app code
+Shoes.app do
+  @p = para "Yo"
+  button "OK" do
+    @p.replace "Clicked"
+  end
+end
+
+----------- test code
+p = para()
+
+assert_equal "Yo", p.text
+button().trigger_click
+assert_equal "Clicked", p.text
+p.replace("This", "Is", "Text")
+assert_equal "ThisIsText", p.text
+
+# Need to call em, so set self to p
+p.app.instance_eval do
+  p.replace("This", em("Is"), strong("Text"))
+end
+assert_equal "ThisIsText", p.text

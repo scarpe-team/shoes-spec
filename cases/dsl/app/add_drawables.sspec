@@ -1,0 +1,20 @@
+---
+----------- app code
+Shoes.app do
+  @p = para "Yo"
+  $s = stack do
+    @b = button "OK" do
+      @b2 = @p.app.button("Dyna-Yo")
+    end
+  end
+
+  $s.app.list_box items: ["apple", "orange"], choose: "orange"
+end
+
+----------- test code
+p = para()
+
+button("@b").trigger_click
+assert_equal "Dyna-Yo", button("@b2").text
+
+assert_equal "orange", list_box().text
