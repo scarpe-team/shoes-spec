@@ -9,3 +9,6 @@
 *.gem
 **/.DS_Store
 **/sspec.json
+results/scarpe-webview/*.yaml
+results/scarpe-wasm/*.yaml
+results/niente/*.yaml

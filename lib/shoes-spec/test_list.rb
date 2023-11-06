@@ -9,7 +9,7 @@ module ShoesSpec
   ROOT_DIR = File.expand_path File.join(__dir__, "../..")
   CASES_DIR = File.join ROOT_DIR, "cases"
   CATEGORIES = Dir.glob("*/*", base: CASES_DIR).select do |f|
-    File.directory?("#{CASES_DIR}/#{f}") # e.g. "widgets/button"
+    File.directory?("#{CASES_DIR}/#{f}") # e.g. "drawables/button"
   end
 
   private
@@ -31,7 +31,7 @@ module ShoesSpec
       Dir.glob("*.sspec", base: cat_dir).each do |sspec_file|
         item = {
           file: "#{cat_dir}/#{sspec_file}",
-          test_name: File.basename(sspec_file),
+          test_name: File.basename(sspec_file, ".sspec"),
           category: category,
         }
         @tests_by_category[category] << item

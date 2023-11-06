@@ -4,8 +4,10 @@ task "shoes-spec" do
   require_relative "scarpe_webview_runner"
   include Scarpe::Webview::Runner
 
-  pid = minitest_runner_process
-  Process.wait pid
+  #pid = minitest_runner_process
+  #Process.wait pid
+
+  report_webview_specs
 end
 
 task default: "shoes-spec"

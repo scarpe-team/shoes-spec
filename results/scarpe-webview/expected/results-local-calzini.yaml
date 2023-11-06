@@ -1,0 +1,11 @@
+---
+:display: scarpe-webview
+:config: local-calzini
+:results:
+  drawables/button:
+    basic_click: :pass
+    button_events: :pass
+  drawables/para:
+    para_replace: :pass
+  dsl/app:
+    add_drawables: :pass
