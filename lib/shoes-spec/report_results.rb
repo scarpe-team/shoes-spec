@@ -81,6 +81,8 @@ module ShoesSpec
 
     if unexpected_items.empty? && failing_items.empty? && passing_items.empty?
       puts "Results for #{display}-#{config} are exactly as expected."
+      puts "-------"
+      true
     else
       puts "For #{display}-#{config}:"
       puts "  Tests with no expected result:" unless unexpected_items.empty?
@@ -96,6 +98,7 @@ module ShoesSpec
         puts "    * #{cat} / #{test}: #{res}"
       end
       puts "-------"
+      false
     end
   end
 end
