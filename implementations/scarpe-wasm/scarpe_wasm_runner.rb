@@ -4,6 +4,7 @@ require "rbconfig"
 
 require_relative "../../lib/shoes-spec/test_list"
 require_relative "../../lib/shoes-spec/shoes_config"
+require_relative "../../lib/shoes-spec/report_results"
 
 require "scarpe/wasm/shoes-spec"
 
@@ -12,6 +13,10 @@ module Scarpe
     module Runner
       include Scarpe::Wasm::PortUtils
       include ShoesSpec
+
+      class << self
+        attr_accessor :reporter
+      end
 
       # Wasm is fun. We can build the Scarpe-Wasm code into
       # a reusable package and serve it via webrick.
@@ -49,6 +54,8 @@ module Scarpe
           system("pkill -f 'ruby -run -e httpd . -p #{port_num}'")
         end
 
+        Scarpe::Wasm::Runner.reporter = ShoesSpec::ReportResults.new(display: "scarpe-wasm", config: "wasm")
+
         require "minitest/autorun"
         with_each_loaded_test(display_service: "scarpe-wasm") do |metadata, app_code, test_code|
           cat = metadata["category"].gsub("/", "_")
@@ -67,13 +74,43 @@ module Scarpe
           end
         end
 
+        Minitest.after_run do
+          path = Scarpe::Wasm::Runner.reporter.complete
+          puts "Wrote ShoesSpec results to #{path}"
+          compare_results(display: "scarpe-wasm", config: "")
+        end
+
         puts "Start Minitest autorun..."
       end
 
       # Name must not start with "test"
       def get_test_class_for_category(category)
         @test_classes ||= {}
-        @test_classes[category] ||= Class.new(Scarpe::Wasm::CapybaraTestCase)
+        return @test_classes[category] if @test_classes[category]
+        new_class = Class.new(Scarpe::Wasm::CapybaraReportingTestCase)
+        new_class.class_eval do
+          class << self
+            attr_accessor :category
+          end
+        end
+        new_class.category = category
+        @test_classes[category] = new_class
+      end
+    end
+
+    class CapybaraReportingTestCase < Scarpe::Wasm::CapybaraTestCase
+      def teardown
+        test_name = self.name
+        category = self.class.category
+        if passed?
+          Scarpe::Wasm::Runner.reporter.report :pass, test_name:, category:
+        elsif skipped?
+          Scarpe::Wasm::Runner.reporter.report :skip, test_name:, category:
+        else
+          Scarpe::Wasm::Runner.reporter.report :fail, test_name:, category:
+        end
+
+        super
       end
     end
   end

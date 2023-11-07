@@ -40,14 +40,6 @@ module Scarpe
         end
       end
 
-      # No longer used
-      def minitest_run_with_imported_results(results)
-        require "scarpe/components/minitest_import_runnable"
-        results.each do |res|
-          Scarpe::Components::ImportRunnables::ImportRunnable.import_json_data(res)
-        end
-      end
-
       def report_webview_specs
         report = ShoesSpec::ReportResults.new(display: "scarpe-webview", config: "local-calzini")
 
@@ -70,17 +62,6 @@ module Scarpe
         path = report.complete
         puts "Wrote ShoesSpec results to #{path}"
         compare_results(display: "scarpe-webview", config: "local-calzini")
-      end
-
-      # No longer used
-      def minitest_runner_process
-        pid = fork do
-          require "minitest/autorun"
-          results = run_all_tests
-          minitest_run_with_imported_results(results)
-        end
-
-        pid
       end
     end
   end
