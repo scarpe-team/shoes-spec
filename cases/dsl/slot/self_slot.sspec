@@ -3,12 +3,17 @@
 Shoes.app do
   $app_self = self
   @a = 7
+  p = para ""
   stack do
     $stack_self = self
-    $a = @a
+    p.replace "val: #{@a.inspect}"
+  end
+
+  if $app_self == $stack_self
+    button "OK"
   end
 end
 
 ----------- test code
-assert_equal $app_self, $stack_self, "Self should be the app in slots too!"
-assert_equal $a, 7, "Instance variables should be identical in slots and app"
+assert_equal "OK", button().text, "It looks like app's self is not equal to stack's self!"
+assert_equal "val: 7", para().text, "It looks like the stack's instance vars are not the same as the app's!"
