@@ -16,6 +16,15 @@ Normally you'll clone the shoes-spec repository in order to use it:
 
 If you want to test an existing Shoes implementation, you'll find them in the "implementations" directory. Normally you can cd into the appropriate subdirectory and then run "bundle exec rake shoes-spec"
 
+## Test Case Limitations
+
+Shoes-Spec works with a variety of display services. That means, for instance, that your test code and your Shoes application may be running in different processes, or even possibly on different computers. A display service that's designed for that (e.g. Scarpe-Wasm compiles your Shoes app to Wasm and tests with Capybara and a remote browser) will be able to patch over some of that, for instance by creating proxy objects and shipping Ruby code back and forth.
+
+But there are still some important limitations when writing test code. For instance:
+
+* your test code can be in a different process, so global variables aren't shared. Similarly, there may be no actual display-service objects in memory when the test code runs if there's a remote server (e.g. wv_relay or scarpe-wasm).
+* your test code doesn't run in the Shoes::App object. In fact it can't -- the method button() will make a button in that object, while button() in your test code will find a Shoes::Button.
+
 ## Development
 
 Shoes-spec can work with a variety of display services. That's the whole reason it exists. But it needs to know how to run each one.
