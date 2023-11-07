@@ -4,9 +4,6 @@ Shoes.app do
   @b = button "OK" do
     @b.text = "Clicked"
   end
-  @b.hover do
-    @b.text = "Hovering"
-  end
 end
 
 ----------- test code

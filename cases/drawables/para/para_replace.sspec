@@ -3,9 +3,11 @@
 Shoes.app do
   @p = para "Yo"
   @b = button "OK" do
+    # Make sure replace works with simple one-argument text
     @p.replace "Clicked"
   end
   @b2 = button "Replace" do
+    # Make sure replace works with em() and strong() text
     @p.replace("This", em("Is"), strong("Text"))
   end
 end
