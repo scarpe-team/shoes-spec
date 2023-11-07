@@ -1,0 +1,14 @@
+---
+----------- app code
+Shoes.app do
+  $app_self = self
+  @a = 7
+  stack do
+    $stack_self = self
+    $a = @a
+  end
+end
+
+----------- test code
+assert_equal $app_self, $stack_self, "Self should be the app in slots too!"
+assert_equal $a, 7, "Instance variables should be identical in slots and app"
