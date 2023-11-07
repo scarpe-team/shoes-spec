@@ -1,0 +1,15 @@
+---
+:display: scarpe-wasm
+:config: wasm
+:results:
+  legacy_examples_simple:
+    test_calc: :pass
+  dsl_app:
+    test_add_drawables: :pass
+  dsl_slot:
+    test_self_slot: :pass
+  drawables_para:
+    test_para_replace: :pass
+  drawables_button:
+    test_basic_click: :pass
+    test_button_events: :pass
