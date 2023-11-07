@@ -8,3 +8,5 @@ src/
 ruby-3_2-wasm32-unknown-wasi-full-js.tar.gz
 ruby.wasm
 deps
+index-*.html
+spec_*
