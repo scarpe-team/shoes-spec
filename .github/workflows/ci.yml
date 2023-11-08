@@ -1,0 +1,25 @@
+---
+name: CI
+on:
+  schedule:
+    - cron:  '30 17 * * *'
+  workflow_dispatch:
+
+jobs:
+  tests:
+    name: Shoes-Spec Tests
+    runs-on: macos-latest
+    timeout-minutes: 30
+    steps:
+      - name: Install dependencies
+        run: brew install pkg-config portaudio
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Setup Ruby and install gems
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - name: Install gems for implementations
+        run: cd implementations/scarpe-wasm && bundle update && cd pkg_dir && bundle update &&  cd ../../scarpe-webview && bundle update
+      - name: Run Shoes-Spec tests
+        run: bundle exec rake shoes-spec
