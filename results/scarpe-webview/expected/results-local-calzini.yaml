@@ -11,3 +11,5 @@
     add_drawables: :pass
   dsl/slot:
     self_slot: :pass
+  manual/examples:
+    example_1: :pass

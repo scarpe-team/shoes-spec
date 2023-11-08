@@ -57,6 +57,7 @@ module ShoesSpec
     unexpected_items = []
     failing_items = []
     passing_items = []
+    not_present_items = []
 
     actual_items.each do |category, h1|
       h1.each do |test_name, result|
@@ -77,7 +78,16 @@ module ShoesSpec
       end
     end
 
-    if unexpected_items.empty? && failing_items.empty? && passing_items.empty?
+    expected_items.each do |category, h1|
+      h1.each do |test_name, result|
+        item = [category, test_name, result]
+        unless actual_items[category] && actual_items[category][test_name]
+          not_present_items << item
+        end
+      end
+    end
+
+    if unexpected_items.empty? && failing_items.empty? && passing_items.empty? && not_present_items.empty?
       puts "Results for #{display}-#{config} are exactly as expected."
       puts "-------"
       true
@@ -93,6 +103,10 @@ module ShoesSpec
       end
       puts "  Tests unexpectedly failing:" unless failing_items.empty?
       failing_items.each do |cat, test, res|
+        puts "    * #{cat} / #{test}: #{res}"
+      end
+      puts "  Expected tests not present:" unless not_present_items.empty?
+      not_present_items.each do |cat, test, res|
         puts "    * #{cat} / #{test}: #{res}"
       end
       puts "-------"

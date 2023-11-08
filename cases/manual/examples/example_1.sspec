@@ -1,0 +1,11 @@
+---
+----------- app code
+# Shoes manual, example 1
+Shoes.app do
+  button("Click me!") do
+    alert("Good job.")
+  end
+end
+----------- test code
+button().trigger_click
+# TODO: how to verify alert is present in Shoes-Spec DSL

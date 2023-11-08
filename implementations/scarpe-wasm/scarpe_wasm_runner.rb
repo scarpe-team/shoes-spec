@@ -58,8 +58,8 @@ module Scarpe
 
         require "minitest/autorun"
         with_each_loaded_test(display_service: "scarpe-wasm") do |metadata, app_code, test_code|
-          cat = metadata["category"].gsub("/", "_")
-          test_name = "#{cat}_#{metadata["test_name"]}".gsub(".sspec", ".rb")
+          cat = metadata["category"]
+          test_name = "#{cat.gsub("/", "_")}_#{metadata["test_name"]}".gsub(".sspec", ".rb")
 
           rb_file = "spec_#{test_name}"
           File.write(rb_file, app_code) # Write Ruby app-source file
@@ -100,7 +100,7 @@ module Scarpe
 
     class CapybaraReportingTestCase < Scarpe::Wasm::CapybaraTestCase
       def teardown
-        test_name = self.name
+        test_name = self.name.gsub(/^test_/, "")
         category = self.class.category
         if passed?
           Scarpe::Wasm::Runner.reporter.report :pass, test_name:, category:
