@@ -1,4 +1,11 @@
 GIT
+  remote: https://github.com/AlawysDelta/wasify.git
+  revision: 86229b2b5cfffb07491c95c1039844f8ea6b466a
+  branch: perms_fixes
+  specs:
+    wasify (0.1.1)
+
+GIT
   remote: https://github.com/scarpe-team/scarpe-wasm.git
   revision: ccbbd1d2bf9757035adf36161ec48e85ff2b649e
   specs:
@@ -69,7 +76,6 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    wasify (0.1.1)
     webrick (1.8.1)
     websocket (1.2.10)
     xpath (3.2.0)
@@ -89,7 +95,7 @@ DEPENDENCIES
   scarpe-wasm!
   selenium-webdriver
   shoes-spec!
-  wasify
+  wasify!
   webrick
 
 BUNDLED WITH

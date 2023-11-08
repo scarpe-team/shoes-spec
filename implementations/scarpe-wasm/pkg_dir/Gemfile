@@ -17,7 +17,7 @@ gem "lacci", github: "scarpe-team/scarpe", glob: "lacci/*.gemspec"
 
 # Needed for packaging
 #gem "wasify", path: wasify_local_path
-gem "wasify"
+gem "wasify", github: "AlawysDelta/wasify", branch: "perms_fixes"
 
 group :test do
   gem "minitest", "~> 5.0"
