@@ -16,7 +16,8 @@ gem "scarpe-components", github: "scarpe-team/scarpe", glob: "scarpe-components/
 gem "lacci", github: "scarpe-team/scarpe", glob: "lacci/*.gemspec"
 
 # Needed for packaging
-gem "wasify", path: wasify_local_path
+#gem "wasify", path: wasify_local_path
+gem "wasify"
 
 group :test do
   gem "minitest", "~> 5.0"

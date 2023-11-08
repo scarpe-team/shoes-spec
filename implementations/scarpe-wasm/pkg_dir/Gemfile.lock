@@ -21,11 +21,6 @@ GIT
     scarpe-components (0.3.0)
 
 PATH
-  remote: ../../../../wasify
-  specs:
-    wasify (0.1.1)
-
-PATH
   remote: ../../..
   specs:
     shoes-spec (0.1.0)
@@ -74,6 +69,7 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    wasify (0.1.1)
     webrick (1.8.1)
     websocket (1.2.10)
     xpath (3.2.0)
@@ -81,8 +77,8 @@ GEM
 
 PLATFORMS
   wasm32-unknown
-  x86_64-darwin-22
   x86_64-darwin-19
+  x86_64-darwin-22
 
 DEPENDENCIES
   capybara
@@ -93,7 +89,7 @@ DEPENDENCIES
   scarpe-wasm!
   selenium-webdriver
   shoes-spec!
-  wasify!
+  wasify
   webrick
 
 BUNDLED WITH
