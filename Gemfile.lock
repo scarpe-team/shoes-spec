@@ -2,12 +2,14 @@ PATH
   remote: .
   specs:
     shoes-spec (0.1.0)
+      scarpe-components
 
 GEM
   remote: https://rubygems.org/
   specs:
     minitest (5.20.0)
     rake (13.0.6)
+    scarpe-components (0.2.2)
 
 PLATFORMS
   x86_64-darwin-22

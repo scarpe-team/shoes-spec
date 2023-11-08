@@ -1,12 +1,31 @@
 # frozen_string_literal: true
 
-require "bundler/gem_tasks"
-require "rake/testtask"
+require_relative "lib/shoes-spec/report_results"
 
-Rake::TestTask.new(:test) do |t|
-  t.libs << "test"
-  t.libs << "lib"
-  t.test_files = FileList["test/**/test_*.rb"]
+require "fileutils"
+
+task "shoes-spec" do
+  include ShoesSpec
+
+  Dir["results/scarpe-webview/*.yaml"].each { |f| File.unlink f }
+  Dir["results/scarpe-wasm/*.yaml"].each { |f| File.unlink f }
+
+  Dir.chdir("implementations/scarpe-webview") do
+    Bundler.with_unbundled_env do
+      puts "Run Shoes-Spec for Scarpe-Webview with Calzini"
+      system("bundle exec rake shoes-spec")
+    end
+  end
+
+  Dir.chdir("implementations/scarpe-wasm") do
+    Bundler.with_unbundled_env do
+      puts "Run Shoes-Spec for Scarpe-Wasm"
+      system("bundle exec rake shoes-spec")
+    end
+  end
+
+  compare_results(display: "scarpe-webview", config: "local-calzini")
+  compare_results(display: "scarpe-wasm", config: "wasm")
 end
 
-task default: :test
+task default: "shoes-spec"

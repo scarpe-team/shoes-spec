@@ -9,3 +9,5 @@
     para_replace: :pass
   dsl/app:
     add_drawables: :pass
+  dsl/slot:
+    self_slot: pass

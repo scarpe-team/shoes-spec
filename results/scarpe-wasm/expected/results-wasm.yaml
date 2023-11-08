@@ -2,8 +2,6 @@
 :display: scarpe-wasm
 :config: wasm
 :results:
-  legacy_examples_simple:
-    test_calc: :pass
   dsl_app:
     test_add_drawables: :pass
   dsl_slot:

@@ -77,7 +77,7 @@ module Scarpe
         Minitest.after_run do
           path = Scarpe::Wasm::Runner.reporter.complete
           puts "Wrote ShoesSpec results to #{path}"
-          compare_results(display: "scarpe-wasm", config: "")
+          compare_results(display: "scarpe-wasm", config: "wasm")
         end
 
         puts "Start Minitest autorun..."
