@@ -1,5 +1,5 @@
 ---
-name: CI
+name: Regular Shoes-Spec Run vs Known Implementations
 on:
   schedule:
     - cron:  '30 17 * * *'
