@@ -1,17 +1,22 @@
-PATH
-  remote: ../../../scarpe-wasm
+GIT
+  remote: https://github.com/scarpe-team/scarpe-wasm.git
+  revision: ccbbd1d2bf9757035adf36161ec48e85ff2b649e
   specs:
     scarpe-wasm (0.1.0)
       lacci
       scarpe-components
 
-PATH
-  remote: ../../../scarpe/lacci
+GIT
+  remote: https://github.com/scarpe-team/scarpe.git
+  revision: b9a0c2c201900ae0d7f33bb71d9a5e76232bfaf8
+  glob: lacci/*.gemspec
   specs:
     lacci (0.3.0)
 
-PATH
-  remote: ../../../scarpe/scarpe-components
+GIT
+  remote: https://github.com/scarpe-team/scarpe.git
+  revision: b9a0c2c201900ae0d7f33bb71d9a5e76232bfaf8
+  glob: scarpe-components/*.gemspec
   specs:
     scarpe-components (0.3.0)
 
