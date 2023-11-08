@@ -10,4 +10,4 @@
   dsl/app:
     add_drawables: :pass
   dsl/slot:
-    self_slot: pass
+    self_slot: :pass

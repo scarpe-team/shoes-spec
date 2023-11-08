@@ -24,8 +24,15 @@ task "shoes-spec" do
     end
   end
 
-  compare_results(display: "scarpe-webview", config: "local-calzini")
-  compare_results(display: "scarpe-wasm", config: "wasm")
+  passed = true
+  passed &= compare_results(display: "scarpe-webview", config: "local-calzini")
+  passed &= compare_results(display: "scarpe-wasm", config: "wasm")
+
+  # If anybody failed, fail the task
+  unless passed
+    STDERR.puts "One or more spec runs had errors!"
+    exit -1
+  end
 end
 
 task default: "shoes-spec"
