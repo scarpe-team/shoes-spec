@@ -14,14 +14,6 @@ module Scarpe
       include ShoesSpec
       include Scarpe::Components::FileHelpers
 
-      def run_all_tests
-        results = []
-        with_each_loaded_test(display_service: "scarpe-webview") do |metadata, app_code, test_code|
-          results << run_scarpe_command_line_test(metadata, app_code, test_code)
-        end
-        results
-      end
-
       def run_scarpe_command_line_test metadata, app_code, test_code
         with_tempfiles(
           [
@@ -30,8 +22,10 @@ module Scarpe
           ]) do |app_file, test_code_file|
             sspec_file = File.expand_path "sspec.json"
 
-            # TODO: env vars SCARPE_LOG_CONFIG, SCARPE_TEST_RESULTS, LOCALAPPDATA=Dir.tmpdir, etc.
+            # TODO: env vars SCARPE_LOG_CONFIG, LOCALAPPDATA=Dir.tmpdir, etc.
             ENV["SHOES_SPEC_TEST"] = test_code_file
+            ENV["SCARPE_DISPLAY_SERVICE"] = "wv_local"
+            ENV["SCARPE_HTML_RENDERER"] = "calzini"
             ENV["SHOES_MINITEST_EXPORT_FILE"] = sspec_file
             ENV["SHOES_MINITEST_CLASS_NAME"] = metadata["category"].gsub("/", "_")
             ENV["SHOES_MINITEST_METHOD_NAME"] = metadata["test_name"].gsub(".sspec", "")
