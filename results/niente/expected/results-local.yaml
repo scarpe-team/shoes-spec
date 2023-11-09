@@ -1,0 +1,15 @@
+---
+:display: niente
+:config: local
+:results:
+  drawables/button:
+    basic_click: :fail
+    button_events: :fail
+  drawables/para:
+    para_replace: :fail
+  dsl/app:
+    add_drawables: :fail
+  dsl/slot:
+    self_slot: :pass
+  manual/examples:
+    example_1: :pass

@@ -1,0 +1,10 @@
+# frozen_string_literal: true
+require_relative "scarpe_niente_runner"
+
+task "shoes-spec" do
+  include Niente::Runner
+
+  report_niente_specs
+end
+
+task default: "shoes-spec"
