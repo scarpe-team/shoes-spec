@@ -3,12 +3,12 @@
 :config: local
 :results:
   drawables/button:
-    basic_click: :fail
-    button_events: :fail
+    basic_click: :pass
+    button_events: :pass
   drawables/para:
-    para_replace: :fail
+    para_replace: :pass
   dsl/app:
-    add_drawables: :fail
+    add_drawables: :pass
   dsl/slot:
     self_slot: :pass
   manual/examples:
