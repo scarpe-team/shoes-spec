@@ -12,7 +12,7 @@ task "shoes-spec" do
 
   Dir.chdir("implementations/scarpe-webview") do
     Bundler.with_unbundled_env do
-      puts "Run Shoes-Spec for Scarpe-Webview with Calzini"
+      puts "Run Shoes-Spec for Scarpe-Webview"
       system("bundle exec rake shoes-spec")
     end
   end
@@ -26,6 +26,7 @@ task "shoes-spec" do
 
   passed = true
   passed &= compare_results(display: "scarpe-webview", config: "local-calzini")
+  passed &= compare_results(display: "scarpe-webview", config: "local-tiranti")
   passed &= compare_results(display: "scarpe-wasm", config: "wasm")
 
   # If anybody failed, fail the task

@@ -1,13 +1,21 @@
 # frozen_string_literal: true
 
+require_relative "scarpe_webview_runner"
+
 task "shoes-spec" do
-  require_relative "scarpe_webview_runner"
   include Scarpe::Webview::Runner
+  report_webview_specs(config: "local-calzini")
+  report_webview_specs(config: "local-tiranti")
+end
 
-  #pid = minitest_runner_process
-  #Process.wait pid
+task "shoes-spec-calzini" do
+  include Scarpe::Webview::Runner
+  report_webview_specs(config: "local-calzini")
+end
 
-  report_webview_specs
+task "shoes-spec-tiranti" do
+  include Scarpe::Webview::Runner
+  report_webview_specs(config: "local-tiranti")
 end
 
 task default: "shoes-spec"

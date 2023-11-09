@@ -14,7 +14,7 @@ module Scarpe
       include ShoesSpec
       include Scarpe::Components::FileHelpers
 
-      def run_scarpe_command_line_test metadata, app_code, test_code
+      def run_scarpe_command_line_test metadata, app_code, test_code, env: {}
         with_tempfiles(
           [
             ["shoes-spec-scarpe-test-app", app_code],
@@ -29,16 +29,33 @@ module Scarpe
             ENV["SHOES_MINITEST_EXPORT_FILE"] = sspec_file
             ENV["SHOES_MINITEST_CLASS_NAME"] = metadata["category"].gsub("/", "_")
             ENV["SHOES_MINITEST_METHOD_NAME"] = metadata["test_name"].gsub(".sspec", "")
+            env.each do |name, val|
+              ENV[name] = val
+            end
             system(RbConfig.ruby, which("scarpe"), "--dev", app_file)
             return File.read(sspec_file)
         end
       end
 
-      def report_webview_specs
-        report = ShoesSpec::ReportResults.new(display: "scarpe-webview", config: "local-calzini")
+      def report_webview_specs(config: "local-calzini")
+        # Set environment variables for particular Scarpe-Webview configs
+        env = case config
+        when "local-calzini"
+          {
+            "SCARPE_HTML_RENDERER" => "calzini",
+          }
+        when "local-tiranti"
+          {
+            "SCARPE_HTML_RENDERER" => "tiranti",
+          }
+        else
+          raise "Unrecognized Scarpe-Webview spec config: #{config.inspect}!"
+        end
+
+        report = ShoesSpec::ReportResults.new(display: "scarpe-webview", config:)
 
         with_each_loaded_test(display_service: "scarpe-webview") do |metadata, app_code, test_code|
-          res = JSON.load run_scarpe_command_line_test(metadata, app_code, test_code)
+          res = JSON.load run_scarpe_command_line_test(metadata, app_code, test_code, env:)
           unless res.is_a?(Array) && res.size == 1
             raise "Internal error! Unexpected result format from run_scarpe_command_line_test!"
           end
@@ -55,7 +72,7 @@ module Scarpe
 
         path = report.complete
         puts "Wrote ShoesSpec results to #{path}"
-        compare_results(display: "scarpe-webview", config: "local-calzini")
+        compare_results(display: "scarpe-webview", config:)
       end
     end
   end
