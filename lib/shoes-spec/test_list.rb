@@ -2,6 +2,7 @@
 
 require "scarpe/components/file_helpers"
 require "scarpe/components/segmented_file_loader"
+require "scarpe/components/errors"
 
 module ShoesSpec
   extend self
@@ -13,13 +14,6 @@ module ShoesSpec
   end
 
   private
-
-  def test_loader
-    # We don't add this to Shoes, because this isn't a Shoes app. Instead we'll
-    # call it directly to load our Shoes specs. We use front_matter_and_segments_from_file
-    # instead of load_file, so we don't register segment types.
-    @loader ||= Scarpe::Components::SegmentedFileLoader.new
-  end
 
   def tests_by_category
     return @tests_by_category if @tests_by_category
@@ -49,7 +43,12 @@ module ShoesSpec
   def with_each_loaded_test(display_service:, &handler)
     tests_by_category.values.each do |items|
       items.each do |item|
-        front_matter, segmap = test_loader.front_matter_and_segments_from_file(File.read item[:file])
+        begin
+          front_matter, segmap = Scarpe::Components::SegmentedFileLoader.front_matter_and_segments_from_file(File.read item[:file])
+        rescue
+          STDERR.puts "Error parsing file #{item[:file]}!"
+          raise
+        end
         meta = front_matter.merge("file" => item[:file], "test_name" => item[:test_name], "category" => item[:category])
         handler.call(meta, segmap.values[0], segmap.values[1])
       end

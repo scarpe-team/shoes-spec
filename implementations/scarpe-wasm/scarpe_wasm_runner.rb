@@ -82,6 +82,7 @@ module Scarpe
                                          browser: :chrome,
                                          )
         end
+
         Capybara.default_driver = :logging_selenium_chrome
         Capybara.run_server = false
         Capybara.app_host = "http://localhost:#{port_num}"

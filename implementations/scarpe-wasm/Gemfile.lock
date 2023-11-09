@@ -4,34 +4,29 @@ GIT
   specs:
     wasify (0.1.1)
 
-GIT
-  remote: https://github.com/scarpe-team/scarpe-wasm.git
-  revision: d9a7441fec4398589b2442e5ccb721002601e417
-  specs:
-    scarpe-wasm (0.1.0)
-      lacci
-      scarpe-components
-
-GIT
-  remote: https://github.com/scarpe-team/scarpe.git
-  revision: 79f48be65fc3c091982e45e26afce3f3ec05e3ea
-  glob: lacci/*.gemspec
-  specs:
-    lacci (0.3.0)
-      scarpe-components
-
-GIT
-  remote: https://github.com/scarpe-team/scarpe.git
-  revision: 79f48be65fc3c091982e45e26afce3f3ec05e3ea
-  glob: scarpe-components/*.gemspec
-  specs:
-    scarpe-components (0.3.0)
-
 PATH
   remote: ../..
   specs:
     shoes-spec (0.1.0)
       scarpe-components
+
+PATH
+  remote: /Users/noah/src/shoes/scarpe-wasm
+  specs:
+    scarpe-wasm (0.1.0)
+      lacci
+      scarpe-components
+
+PATH
+  remote: /Users/noah/src/shoes/scarpe/lacci
+  specs:
+    lacci (0.3.0)
+      scarpe-components
+
+PATH
+  remote: /Users/noah/src/shoes/scarpe/scarpe-components
+  specs:
+    scarpe-components (0.3.0)
 
 GEM
   remote: https://rubygems.org/
@@ -79,7 +74,6 @@ GEM
       nokogiri (~> 1.8)
 
 PLATFORMS
-  x86_64-darwin-19
   x86_64-darwin-22
 
 DEPENDENCIES
