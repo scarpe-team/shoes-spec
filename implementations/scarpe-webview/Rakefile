@@ -10,11 +10,19 @@ end
 
 task "shoes-spec-calzini" do
   include Scarpe::Webview::Runner
+
+  File.unlink File.join(__dir__, "sspec.json") rescue nil
+  File.unlink File.expand_path(File.join(__dir__, "../../results/niente/results-calzini.yaml")) rescue nil
+
   report_webview_specs(config: "local-calzini")
 end
 
 task "shoes-spec-tiranti" do
   include Scarpe::Webview::Runner
+
+  File.unlink File.join(__dir__, "sspec.json") rescue nil
+  File.unlink File.expand_path(File.join(__dir__, "../../results/niente/results-tiranti.yaml")) rescue nil
+
   report_webview_specs(config: "local-tiranti")
 end
 
