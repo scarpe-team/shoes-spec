@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: b9a0c2c201900ae0d7f33bb71d9a5e76232bfaf8
+  revision: ae589f1b8d2f6bb1cfbbb7b6d7805266f008b7c7
   specs:
     scarpe (0.3.0)
       bloops (~> 0.5)
@@ -14,14 +14,14 @@ GIT
 
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: b9a0c2c201900ae0d7f33bb71d9a5e76232bfaf8
+  revision: ae589f1b8d2f6bb1cfbbb7b6d7805266f008b7c7
   glob: lacci/*.gemspec
   specs:
     lacci (0.3.0)
 
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: b9a0c2c201900ae0d7f33bb71d9a5e76232bfaf8
+  revision: ae589f1b8d2f6bb1cfbbb7b6d7805266f008b7c7
   glob: scarpe-components/*.gemspec
   specs:
     scarpe-components (0.3.0)
@@ -66,8 +66,8 @@ GEM
       rake
 
 PLATFORMS
-  x86_64-darwin-22
   x86_64-darwin-19
+  x86_64-darwin-22
 
 DEPENDENCIES
   lacci!
