@@ -8,14 +8,14 @@ GIT
 
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: b9a0c2c201900ae0d7f33bb71d9a5e76232bfaf8
+  revision: ae589f1b8d2f6bb1cfbbb7b6d7805266f008b7c7
   glob: lacci/*.gemspec
   specs:
     lacci (0.3.0)
 
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: b9a0c2c201900ae0d7f33bb71d9a5e76232bfaf8
+  revision: ae589f1b8d2f6bb1cfbbb7b6d7805266f008b7c7
   glob: scarpe-components/*.gemspec
   specs:
     scarpe-components (0.3.0)
@@ -53,7 +53,7 @@ GEM
     nokogiri (1.15.4-x86_64-darwin)
       racc (~> 1.4)
     public_suffix (5.0.3)
-    racc (1.7.1)
+    racc (1.7.3)
     rack (3.0.8)
     rack-test (2.1.0)
       rack (>= 1.3)
@@ -62,7 +62,7 @@ GEM
     rexml (3.2.6)
     ruby-progressbar (1.13.0)
     rubyzip (2.3.2)
-    selenium-webdriver (4.14.0)
+    selenium-webdriver (4.15.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
@@ -72,8 +72,8 @@ GEM
       nokogiri (~> 1.8)
 
 PLATFORMS
-  x86_64-darwin-22
   x86_64-darwin-19
+  x86_64-darwin-22
 
 DEPENDENCIES
   capybara
