@@ -1,6 +1,6 @@
 ---
 :display: scarpe-webview
-:config: local-calzini
+:config: local-tiranti
 :results:
   drawables/button:
     basic_click: :pass
@@ -11,5 +11,11 @@
     add_drawables: :pass
   dsl/slot:
     self_slot: :pass
+  legacy_examples/misc:
+    speedometer_app: :pass
+    superleg: :pass
+  legacy_examples/simple:
+    calc: :pass
+    image: :pass
   manual/examples:
     example_1: :pass
