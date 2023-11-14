@@ -1,15 +1,6 @@
-PATH
-  remote: ../../../scarpe/lacci
-  specs:
-    lacci (0.3.0)
-
-PATH
-  remote: ../../../scarpe/scarpe-components
-  specs:
-    scarpe-components (0.3.0)
-
-PATH
-  remote: ../../../scarpe
+GIT
+  remote: https://github.com/scarpe-team/scarpe.git
+  revision: c6d736ff377b63577f0d95ad829494ec8a8c9d5a
   specs:
     scarpe (0.3.0)
       bloops (~> 0.5)
@@ -20,6 +11,20 @@ PATH
       scarpe-components
       sqlite3
       webview_ruby (~> 0.1.1)
+
+GIT
+  remote: https://github.com/scarpe-team/scarpe.git
+  revision: c6d736ff377b63577f0d95ad829494ec8a8c9d5a
+  glob: lacci/*.gemspec
+  specs:
+    lacci (0.3.0)
+
+GIT
+  remote: https://github.com/scarpe-team/scarpe.git
+  revision: c6d736ff377b63577f0d95ad829494ec8a8c9d5a
+  glob: scarpe-components/*.gemspec
+  specs:
+    scarpe-components (0.3.0)
 
 PATH
   remote: ../..
