@@ -24,10 +24,18 @@ task "shoes-spec" do
     end
   end
 
+  Dir.chdir("implementations/niente") do
+    Bundler.with_unbundled_env do
+      puts "Run Shoes-Spec for Niente"
+      system("bundle exec rake shoes-spec")
+    end
+  end
+
   passed = true
   passed &= compare_results(display: "scarpe-webview", config: "local-calzini")
   passed &= compare_results(display: "scarpe-webview", config: "local-tiranti")
   passed &= compare_results(display: "scarpe-wasm", config: "wasm")
+  passed &= compare_results(display: "niente", config: "local")
 
   # If anybody failed, fail the task
   unless passed

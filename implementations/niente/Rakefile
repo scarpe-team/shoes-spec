@@ -4,6 +4,9 @@ require_relative "scarpe_niente_runner"
 task "shoes-spec" do
   include Niente::Runner
 
+  File.unlink File.join(__dir__, "sspec.json") rescue nil
+  File.unlink File.expand_path(File.join(__dir__, "../../results/niente/results-local.yaml")) rescue nil
+
   report_niente_specs
 end
 
