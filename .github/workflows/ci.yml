@@ -22,6 +22,6 @@ jobs:
       - name: Install wasi-vfs for wasify
         run: curl -LO https://github.com/kateinoigakukun/wasi-vfs/releases/download/v0.1.1/wasi-vfs-cli-x86_64-apple-darwin.zip && unzip wasi-vfs-cli-x86_64-apple-darwin.zip && mkdir -p bin && mv wasi-vfs bin/
       - name: Install gems for implementations
-        run: cd implementations/scarpe-wasm && bundle update && cd pkg_dir && bundle update &&  cd ../../scarpe-webview && bundle update
+        run: cd implementations/scarpe-wasm && bundle update && cd pkg_dir && bundle update && cd ../../scarpe-webview && bundle update && cd ../../niente && bundle update
       - name: Run Shoes-Spec tests
         run: PATH=`pwd`/bin:$PATH bundle exec rake shoes-spec
