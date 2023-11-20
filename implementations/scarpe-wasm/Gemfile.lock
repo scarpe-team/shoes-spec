@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/scarpe-team/scarpe-wasm.git
-  revision: ccbbd1d2bf9757035adf36161ec48e85ff2b649e
+  revision: d9a7441fec4398589b2442e5ccb721002601e417
   specs:
     scarpe-wasm (0.1.0)
       lacci
@@ -8,14 +8,15 @@ GIT
 
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: ae589f1b8d2f6bb1cfbbb7b6d7805266f008b7c7
+  revision: 79f48be65fc3c091982e45e26afce3f3ec05e3ea
   glob: lacci/*.gemspec
   specs:
     lacci (0.3.0)
+      scarpe-components
 
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: ae589f1b8d2f6bb1cfbbb7b6d7805266f008b7c7
+  revision: 79f48be65fc3c091982e45e26afce3f3ec05e3ea
   glob: scarpe-components/*.gemspec
   specs:
     scarpe-components (0.3.0)
@@ -50,9 +51,9 @@ GEM
       builder
       minitest (>= 5.0)
       ruby-progressbar
-    nokogiri (1.15.4-x86_64-darwin)
+    nokogiri (1.15.5-x86_64-darwin)
       racc (~> 1.4)
-    public_suffix (5.0.3)
+    public_suffix (5.0.4)
     racc (1.7.3)
     rack (3.0.8)
     rack-test (2.1.0)
