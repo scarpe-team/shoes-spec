@@ -66,7 +66,7 @@ module ShoesSpec
           if exp_res == result
             # As expected, so do nothing
           else
-            incorrect_items << item
+            incorrect_items << [category, test_name, exp_res, result]
           end
         else
           unexpected_items.push item
@@ -93,7 +93,7 @@ module ShoesSpec
       unexpected_items.each do |cat, test, res|
         puts "    * #{cat} / #{test}: #{res}"
       end
-      puts "  Tests with  unexpected incorrect results:" unless incorrect_items.empty?
+      puts "  Tests with unexpected incorrect results:" unless incorrect_items.empty?
       incorrect_items.each do |cat, test, exp_res, actual_res|
         puts "    * #{cat} / #{test}: expected: #{exp_res} actual: #{actual_res}"
       end
