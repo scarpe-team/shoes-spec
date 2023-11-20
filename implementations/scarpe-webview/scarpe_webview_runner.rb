@@ -4,6 +4,7 @@ require "rbconfig"
 require "json"
 
 require "scarpe/components/file_helpers"
+require "scarpe/components/minitest_result"
 require_relative "../../lib/shoes-spec/test_list"
 require_relative "../../lib/shoes-spec/shoes_config"
 require_relative "../../lib/shoes-spec/report_results"
@@ -32,8 +33,8 @@ module Scarpe
             env.each do |name, val|
               ENV[name] = val
             end
-            system(RbConfig.ruby, which("scarpe"), "--dev", app_file)
-            return File.read(sspec_file)
+            res = system(RbConfig.ruby, which("scarpe"), "--dev", app_file)
+            return res ? sspec_file : nil
         end
       end
 
@@ -55,18 +56,31 @@ module Scarpe
         report = ShoesSpec::ReportResults.new(display: "scarpe-webview", config:)
 
         with_each_loaded_test(display_service: "scarpe-webview") do |metadata, app_code, test_code|
-          res = JSON.load run_scarpe_command_line_test(metadata, app_code, test_code, env:)
-          unless res.is_a?(Array) && res.size == 1
-            raise "Internal error! Unexpected result format from run_scarpe_command_line_test!"
-          end
-          res = res[0]
+          begin
+            test_name = metadata["test_name"]
+            category = metadata["category"]
 
-          test_name = metadata["test_name"]
-          category = metadata["category"]
-          if res["failures"].empty?
-            report.report(:pass, test_name:, category:)
-          else
-            report.report(:fail, test_name:, category:)
+            result_file = run_scarpe_command_line_test(metadata, app_code, test_code, env:)
+            if result_file == nil
+              report.report(:error, test_name:, category:)
+              next
+            end
+
+            mtr = Scarpe::Components::MinitestResult.new(result_file)
+
+            if mtr.error?
+              result = :error
+            elsif mtr.fail?
+              result = :fail
+            elsif mtr.skip?
+              result = :skip
+            else
+              result = :pass
+            end
+            report.report(result, test_name:, category:)
+          rescue
+            STDERR.puts "Error while running test #{metadata.inspect}!"
+            raise
           end
         end
 
