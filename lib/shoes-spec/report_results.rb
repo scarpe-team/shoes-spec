@@ -14,7 +14,7 @@ module ShoesSpec
       @results = {}
     end
 
-    RESULTS = [:pass, :fail, :skip]
+    RESULTS = [:pass, :fail, :skip, :error]
     def report(result, test_name:, category:)
       raise "Unknown result #{result.inspect}! Should be one of: #{RESULTS.inspect}!" unless RESULTS.include?(result)
 
@@ -55,8 +55,7 @@ module ShoesSpec
     actual_items = actual[:results]
 
     unexpected_items = []
-    failing_items = []
-    passing_items = []
+    incorrect_items = []
     not_present_items = []
 
     actual_items.each do |category, h1|
@@ -66,11 +65,8 @@ module ShoesSpec
           exp_res = expected_items[category][test_name]
           if exp_res == result
             # As expected, so do nothing
-          elsif exp_res == :pass
-            # Expected passing, got a failure or skip
-            failing_items << item
           else
-            passing_items << item
+            incorrect_items << item
           end
         else
           unexpected_items.push item
@@ -87,7 +83,7 @@ module ShoesSpec
       end
     end
 
-    if unexpected_items.empty? && failing_items.empty? && passing_items.empty? && not_present_items.empty?
+    if unexpected_items.empty? && incorrect_items.empty? && not_present_items.empty?
       puts "Results for #{display}-#{config} are exactly as expected."
       puts "-------"
       true
@@ -97,13 +93,9 @@ module ShoesSpec
       unexpected_items.each do |cat, test, res|
         puts "    * #{cat} / #{test}: #{res}"
       end
-      puts "  Tests unexpectedly passing:" unless passing_items.empty?
-      passing_items.each do |cat, test, res|
-        puts "    * #{cat} / #{test}: #{res}"
-      end
-      puts "  Tests unexpectedly failing:" unless failing_items.empty?
-      failing_items.each do |cat, test, res|
-        puts "    * #{cat} / #{test}: #{res}"
+      puts "  Tests with  unexpected incorrect results:" unless incorrect_items.empty?
+      incorrect_items.each do |cat, test, exp_res, actual_res|
+        puts "    * #{cat} / #{test}: expected: #{exp_res} actual: #{actual_res}"
       end
       puts "  Expected tests not present:" unless not_present_items.empty?
       not_present_items.each do |cat, test, res|

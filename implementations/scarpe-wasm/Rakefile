@@ -5,7 +5,7 @@ task "shoes-spec" do
   include Scarpe::Wasm::Runner
 
   File.unlink File.join(__dir__, "sspec.json") rescue nil
-  File.unlink File.expand_path(File.join(__dir__, "../../results/niente/results-wasm.yaml")) rescue nil
+  File.unlink File.expand_path(File.join(__dir__, "../../results/scarpe-wasm/results-wasm.yaml")) rescue nil
 
   run_all_shoes_specs
 end
