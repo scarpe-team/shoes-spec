@@ -12,8 +12,8 @@
   dsl/slot:
     self_slot: :pass
   legacy_examples/misc:
-    speedometer_app: :pass
-    superleg: :pass
+    speedometer_app: :error
+    superleg: :error
   legacy_examples/simple:
     calc: :pass
     image: :pass

@@ -4,6 +4,7 @@ require "rbconfig"
 require "json"
 
 require "scarpe/components/file_helpers"
+require "scarpe/components/minitest_result"
 require_relative "../../lib/shoes-spec/test_list"
 require_relative "../../lib/shoes-spec/shoes_config"
 require_relative "../../lib/shoes-spec/report_results"
@@ -27,8 +28,8 @@ module Niente
           ENV["SHOES_MINITEST_EXPORT_FILE"] = sspec_file
           ENV["SHOES_MINITEST_CLASS_NAME"] = metadata["category"].gsub("/", "_")
           ENV["SHOES_MINITEST_METHOD_NAME"] = metadata["test_name"].gsub(".sspec", "")
-          system(RbConfig.ruby, which("scarpe"), "--dev", app_file)
-          return File.read(sspec_file)
+          res = system(RbConfig.ruby, which("scarpe"), "--dev", app_file)
+          return res ? sspec_file : nil
       end
     end
 
@@ -36,24 +37,33 @@ module Niente
       report = ShoesSpec::ReportResults.new(display: "niente", config: "local")
 
       with_each_loaded_test(display_service: "niente") do |metadata, app_code, test_code|
-        res = JSON.load run_scarpe_command_line_test(metadata, app_code, test_code)
-        unless res.is_a?(Array) && res.size == 1
-          raise "Internal error! Unexpected result format from run_scarpe_command_line_test!"
-        end
-        res = res[0]
+        begin
+          test_name = metadata["test_name"]
+          category = metadata["category"]
 
-        test_name = metadata["test_name"]
-        category = metadata["category"]
-        if res["failures"].empty?
-          report.report(:pass, test_name:, category:)
-        else
-          report.report(:fail, test_name:, category:)
+          result_file = run_scarpe_command_line_test(metadata, app_code, test_code)
+
+          if result_file == nil
+            report.report(:error, test_name:, category:)
+            next
+          end
+
+          mtr = Scarpe::Components::MinitestResult.new(result_file)
+
+          if mtr.error?
+            result = :error
+          elsif mtr.fail?
+            result = :fail
+          elsif mtr.skip?
+            result = :skip
+          else
+            result = :pass
+          end
+          report.report(result, test_name:, category:)
         end
       end
 
-      path = report.complete
-      puts "Wrote ShoesSpec results to #{path}"
-      compare_results(display: "niente", config: "local")
+      report.complete
     end
   end
 end

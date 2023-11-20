@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: c6d736ff377b63577f0d95ad829494ec8a8c9d5a
+  revision: 79f48be65fc3c091982e45e26afce3f3ec05e3ea
   specs:
     scarpe (0.3.0)
       bloops (~> 0.5)
@@ -14,14 +14,15 @@ GIT
 
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: c6d736ff377b63577f0d95ad829494ec8a8c9d5a
+  revision: 79f48be65fc3c091982e45e26afce3f3ec05e3ea
   glob: lacci/*.gemspec
   specs:
     lacci (0.3.0)
+      scarpe-components
 
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: c6d736ff377b63577f0d95ad829494ec8a8c9d5a
+  revision: 79f48be65fc3c091982e45e26afce3f3ec05e3ea
   glob: scarpe-components/*.gemspec
   specs:
     scarpe-components (0.3.0)
@@ -54,7 +55,7 @@ GEM
       minitest (>= 5.0)
       ruby-progressbar
     multi_json (1.15.0)
-    nokogiri (1.15.4-x86_64-darwin)
+    nokogiri (1.15.5-x86_64-darwin)
       racc (~> 1.4)
     racc (1.7.3)
     rake (13.1.0)

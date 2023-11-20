@@ -16,8 +16,6 @@ end
 
 task "shoes-spec" do
   Dir["results/scarpe-webview/*.yaml"].each { |f| File.unlink f }
-  Dir["results/scarpe-wasm/*.yaml"].each { |f| File.unlink f }
-
   Dir.chdir("implementations/scarpe-webview") do
     Bundler.with_unbundled_env do
       puts "Run Shoes-Spec for Scarpe-Webview"
@@ -25,6 +23,7 @@ task "shoes-spec" do
     end
   end
 
+  Dir["results/scarpe-wasm/*.yaml"].each { |f| File.unlink f }
   Dir.chdir("implementations/scarpe-wasm") do
     Bundler.with_unbundled_env do
       puts "Run Shoes-Spec for Scarpe-Wasm"
@@ -32,6 +31,7 @@ task "shoes-spec" do
     end
   end
 
+  Dir["results/niente/*.yaml"].each { |f| File.unlink f }
   Dir.chdir("implementations/niente") do
     Bundler.with_unbundled_env do
       puts "Run Shoes-Spec for Niente"
