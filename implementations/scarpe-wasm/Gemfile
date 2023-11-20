@@ -1,8 +1,20 @@
 source "https://rubygems.org"
 
-shoes_spec_path = "../.."
-scarpe_local_path = "#{shoes_spec_path}/../scarpe"
-scarpe_wasm_local_path = "#{shoes_spec_path}/../scarpe-wasm"
+# Why the complexity? This Gemfile needs to work from here and from inside the pkg_dir.
+scan_for_root = "../.."
+loop do
+  if File.expand_path(scan_for_root) == "/"
+    raise "Can't find cases dir to get shoes-spec local path!"
+  end
+  if File.exist? File.expand_path(scan_for_root + "/cases")
+    break # Found it!
+  end
+  scan_for_root += "/.."
+end
+
+shoes_spec_path = scan_for_root
+scarpe_local_path = File.expand_path "#{shoes_spec_path}/../scarpe"
+scarpe_wasm_local_path = File.expand_path "#{shoes_spec_path}/../scarpe-wasm"
 
 gem "shoes-spec", path: shoes_spec_path
 
@@ -13,6 +25,8 @@ gem "shoes-spec", path: shoes_spec_path
 gem "scarpe-wasm", github: "scarpe-team/scarpe-wasm"
 gem "scarpe-components", github: "scarpe-team/scarpe", glob: "scarpe-components/*.gemspec"
 gem "lacci", github: "scarpe-team/scarpe", glob: "lacci/*.gemspec"
+
+gem "wasify"
 
 group :test do
   gem "rake"
