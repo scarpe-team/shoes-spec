@@ -19,3 +19,9 @@
     image: :pass
   manual/examples:
     example_1: :pass
+  test_code/assertions:
+    fail: :fail
+    pass: :pass
+    skip: :skip
+  test_code/exceptions:
+    no_method: :error
