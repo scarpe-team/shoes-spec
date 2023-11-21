@@ -12,16 +12,16 @@
   dsl/slot:
     self_slot: :pass
   legacy_examples/misc:
-    speedometer_app: :fail
-    superleg: :fail
+    speedometer_app: :error
+    superleg: :error
   legacy_examples/simple:
     calc: :pass
-    image: :fail
+    image: :error
   manual/examples:
     example_1: :pass
   test_code/assertions:
-    fail: :fail
-    pass: :fail
-    skip: :fail
+    fail: :error
+    pass: :error
+    skip: :error
   test_code/exceptions:
-    no_method: :fail
+    no_method: :error
