@@ -2,6 +2,10 @@
 
 require "rbconfig"
 
+require 'selenium-webdriver'
+
+require "scarpe/components/minitest_result"
+
 require_relative "../../lib/shoes-spec/test_list"
 require_relative "../../lib/shoes-spec/shoes_config"
 require_relative "../../lib/shoes-spec/report_results"
@@ -18,6 +22,23 @@ module Scarpe
         attr_accessor :reporter
       end
 
+      def prepare_package_dir
+        # Create this every time to be sure we have latest and match Gemfile.lock
+        Dir.chdir __dir__ do
+          cp "Gemfile", "pkg_dir/"
+          cp "Gemfile.lock", "pkg_dir/"
+          mkdir_p "pkg_dir/src"
+          touch "pkg_dir/src/APP_NAME.rb"
+          Dir.chdir "pkg_dir" do
+            # The Gemfile changes slightly -- local paths for gems change... So bundle install again.
+            Bundler.with_unbundled_env do
+              system("bundle") || raise("Couldn't update Gemfile.lock for pkg_dir!")
+            end
+          end
+          system "scarpe-wasm --dev src-package pkg_dir/ pkg_dir/" || raise("Couldn't package scarpe-wasm!")
+        end
+      end
+
       # Wasm is fun. We can build the Scarpe-Wasm code into
       # a reusable package and serve it via webrick.
       # We'd like to run webrick (a.k.a. Ruby's default httpd)
@@ -27,16 +48,21 @@ module Scarpe
       def run_all_shoes_specs
         test_dir = File.join(File.expand_path(__dir__), "pkg_dir")
         port_num = 4327
-        Capybara.default_driver = :selenium_chrome_headless
+        Capybara.register_driver :logging_selenium_chrome do |app|
+          options = Selenium::WebDriver::Chrome::Options.new
+          options.add_option("goog:loggingPrefs", {browser: 'ALL'})
+          options.add_argument("--headless")
+
+          Capybara::Selenium::Driver.new(app,
+                                         options:,
+                                         browser: :chrome,
+                                         )
+        end
+        Capybara.default_driver = :logging_selenium_chrome
         Capybara.run_server = false
         Capybara.app_host = "http://localhost:#{port_num}"
 
-        # Create this every time to be sure we have latest and match Gemfile.lock
-        Dir.chdir __dir__ do
-          mkdir_p "pkg_dir/src"
-          touch "pkg_dir/src/APP_NAME.rb"
-          system "scarpe-wasm --dev src-package pkg_dir/ pkg_dir/"
-        end
+        prepare_package_dir
 
         Dir.chdir test_dir
 
@@ -61,7 +87,7 @@ module Scarpe
           cat = metadata["category"]
           test_name = "#{cat.gsub("/", "_")}_#{metadata["test_name"]}".gsub(".sspec", ".rb")
 
-          rb_file = "spec_#{test_name}"
+          rb_file = "spec_#{test_name}.rb"
           File.write(rb_file, app_code) # Write Ruby app-source file
 
           index_file = "index-#{test_name}.html"
@@ -81,6 +107,31 @@ module Scarpe
         end
 
         puts "Start Minitest autorun..."
+      end
+
+      def manual_shoes_spec_run
+        test_dir = File.join(File.expand_path(__dir__), "pkg_dir")
+        port_num = 4327
+
+        prepare_package_dir
+
+        puts "HTTP server: \"ruby -run -e httpd . -p #{port_num}\""
+        #httpd_pid = start_http_server(port_num:)
+
+        Dir.chdir test_dir
+        with_each_loaded_test(display_service: "scarpe-wasm") do |metadata, app_code, test_code|
+          cat = metadata["category"]
+          test_name = "#{cat.gsub("/", "_")}_#{metadata["test_name"]}".gsub(".sspec", ".rb")
+
+          rb_file = "spec_#{test_name}.rb"
+          File.write(rb_file, app_code) # Write Ruby app-source file
+
+          index_file = "index-#{test_name}.html"
+          index_contents = File.read("index.html").gsub("APP_NAME.rb", rb_file).gsub("8080", port_num.to_s)
+          File.write(index_file, index_contents)
+
+          puts "Test: #{metadata["category"]}/#{metadata["test_name"]}: http://localhost:#{port_num}/#{index_file}"
+        end
       end
 
       # Name must not start with "test"
@@ -103,12 +154,15 @@ module Scarpe
         test_name = self.name.gsub(/^test_/, "")
         category = self.class.category
         if passed?
-          Scarpe::Wasm::Runner.reporter.report :pass, test_name:, category:
+          res = :pass
         elsif skipped?
-          Scarpe::Wasm::Runner.reporter.report :skip, test_name:, category:
+          res = :skip
+        elsif error?
+          res = :error
         else
-          Scarpe::Wasm::Runner.reporter.report :fail, test_name:, category:
+          res = :fail
         end
+        Scarpe::Wasm::Runner.reporter.report res, test_name:, category: category
 
         super
       end

@@ -1,4 +1,5 @@
-index-*.rb.html
+Gemfile
+Gemfile.lock
 spec_*.rb
 packed_ruby.wasm
 index.html
@@ -9,4 +10,3 @@ ruby-3_2-wasm32-unknown-wasi-full-js.tar.gz
 ruby.wasm
 deps
 index-*.html
-spec_*
