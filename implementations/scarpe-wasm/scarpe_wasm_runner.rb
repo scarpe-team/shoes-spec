@@ -39,6 +39,30 @@ module Scarpe
         end
       end
 
+      # Start an HTTP server in a background process, return a PID
+      def start_http_server(port_num: 4327)
+        httpd_pid = nil
+        command = "ruby -run -e httpd . -p #{port_num}"
+
+        test_dir = File.join(File.expand_path(__dir__), "pkg_dir")
+        Dir.chdir test_dir do
+          httpd_pid = fork do
+            if port_working?("localhost", port_num)
+              system("pkill -f '#{command}'")
+            end
+
+            Bundler.with_unbundled_env do
+              puts "Running HTTP server: #{command.inspect}"
+              system("bundle exec #{command}") || raise("Couldn't start httpd for scarpe-wasm testing!")
+            end
+          end
+          at_exit do
+            system("pkill -f '#{command}'")
+          end
+        end
+        httpd_pid
+      end
+
       # Wasm is fun. We can build the Scarpe-Wasm code into
       # a reusable package and serve it via webrick.
       # We'd like to run webrick (a.k.a. Ruby's default httpd)
@@ -64,23 +88,11 @@ module Scarpe
 
         prepare_package_dir
 
-        Dir.chdir test_dir
-
-        retries = 0
-        httpd_pid = fork do
-          if port_working?("localhost", port_num)
-            system("pkill -f 'ruby -run -e httpd . -p #{port_num}'")
-          end
-
-          Bundler.with_unbundled_env do
-            system("bundle exec ruby -run -e httpd . -p #{port_num}")
-          end
-        end
-        at_exit do
-          system("pkill -f 'ruby -run -e httpd . -p #{port_num}'")
-        end
+        httpd_pid = start_http_server(port_num:)
 
         Scarpe::Wasm::Runner.reporter = ShoesSpec::ReportResults.new(display: "scarpe-wasm", config: "wasm")
+
+        Dir.chdir test_dir
 
         require "minitest/autorun"
         with_each_loaded_test(display_service: "scarpe-wasm") do |metadata, app_code, test_code|
@@ -134,7 +146,6 @@ module Scarpe
         end
       end
 
-      # Name must not start with "test"
       def get_test_class_for_category(category)
         @test_classes ||= {}
         return @test_classes[category] if @test_classes[category]
@@ -162,7 +173,7 @@ module Scarpe
         else
           res = :fail
         end
-        Scarpe::Wasm::Runner.reporter.report res, test_name:, category: category
+        Scarpe::Wasm::Runner.reporter.report res, test_name: test_name, category: category
 
         super
       end
