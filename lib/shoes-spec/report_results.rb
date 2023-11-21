@@ -23,14 +23,22 @@ module ShoesSpec
     end
 
     def complete
+      out_results = {}
+      @results.keys.sort.each do |cat|
+        out_results[cat] = {}
+        @results[cat].keys.sort.each do |test_name|
+          out_results[cat][test_name] = @results[cat][test_name]
+        end
+      end
       out = {
         display: @display,
         config: @config,
-        results: @results,
+        results: out_results,
       }
       res_dir = ShoesSpec.results_dir(@display)
       filename = ShoesSpec.results_filename(@config)
       path = "#{res_dir}/#{filename}"
+
       File.write(path, YAML.dump(out))
       path
     end

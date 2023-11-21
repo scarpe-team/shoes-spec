@@ -2,26 +2,26 @@
 :display: scarpe-wasm
 :config: wasm
 :results:
-  test_code/exceptions:
-    no_method: :fail
-  legacy_examples/misc:
-    superleg: :fail
-    speedometer_app: :fail
   drawables/button:
-    button_events: :pass
     basic_click: :pass
+    button_events: :pass
+  drawables/para:
+    para_replace: :pass
+  dsl/app:
+    add_drawables: :pass
+  dsl/slot:
+    self_slot: :pass
+  legacy_examples/misc:
+    speedometer_app: :fail
+    superleg: :fail
+  legacy_examples/simple:
+    calc: :pass
+    image: :fail
+  manual/examples:
+    example_1: :pass
   test_code/assertions:
     fail: :fail
     pass: :fail
     skip: :fail
-  dsl/app:
-    add_drawables: :pass
-  drawables/para:
-    para_replace: :pass
-  legacy_examples/simple:
-    image: :fail
-    calc: :pass
-  dsl/slot:
-    self_slot: :pass
-  manual/examples:
-    example_1: :pass
+  test_code/exceptions:
+    no_method: :fail
