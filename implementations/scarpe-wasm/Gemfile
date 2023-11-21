@@ -26,7 +26,7 @@ gem "scarpe-wasm", github: "scarpe-team/scarpe-wasm"
 gem "scarpe-components", github: "scarpe-team/scarpe", glob: "scarpe-components/*.gemspec"
 gem "lacci", github: "scarpe-team/scarpe", glob: "lacci/*.gemspec"
 
-gem "wasify"
+gem "wasify", github: "alawysdelta/wasify"
 
 group :test do
   gem "rake"
