@@ -1,7 +1,7 @@
 ---
 ----------- app code
+raise_exception_before_shoes_app_body
 Shoes.app do
-  no_such_method
 end
 ----------- test code
 assert true, "Even if the test code is fine, this spec should fail because the app fails."

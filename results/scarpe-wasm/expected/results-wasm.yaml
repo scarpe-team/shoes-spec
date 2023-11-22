@@ -24,4 +24,6 @@
     pass: :error
     skip: :error
   test_code/exceptions:
-    no_method: :error
+    raise_before_shoes_app: :error
+    raise_in_shoes_app: :error
+    raise_in_test_code: :error

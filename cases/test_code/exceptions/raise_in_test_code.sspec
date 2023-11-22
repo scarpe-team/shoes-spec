@@ -1,0 +1,6 @@
+---
+----------- app code
+Shoes.app do
+end
+----------- test code
+raise_exception_in_test_code
