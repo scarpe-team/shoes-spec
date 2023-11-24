@@ -1,0 +1,29 @@
+---
+:display: abstract-perfection
+:config: abstract-perfection
+:results:
+  drawables/button:
+    basic_click: :pass
+    button_events: :pass
+  drawables/para:
+    para_replace: :pass
+  dsl/app:
+    add_drawables: :pass
+  dsl/slot:
+    self_slot: :pass
+  legacy_examples/misc:
+    speedometer_app: :pass
+    superleg: :pass
+  legacy_examples/simple:
+    calc: :pass
+    image: :pass
+  manual/examples:
+    example_1: :pass
+  test_code/assertions:
+    fail: :fail
+    pass: :pass
+    skip: :skip
+  test_code/exceptions:
+    raise_before_shoes_app: :error
+    raise_in_shoes_app: :error
+    raise_in_test_code: :error
