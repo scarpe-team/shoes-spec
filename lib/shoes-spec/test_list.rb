@@ -14,13 +14,6 @@ module ShoesSpec
 
   private
 
-  def test_loader
-    # We don't add this to Shoes, because this isn't a Shoes app. Instead we'll
-    # call it directly to load our Shoes specs. We use front_matter_and_segments_from_file
-    # instead of load_file, so we don't register segment types.
-    @loader ||= Scarpe::Components::SegmentedFileLoader.new
-  end
-
   def tests_by_category
     return @tests_by_category if @tests_by_category
 
