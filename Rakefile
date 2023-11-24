@@ -58,4 +58,10 @@ task "local-compare" do
   end
 end
 
+task "perfect-compare" do
+  compare_vs_perfect(display: "scarpe-webview", config: "local-tiranti")
+  compare_vs_perfect(display: "scarpe-wasm", config: "wasm")
+  compare_vs_perfect(display: "niente", config: "local")
+end
+
 task default: "shoes-spec"

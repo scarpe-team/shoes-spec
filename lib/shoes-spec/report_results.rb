@@ -52,16 +52,7 @@ module ShoesSpec
     "results-#{config}.yaml"
   end
 
-  def compare_results(display:, config:)
-    dir = results_dir(display)
-    filename = results_filename(config)
-
-    expected = YAML.load(File.read "#{dir}/expected/#{filename}")
-    actual = YAML.load(File.read "#{dir}/#{filename}")
-
-    expected_items = expected[:results]
-    actual_items = actual[:results]
-
+  def compare_expected_actual(name, expected_items, actual_items)
     unexpected_items = []
     incorrect_items = []
     not_present_items = []
@@ -92,11 +83,11 @@ module ShoesSpec
     end
 
     if unexpected_items.empty? && incorrect_items.empty? && not_present_items.empty?
-      puts "Results for #{display}-#{config} are exactly as expected."
+      puts "Results for #{name} are exactly as expected."
       puts "-------"
       true
     else
-      puts "For #{display}-#{config}:"
+      puts "For #{name}:"
       puts "  Tests with no expected result:" unless unexpected_items.empty?
       unexpected_items.each do |cat, test, res|
         puts "    * #{cat} / #{test}: #{res}"
@@ -112,5 +103,26 @@ module ShoesSpec
       puts "-------"
       false
     end
+  end
+
+  def compare_results(display:, config:)
+    dir = results_dir(display)
+    filename = results_filename(config)
+
+    expected = YAML.load(File.read "#{dir}/expected/#{filename}")
+    actual = YAML.load(File.read "#{dir}/#{filename}")
+
+    compare_expected_actual("#{display}-#{config}", expected[:results], actual[:results])
+  end
+
+  def compare_vs_perfect(display:, config:, compare_expected: true)
+    dir = results_dir(display)
+    ideal_dir = results_dir("ideal")
+    filename = results_filename(config)
+
+    expected = YAML.load(File.read "#{ideal_dir}/results-perfect.yaml")
+    actual = YAML.load(File.read "#{dir}/#{compare_expected ? "expected/" : ""}#{filename}")
+
+    compare_expected_actual("#{display}-#{config}", expected[:results], actual[:results])
   end
 end
