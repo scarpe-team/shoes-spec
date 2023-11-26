@@ -6,7 +6,7 @@ GIT
 
 GIT
   remote: https://github.com/scarpe-team/scarpe-wasm.git
-  revision: e11124d7df1f0070fa6b3f84097a0db322c5ec3b
+  revision: 7431165b9a8ab3f126bcc3bd12af359017d55936
   specs:
     scarpe-wasm (0.1.0)
       lacci
@@ -14,7 +14,7 @@ GIT
 
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: ae5bb8623da22c8391ab8adaa1d5e3919a7cf6e3
+  revision: ad947a9fc952c7730d233f56293c4144d0a1cda5
   glob: lacci/*.gemspec
   specs:
     lacci (0.3.0)
@@ -22,7 +22,7 @@ GIT
 
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: ae5bb8623da22c8391ab8adaa1d5e3919a7cf6e3
+  revision: ad947a9fc952c7730d233f56293c4144d0a1cda5
   glob: scarpe-components/*.gemspec
   specs:
     scarpe-components (0.3.0)
