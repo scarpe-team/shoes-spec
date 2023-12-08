@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: ae5bb8623da22c8391ab8adaa1d5e3919a7cf6e3
+  revision: a9e3c0aa9d1ab2b88d094dab0f3913a2479c5af1
   specs:
     scarpe (0.3.0)
       bloops (~> 0.5)
@@ -10,11 +10,12 @@ GIT
       nokogiri
       scarpe-components
       sqlite3
+      webrick
       webview_ruby (~> 0.1.1)
 
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: ae5bb8623da22c8391ab8adaa1d5e3919a7cf6e3
+  revision: a9e3c0aa9d1ab2b88d094dab0f3913a2479c5af1
   glob: lacci/*.gemspec
   specs:
     lacci (0.3.0)
@@ -22,7 +23,7 @@ GIT
 
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: ae5bb8623da22c8391ab8adaa1d5e3919a7cf6e3
+  revision: a9e3c0aa9d1ab2b88d094dab0f3913a2479c5af1
   glob: scarpe-components/*.gemspec
   specs:
     scarpe-components (0.3.0)
@@ -60,7 +61,8 @@ GEM
     racc (1.7.3)
     rake (13.1.0)
     ruby-progressbar (1.13.0)
-    sqlite3 (1.6.8-x86_64-darwin)
+    sqlite3 (1.6.9-x86_64-darwin)
+    webrick (1.8.1)
     webview_ruby (0.1.2)
       ffi
       ffi-compiler
