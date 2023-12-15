@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: a9e3c0aa9d1ab2b88d094dab0f3913a2479c5af1
+  revision: 8156d76041e011164aab0fa07ea6b964f6d35c00
   specs:
     scarpe (0.3.0)
       bloops (~> 0.5)
@@ -15,7 +15,7 @@ GIT
 
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: a9e3c0aa9d1ab2b88d094dab0f3913a2479c5af1
+  revision: 8156d76041e011164aab0fa07ea6b964f6d35c00
   glob: lacci/*.gemspec
   specs:
     lacci (0.3.0)
@@ -23,7 +23,7 @@ GIT
 
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: a9e3c0aa9d1ab2b88d094dab0f3913a2479c5af1
+  revision: 8156d76041e011164aab0fa07ea6b964f6d35c00
   glob: scarpe-components/*.gemspec
   specs:
     scarpe-components (0.3.0)
