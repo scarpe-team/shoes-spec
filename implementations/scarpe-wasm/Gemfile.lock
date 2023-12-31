@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: https://github.com/scarpe-team/scarpe-wasm.git
-  revision: 873763a172b94d5cdce8b36cca7de36c30c7fae4
+  revision: 3a8886683c36e44c0fe71113bf32b98d6177f8a6
   specs:
     scarpe-wasm (0.1.0)
       lacci
