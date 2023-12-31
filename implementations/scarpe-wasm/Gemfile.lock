@@ -1,12 +1,13 @@
 GIT
   remote: https://github.com/alawysdelta/wasify.git
-  revision: 86229b2b5cfffb07491c95c1039844f8ea6b466a
+  revision: b39a34c9ff6832a7b60c813a2419bbe0bc53da23
+  branch: ruby_3_3_and_later_ruby_wasm
   specs:
-    wasify (0.1.1)
+    wasify (0.1.2)
 
 GIT
   remote: https://github.com/scarpe-team/scarpe-wasm.git
-  revision: 45fda051d70ad09ea16bcd6ed552de9b58459d78
+  revision: 873763a172b94d5cdce8b36cca7de36c30c7fae4
   specs:
     scarpe-wasm (0.1.0)
       lacci
@@ -14,7 +15,7 @@ GIT
 
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: a9e3c0aa9d1ab2b88d094dab0f3913a2479c5af1
+  revision: b964be2b43cbb62e8c2b12138a2aae2f01912550
   glob: lacci/*.gemspec
   specs:
     lacci (0.3.0)
@@ -22,7 +23,7 @@ GIT
 
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: a9e3c0aa9d1ab2b88d094dab0f3913a2479c5af1
+  revision: b964be2b43cbb62e8c2b12138a2aae2f01912550
   glob: scarpe-components/*.gemspec
   specs:
     scarpe-components (0.3.0)
@@ -36,7 +37,7 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.8.5)
+    addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
     ansi (1.5.0)
     builder (3.2.4)
@@ -57,7 +58,7 @@ GEM
       builder
       minitest (>= 5.0)
       ruby-progressbar
-    nokogiri (1.15.5-x86_64-darwin)
+    nokogiri (1.16.0-x86_64-darwin)
       racc (~> 1.4)
     public_suffix (5.0.4)
     racc (1.7.3)
