@@ -1,0 +1,100 @@
+GIT
+  remote: https://github.com/scarpe-team/gtk-scarpe.git
+  revision: 714c52cdf2e01a1f0ce2f4711e6a1dca6eda9d26
+  specs:
+    gtk-scarpe (0.1.0)
+      gtk4
+      lacci (= 0.3.0)
+      logging
+      scarpe-components (= 0.3.0)
+
+GIT
+  remote: https://github.com/scarpe-team/scarpe.git
+  revision: 25136ae7143064e226a9f720ff70adadf64e8fdb
+  glob: lacci/*.gemspec
+  specs:
+    lacci (0.3.0)
+      scarpe-components
+
+GIT
+  remote: https://github.com/scarpe-team/scarpe.git
+  revision: 25136ae7143064e226a9f720ff70adadf64e8fdb
+  glob: scarpe-components/*.gemspec
+  specs:
+    scarpe-components (0.3.0)
+
+PATH
+  remote: ../..
+  specs:
+    shoes-spec (0.1.0)
+      scarpe-components
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ansi (1.5.0)
+    atk (4.2.0)
+      glib2 (= 4.2.0)
+    builder (3.2.4)
+    cairo (1.17.13)
+      native-package-installer (>= 1.0.3)
+      pkg-config (>= 1.2.2)
+      red-colors
+    cairo-gobject (4.2.0)
+      cairo (>= 1.16.2)
+      glib2 (= 4.2.0)
+    fiddle (1.1.2)
+    gdk4 (4.2.0)
+      cairo-gobject (= 4.2.0)
+      gdk_pixbuf2 (= 4.2.0)
+      pango (= 4.2.0)
+    gdk_pixbuf2 (4.2.0)
+      gio2 (= 4.2.0)
+    gio2 (4.2.0)
+      fiddle
+      gobject-introspection (= 4.2.0)
+    glib2 (4.2.0)
+      native-package-installer (>= 1.0.3)
+      pkg-config (>= 1.3.5)
+    gobject-introspection (4.2.0)
+      glib2 (= 4.2.0)
+    gtk4 (4.2.0)
+      atk (= 4.2.0)
+      gdk4 (= 4.2.0)
+    little-plugger (1.1.4)
+    logging (2.3.1)
+      little-plugger (~> 1.1)
+      multi_json (~> 1.14)
+    matrix (0.4.2)
+    minitest (5.20.0)
+    minitest-reporters (1.6.1)
+      ansi
+      builder
+      minitest (>= 5.0)
+      ruby-progressbar
+    multi_json (1.15.0)
+    native-package-installer (1.1.9)
+    pango (4.2.0)
+      cairo-gobject (= 4.2.0)
+      gobject-introspection (= 4.2.0)
+    pkg-config (1.5.6)
+    rake (13.1.0)
+    red-colors (0.3.0)
+      matrix
+    ruby-progressbar (1.13.0)
+
+PLATFORMS
+  ruby
+  x86_64-darwin-22
+
+DEPENDENCIES
+  gtk-scarpe!
+  lacci!
+  minitest
+  minitest-reporters
+  rake
+  scarpe-components!
+  shoes-spec!
+
+BUNDLED WITH
+   2.5.3

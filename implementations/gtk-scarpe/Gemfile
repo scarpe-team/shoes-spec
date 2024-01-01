@@ -1,0 +1,21 @@
+source "https://rubygems.org"
+
+shoes_spec_path = "../.."
+scarpe_local_path = "#{shoes_spec_path}/../scarpe"
+
+gem "shoes-spec", path: "../.."
+
+#gem "gtk-scarpe", path: "#{scarpe_local_path}/../gtk-scarpe"
+#gem "scarpe-components", path: "#{scarpe_local_path}/scarpe-components"
+#gem "lacci", path: "#{scarpe_local_path}/lacci"
+
+gem "gtk-scarpe", github: "scarpe-team/gtk-scarpe"
+gem "scarpe-components", github: "scarpe-team/scarpe", glob: "scarpe-components/*.gemspec"
+gem "lacci", github: "scarpe-team/scarpe", glob: "lacci/*.gemspec"
+
+gem "rake"
+
+group :test do
+  gem "minitest"
+  gem "minitest-reporters"
+end

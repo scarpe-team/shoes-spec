@@ -1,0 +1,10 @@
+# frozen_string_literal: true
+
+require_relative "gtk_scarpe_runner"
+
+task "shoes-spec" do
+  include Scarpe::GTK::Runner
+  report_gtk_specs(config: "local-gtk")
+end
+
+task default: "shoes-spec"
