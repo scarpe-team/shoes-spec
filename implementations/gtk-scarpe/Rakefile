@@ -2,6 +2,7 @@
 
 require_relative "gtk_scarpe_runner"
 
+desc "Run shoes-spec tests for gtk-scarpe"
 task "shoes-spec" do
   include Scarpe::GTK::Runner
   report_gtk_specs(config: "local-gtk")
