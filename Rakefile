@@ -14,6 +14,7 @@ def compare_all_results
   passed
 end
 
+desc "Run shoes-spec for the various implementations"
 task "shoes-spec" do
   Dir["results/scarpe-webview/*.yaml"].each { |f| File.unlink f }
   Dir.chdir("implementations/scarpe-webview") do
