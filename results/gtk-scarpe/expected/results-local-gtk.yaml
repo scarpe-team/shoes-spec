@@ -6,11 +6,11 @@
     basic_click: :error
     button_events: :error
   drawables/para:
-    para_replace: :error
+    para_replace: :pass
   dsl/app:
     add_drawables: :error
   dsl/slot:
-    self_slot: :error
+    self_slot: :pass
   legacy_examples/misc:
     speedometer_app: :error
     superleg: :error
@@ -18,7 +18,7 @@
     calc: :error
     image: :error
   manual/examples:
-    example_1: :error
+    example_1: :pass
   test_code/assertions:
     fail: :fail
     pass: :pass

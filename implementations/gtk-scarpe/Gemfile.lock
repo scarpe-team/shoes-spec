@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/scarpe-team/gtk-scarpe.git
-  revision: 714c52cdf2e01a1f0ce2f4711e6a1dca6eda9d26
+  revision: 5370b3e99257f8b7e87cd9e74c6e7d2e3beec470
   specs:
     gtk-scarpe (0.1.0)
       gtk4
