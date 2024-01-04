@@ -10,3 +10,5 @@ ruby-3_2-wasm32-unknown-wasi-full-js.tar.gz
 ruby.wasm
 deps
 index-*.html
+ruby-3.3-wasm32-*.tar.gz
+3.3-wasm32-unknown-wasi-full-js-debug
