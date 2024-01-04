@@ -12,8 +12,8 @@ GEM
     scarpe-components (0.2.2)
 
 PLATFORMS
-  x86_64-darwin-22
   x86_64-darwin-19
+  x86_64-darwin-22
 
 DEPENDENCIES
   minitest (~> 5.0)
