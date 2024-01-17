@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/scarpe-team/gtk-scarpe.git
-  revision: 5370b3e99257f8b7e87cd9e74c6e7d2e3beec470
+  revision: 78954094730f7da2fd622d6605a5cbadac8845af
   specs:
     gtk-scarpe (0.1.0)
       gtk4
@@ -10,7 +10,7 @@ GIT
 
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: 25136ae7143064e226a9f720ff70adadf64e8fdb
+  revision: 2dd233fa2681d7e2041225b46cee940f96110b96
   glob: lacci/*.gemspec
   specs:
     lacci (0.3.0)
@@ -18,7 +18,7 @@ GIT
 
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: 25136ae7143064e226a9f720ff70adadf64e8fdb
+  revision: 2dd233fa2681d7e2041225b46cee940f96110b96
   glob: scarpe-components/*.gemspec
   specs:
     scarpe-components (0.3.0)
@@ -66,7 +66,7 @@ GEM
       little-plugger (~> 1.1)
       multi_json (~> 1.14)
     matrix (0.4.2)
-    minitest (5.20.0)
+    minitest (5.21.1)
     minitest-reporters (1.6.1)
       ansi
       builder
