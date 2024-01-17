@@ -3,8 +3,8 @@
 :config: local-gtk
 :results:
   drawables/button:
-    basic_click: :error
-    button_events: :error
+    basic_click: :pass
+    button_events: :pass
   drawables/para:
     para_replace: :pass
   dsl/app:
