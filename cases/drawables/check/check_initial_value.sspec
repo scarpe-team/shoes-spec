@@ -1,0 +1,12 @@
+---
+----------- app code
+Shoes.app do
+  @c = check true
+end
+
+----------- test code
+assert_equal true, check.checked?
+check.checked = false
+assert_equal false, check.checked?
+check.checked = false
+assert_equal false, check.checked?
