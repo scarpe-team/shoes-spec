@@ -11,6 +11,7 @@ def compare_all_results
   passed &= compare_results(display: "scarpe-webview", config: "local-tiranti")
   passed &= compare_results(display: "scarpe-wasm", config: "wasm")
   passed &= compare_results(display: "niente", config: "local")
+  passed &= compare_results(display: "gtk-scarpe", config: "local-gtk")
   passed
 end
 
@@ -36,6 +37,14 @@ task "shoes-spec" do
   Dir.chdir("implementations/niente") do
     Bundler.with_unbundled_env do
       puts "Run Shoes-Spec for Niente"
+      system("bundle exec rake shoes-spec")
+    end
+  end
+
+  Dir["results/gtk-scarpe/*.yaml"].each { |f| File.unlink f }
+  Dir.chdir("implementations/gtk-scarpe") do
+    Bundler.with_unbundled_env do
+      puts "Run Shoes-Spec for gtk-scarpe"
       system("bundle exec rake shoes-spec")
     end
   end
