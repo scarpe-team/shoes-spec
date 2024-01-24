@@ -82,9 +82,18 @@ module ShoesSpec
       end
     end
 
-    if unexpected_items.empty? && incorrect_items.empty? && not_present_items.empty?
-      puts "Results for #{name} are exactly as expected."
-      puts "-------"
+    if incorrect_items.empty? && not_present_items.empty?
+      if unexpected_items.empty?
+        puts "Results for #{name} are exactly as expected."
+        puts "-------"
+      else
+        puts "For #{name}:"
+        puts "  Tests with no expected result:" unless unexpected_items.empty?
+        unexpected_items.each do |cat, test, res|
+          puts "    * #{cat} / #{test}: #{res}"
+        end
+        puts "  ... But all expected tests are present and correct."
+      end
       true
     else
       puts "For #{name}:"
