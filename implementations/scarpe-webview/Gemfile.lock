@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: 8156d76041e011164aab0fa07ea6b964f6d35c00
+  revision: c66f1d9396299a6a4b6948fa9f29a1cc25f0b1ee
   specs:
     scarpe (0.3.0)
       bloops (~> 0.5)
@@ -15,7 +15,7 @@ GIT
 
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: 8156d76041e011164aab0fa07ea6b964f6d35c00
+  revision: c66f1d9396299a6a4b6948fa9f29a1cc25f0b1ee
   glob: lacci/*.gemspec
   specs:
     lacci (0.3.0)
@@ -23,7 +23,7 @@ GIT
 
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: 8156d76041e011164aab0fa07ea6b964f6d35c00
+  revision: c66f1d9396299a6a4b6948fa9f29a1cc25f0b1ee
   glob: scarpe-components/*.gemspec
   specs:
     scarpe-components (0.3.0)
@@ -40,7 +40,7 @@ GEM
     ansi (1.5.0)
     bloops (0.5)
     builder (3.2.4)
-    fastimage (2.2.7)
+    fastimage (2.3.0)
     ffi (1.16.3)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
@@ -49,19 +49,19 @@ GEM
     logging (2.3.1)
       little-plugger (~> 1.1)
       multi_json (~> 1.14)
-    minitest (5.20.0)
+    minitest (5.21.2)
     minitest-reporters (1.6.1)
       ansi
       builder
       minitest (>= 5.0)
       ruby-progressbar
     multi_json (1.15.0)
-    nokogiri (1.15.5-x86_64-darwin)
+    nokogiri (1.16.0-x86_64-darwin)
       racc (~> 1.4)
     racc (1.7.3)
     rake (13.1.0)
     ruby-progressbar (1.13.0)
-    sqlite3 (1.6.9-x86_64-darwin)
+    sqlite3 (1.7.0-x86_64-darwin)
     webrick (1.8.1)
     webview_ruby (0.1.2)
       ffi

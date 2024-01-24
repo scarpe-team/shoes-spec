@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: https://github.com/scarpe-team/scarpe-wasm.git
-  revision: 3a8886683c36e44c0fe71113bf32b98d6177f8a6
+  revision: 92c256cb28e220f1447362400ae99f7575e16562
   specs:
     scarpe-wasm (0.1.0)
       lacci
@@ -15,7 +15,7 @@ GIT
 
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: b964be2b43cbb62e8c2b12138a2aae2f01912550
+  revision: c66f1d9396299a6a4b6948fa9f29a1cc25f0b1ee
   glob: lacci/*.gemspec
   specs:
     lacci (0.3.0)
@@ -23,7 +23,7 @@ GIT
 
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: b964be2b43cbb62e8c2b12138a2aae2f01912550
+  revision: c66f1d9396299a6a4b6948fa9f29a1cc25f0b1ee
   glob: scarpe-components/*.gemspec
   specs:
     scarpe-components (0.3.0)
@@ -40,6 +40,7 @@ GEM
     addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
     ansi (1.5.0)
+    base64 (0.2.0)
     builder (3.2.4)
     capybara (3.39.2)
       addressable
@@ -52,7 +53,7 @@ GEM
       xpath (~> 3.2)
     matrix (0.4.2)
     mini_mime (1.1.5)
-    minitest (5.20.0)
+    minitest (5.21.2)
     minitest-reporters (1.6.1)
       ansi
       builder
@@ -66,11 +67,12 @@ GEM
     rack-test (2.1.0)
       rack (>= 1.3)
     rake (13.1.0)
-    regexp_parser (2.8.3)
+    regexp_parser (2.9.0)
     rexml (3.2.6)
     ruby-progressbar (1.13.0)
     rubyzip (2.3.2)
-    selenium-webdriver (4.16.0)
+    selenium-webdriver (4.17.0)
+      base64 (~> 0.2)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
