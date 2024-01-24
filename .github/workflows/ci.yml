@@ -12,7 +12,7 @@ jobs:
     timeout-minutes: 30
     steps:
       - name: Install dependencies
-        run: brew install pkg-config portaudio
+        run: brew install pkg-config portaudio pcre2
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Setup Ruby and install gems
