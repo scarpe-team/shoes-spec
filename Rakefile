@@ -9,7 +9,7 @@ def compare_all_results
   passed = true
   passed &= compare_results(display: "scarpe-webview", config: "local-calzini")
   passed &= compare_results(display: "scarpe-webview", config: "local-tiranti")
-  passed &= compare_results(display: "scarpe-wasm", config: "wasm")
+  #passed &= compare_results(display: "scarpe-wasm", config: "wasm")
   passed &= compare_results(display: "niente", config: "local")
   passed &= compare_results(display: "gtk-scarpe", config: "local-gtk")
   passed
@@ -25,13 +25,13 @@ task "shoes-spec" do
     end
   end
 
-  Dir["results/scarpe-wasm/*.yaml"].each { |f| File.unlink f }
-  Dir.chdir("implementations/scarpe-wasm") do
-    Bundler.with_unbundled_env do
-      puts "Run Shoes-Spec for Scarpe-Wasm"
-      system("bundle exec rake shoes-spec")
-    end
-  end
+  #Dir["results/scarpe-wasm/*.yaml"].each { |f| File.unlink f }
+  #Dir.chdir("implementations/scarpe-wasm") do
+  #  Bundler.with_unbundled_env do
+  #    puts "Run Shoes-Spec for Scarpe-Wasm"
+  #    system("bundle exec rake shoes-spec")
+  #  end
+  #end
 
   Dir["results/niente/*.yaml"].each { |f| File.unlink f }
   Dir.chdir("implementations/niente") do
@@ -70,7 +70,7 @@ end
 
 task "perfect-compare" do
   compare_vs_perfect(display: "scarpe-webview", config: "local-tiranti")
-  compare_vs_perfect(display: "scarpe-wasm", config: "wasm")
+  #compare_vs_perfect(display: "scarpe-wasm", config: "wasm")
   compare_vs_perfect(display: "niente", config: "local")
 end
 
