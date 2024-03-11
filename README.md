@@ -2,7 +2,7 @@
 
 Scarpe, like Shoes before it, tried a variety of display technologies for the [Shoes](https://shoesrb.com) UI app library. Different attempts reached different levels of functionality and maturity.
 
-But it's hard to do more than say, "Shoes3 seemed the most mature, Shoes4 had a good DSL parser but not as good a display library" or similar qualitative, very rough judgements. How would you tell? Are things defined by how close to Shoes3 they got? What about clear bugs in Shoes3? What counts as "really" Shoes?
+But it's hard to describe how mature they were. "Shoes3 seemed the most mature, Shoes4 had a good DSL parser but not as good a display library". These are qualitative, very rough judgements. How would you tell? Are things defined by how close to Shoes3 they got? What about clear bugs in Shoes3? What counts as "really" Shoes?
 
 The Shoes Spec, like the Ruby Spec before it, tries to try to spell out these differences and test Shoes implementations. The Shoes Spec isn't the definition -- nobody appointed me the Emperor of Shoes. Instead, it's a place to argue. If we think Shoes should do one thing or another, we can talk through it, write tests and see what current kinds of Shoes do.
 
@@ -20,13 +20,13 @@ For known implementations, the Shoes-Spec repo does regular test runs to check c
 
 ## Test Case Limitations
 
-Shoes-Spec works with a variety of display services. That means, for instance, that your test code and your Shoes application may be running in different processes, or even possibly on different computers. A display service that's designed for that (e.g. Scarpe-Wasm compiles your Shoes app to Wasm and tests with Capybara and a remote browser) will be able to patch over some of that, for instance by creating proxy objects and shipping Ruby code back and forth.
+Shoes-Spec works with a variety of display services. That means, for instance, that your test code and your Shoes application may be running in different processes, or even possibly on different computers. A display service that's designed for that (e.g. Scarpe-Wasm compiles your Shoes app to Wasm and tests with Capybara and a remote browser) will be able to make it work conveniently, for instance by creating proxy objects and shipping Ruby code back and forth.
 
 But there are still some important limitations when writing test code. For instance:
 
 * your test code can be in a different process, so global variables aren't shared. Similarly, there may be no actual display-service objects in memory when the test code runs if there's a remote server (e.g. wv_relay or scarpe-wasm).
 * your test code doesn't run in the Shoes::App object. In fact it can't -- the method button() will make a button in that object, while button() in your test code will find a Shoes::Button.
-* some display libraries need a Shoes app to even run the test code, so you'll need to include a Shoes application even if you're "not using" it.
+* some display libraries need a Shoes app to even run the test code. So your code will need to include a Shoes application even if you're "not using" it.
 
 ## Development
 
@@ -37,6 +37,12 @@ The basic unit of Shoes-Spec is a single test -- a Shoes application with a chun
 You can find test cases under "cases" in this repo.
 
 For a single implementation, run "bundle exec rake shoes-spec" in its directory. Some implementations may have more than one way they can be run -- for instance, scarpe-webview can run with Calzini or Tiranti, and it's possible to run with packaged Shoes apps or dynamically.
+
+## Documentation
+
+The latest version of the Shoes-Spec API is found in the [Scarpe repository](https://github.com/scarpe-team/scarpe) and its classes are [documented with Scarpe](https://scarpe-team.github.io/scarpe).
+
+You can find the [top-level methods for Shoes-Spec code](TODO ADD ME HERE) and [parent classes for proxy objects](TODO ADD ME HERE) that will be returned from Shoes-Spec query methods.
 
 ## Contributing
 
