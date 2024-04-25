@@ -70,6 +70,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-22
+  arm64-darwin-22
 
 DEPENDENCIES
   lacci!
