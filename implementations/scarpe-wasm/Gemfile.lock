@@ -1,13 +1,13 @@
 GIT
   remote: https://github.com/alawysdelta/wasify.git
-  revision: b39a34c9ff6832a7b60c813a2419bbe0bc53da23
+  revision: 50c2c2dbb8db40b9c3720533266deb1041bdc4cd
   branch: ruby_3_3_and_later_ruby_wasm
   specs:
     wasify (0.1.2)
 
 GIT
   remote: https://github.com/scarpe-team/scarpe-wasm.git
-  revision: 92c256cb28e220f1447362400ae99f7575e16562
+  revision: e2c4cbfb9897ed49c59ef4ba42deb9e05d933ddd
   specs:
     scarpe-wasm (0.1.0)
       lacci
@@ -15,18 +15,18 @@ GIT
 
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: c66f1d9396299a6a4b6948fa9f29a1cc25f0b1ee
+  revision: 3c094c49bf0e0720482ed06041bdb20dcba4ffdb
   glob: lacci/*.gemspec
   specs:
-    lacci (0.3.0)
-      scarpe-components
+    lacci (0.4.0)
+      scarpe-components (~> 0.4.0)
 
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: c66f1d9396299a6a4b6948fa9f29a1cc25f0b1ee
+  revision: 3c094c49bf0e0720482ed06041bdb20dcba4ffdb
   glob: scarpe-components/*.gemspec
   specs:
-    scarpe-components (0.3.0)
+    scarpe-components (0.4.0)
 
 PATH
   remote: ../..
@@ -42,36 +42,38 @@ GEM
     ansi (1.5.0)
     base64 (0.2.0)
     builder (3.2.4)
-    capybara (3.39.2)
+    capybara (3.40.0)
       addressable
       matrix
       mini_mime (>= 0.1.3)
-      nokogiri (~> 1.8)
+      nokogiri (~> 1.11)
       rack (>= 1.6.0)
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
     matrix (0.4.2)
     mini_mime (1.1.5)
-    minitest (5.21.2)
+    minitest (5.22.3)
     minitest-reporters (1.6.1)
       ansi
       builder
       minitest (>= 5.0)
       ruby-progressbar
-    nokogiri (1.16.0-x86_64-darwin)
+    nokogiri (1.16.4-arm64-darwin)
       racc (~> 1.4)
-    public_suffix (5.0.4)
+    nokogiri (1.16.4-x86_64-darwin)
+      racc (~> 1.4)
+    public_suffix (5.0.5)
     racc (1.7.3)
-    rack (3.0.8)
+    rack (3.0.10)
     rack-test (2.1.0)
       rack (>= 1.3)
-    rake (13.1.0)
+    rake (13.2.1)
     regexp_parser (2.9.0)
     rexml (3.2.6)
     ruby-progressbar (1.13.0)
     rubyzip (2.3.2)
-    selenium-webdriver (4.17.0)
+    selenium-webdriver (4.20.1)
       base64 (~> 0.2)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
@@ -82,9 +84,9 @@ GEM
       nokogiri (~> 1.8)
 
 PLATFORMS
+  arm64-darwin-22
   x86_64-darwin-19
   x86_64-darwin-22
-  arm64-darwin-22
 
 DEPENDENCIES
   capybara

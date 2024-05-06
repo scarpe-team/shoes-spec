@@ -1,32 +1,32 @@
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: c66f1d9396299a6a4b6948fa9f29a1cc25f0b1ee
+  revision: 3c094c49bf0e0720482ed06041bdb20dcba4ffdb
   specs:
-    scarpe (0.3.0)
+    scarpe (0.4.0)
       bloops (~> 0.5)
-      fastimage
-      lacci
+      fastimage (~> 2.2.7)
+      lacci (~> 0.4.0)
       logging (~> 2.3.1)
-      nokogiri
-      scarpe-components
-      sqlite3
-      webrick
+      nokogiri (~> 1.15.2)
+      scarpe-components (~> 0.4.0)
+      sqlite3 (~> 1.6.3)
+      webrick (~> 1.7.0)
       webview_ruby (~> 0.1.1)
 
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: c66f1d9396299a6a4b6948fa9f29a1cc25f0b1ee
+  revision: 3c094c49bf0e0720482ed06041bdb20dcba4ffdb
   glob: lacci/*.gemspec
   specs:
-    lacci (0.3.0)
-      scarpe-components
+    lacci (0.4.0)
+      scarpe-components (~> 0.4.0)
 
 GIT
   remote: https://github.com/scarpe-team/scarpe.git
-  revision: c66f1d9396299a6a4b6948fa9f29a1cc25f0b1ee
+  revision: 3c094c49bf0e0720482ed06041bdb20dcba4ffdb
   glob: scarpe-components/*.gemspec
   specs:
-    scarpe-components (0.3.0)
+    scarpe-components (0.4.0)
 
 PATH
   remote: ../..
@@ -40,37 +40,40 @@ GEM
     ansi (1.5.0)
     bloops (0.5)
     builder (3.2.4)
-    fastimage (2.3.0)
+    fastimage (2.2.7)
     ffi (1.16.3)
-    ffi-compiler (1.0.1)
-      ffi (>= 1.0.0)
+    ffi-compiler (1.3.2)
+      ffi (>= 1.15.5)
       rake
     little-plugger (1.1.4)
     logging (2.3.1)
       little-plugger (~> 1.1)
       multi_json (~> 1.14)
-    minitest (5.21.2)
+    minitest (5.22.3)
     minitest-reporters (1.6.1)
       ansi
       builder
       minitest (>= 5.0)
       ruby-progressbar
     multi_json (1.15.0)
-    nokogiri (1.16.0-x86_64-darwin)
+    nokogiri (1.15.6-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.15.6-x86_64-darwin)
       racc (~> 1.4)
     racc (1.7.3)
-    rake (13.1.0)
+    rake (13.2.1)
     ruby-progressbar (1.13.0)
-    sqlite3 (1.7.0-x86_64-darwin)
-    webrick (1.8.1)
+    sqlite3 (1.6.9-arm64-darwin)
+    sqlite3 (1.6.9-x86_64-darwin)
+    webrick (1.7.0)
     webview_ruby (0.1.2)
       ffi
       ffi-compiler
       rake
 
 PLATFORMS
-  x86_64-darwin-22
   arm64-darwin-22
+  x86_64-darwin-22
 
 DEPENDENCIES
   lacci!
