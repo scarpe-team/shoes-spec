@@ -1,0 +1,13 @@
+# frozen_string_literal: true
+require_relative "space_shoes_runner"
+
+task "shoes-spec" do
+  include SpaceShoes::Runner
+
+  File.unlink File.join(__dir__, "sspec.json") rescue nil
+  File.unlink File.expand_path(File.join(__dir__, "../../results/space-shoes/results-embedded.yaml")) rescue nil
+
+  report_space_shoes_specs
+end
+
+task default: "shoes-spec"

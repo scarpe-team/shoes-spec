@@ -1,0 +1,95 @@
+GIT
+  remote: https://github.com/scarpe-team/scarpe.git
+  revision: b59a3e4568ddc1941d0d08c75dfdc167c660b17e
+  glob: lacci/*.gemspec
+  specs:
+    lacci (0.4.0)
+      scarpe-components (~> 0.4.0)
+
+GIT
+  remote: https://github.com/scarpe-team/scarpe.git
+  revision: b59a3e4568ddc1941d0d08c75dfdc167c660b17e
+  glob: scarpe-components/*.gemspec
+  specs:
+    scarpe-components (0.4.0)
+
+GIT
+  remote: https://github.com/scarpe-team/space_shoes.git
+  revision: 9bc023707d060ee71bd5755925fe0f8e3db6db99
+  specs:
+    space_shoes (0.1.1)
+      js (~> 2.6)
+      lacci (~> 0.4.0)
+      minitest (~> 5.22)
+      ruby_wasm (~> 2.5)
+      scarpe-components (~> 0.4.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.8.7)
+      public_suffix (>= 2.0.2, < 7.0)
+    base64 (0.2.0)
+    capybara (3.40.0)
+      addressable
+      matrix
+      mini_mime (>= 0.1.3)
+      nokogiri (~> 1.11)
+      rack (>= 1.6.0)
+      rack-test (>= 0.6.3)
+      regexp_parser (>= 1.5, < 3.0)
+      xpath (~> 3.2)
+    js (2.6.2)
+    logger (1.6.0)
+    matrix (0.4.2)
+    mini_mime (1.1.5)
+    mini_portile2 (2.8.7)
+    minitest (5.24.1)
+    nokogiri (1.16.6)
+      mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
+    nokogiri (1.16.6-x86_64-darwin)
+      racc (~> 1.4)
+    public_suffix (6.0.0)
+    racc (1.8.0)
+    rack (3.1.7)
+    rack-test (2.1.0)
+      rack (>= 1.3)
+    rake (13.2.1)
+    regexp_parser (2.9.2)
+    rexml (3.3.2)
+      strscan
+    ruby_wasm (2.6.2)
+    ruby_wasm (2.6.2-x86_64-darwin)
+    rubyzip (2.3.2)
+    selenium-webdriver (4.23.0)
+      base64 (~> 0.2)
+      logger (~> 1.4)
+      rexml (~> 3.2, >= 3.2.5)
+      rubyzip (>= 1.2.2, < 3.0)
+      websocket (~> 1.0)
+    strscan (3.1.0)
+    un (0.3.0)
+    webrick (1.8.1)
+    websocket (1.2.11)
+    xpath (3.2.0)
+      nokogiri (~> 1.8)
+
+PLATFORMS
+  ruby
+  x86_64-darwin-22
+
+DEPENDENCIES
+  capybara
+  lacci!
+  minitest
+  nokogiri (>= 1.16.5)
+  rake
+  scarpe-components!
+  selenium-webdriver
+  space_shoes!
+  un
+  webrick
+
+BUNDLED WITH
+   2.5.3

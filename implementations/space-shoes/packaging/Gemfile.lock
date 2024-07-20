@@ -1,0 +1,38 @@
+GIT
+  remote: https://github.com/scarpe-team/scarpe.git
+  revision: b59a3e4568ddc1941d0d08c75dfdc167c660b17e
+  glob: lacci/*.gemspec
+  specs:
+    lacci (0.4.0)
+      scarpe-components (~> 0.4.0)
+
+GIT
+  remote: https://github.com/scarpe-team/space_shoes.git
+  revision: ccc4d61f0f883e9d0e39a0c36233680b162079a2
+  specs:
+    space_shoes (0.1.1)
+      js (~> 2.6)
+      lacci (~> 0.4.0)
+      minitest (~> 5.22)
+      ruby_wasm (~> 2.5)
+      scarpe-components (~> 0.4.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    js (2.6.2)
+    minitest (5.24.1)
+    ruby_wasm (2.6.2-x86_64-darwin)
+    scarpe-components (0.4.0)
+    webrick (1.8.1)
+
+PLATFORMS
+  x86_64-darwin-22
+
+DEPENDENCIES
+  lacci!
+  space_shoes!
+  webrick
+
+BUNDLED WITH
+   2.5.3

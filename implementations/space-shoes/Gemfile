@@ -1,0 +1,13 @@
+source "https://rubygems.org"
+
+gem "space_shoes", github: "scarpe-team/space_shoes"
+gem "webrick"
+gem "lacci", github: "scarpe-team/scarpe", glob: "lacci/*.gemspec"
+gem "scarpe-components", github: "scarpe-team/scarpe", glob: "scarpe-components/*.gemspec"
+
+gem "rake"
+gem "minitest"
+gem "capybara"
+gem "selenium-webdriver"
+gem "nokogiri", ">= 1.16.5" # Capybara dependency
+gem "un"

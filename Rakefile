@@ -9,6 +9,7 @@ def compare_all_results
   passed = true
   passed &= compare_results(display: "scarpe-webview", config: "local-calzini")
   passed &= compare_results(display: "scarpe-webview", config: "local-tiranti")
+  passed &= compare_results(display: "space-shoes", config: "embedded")
   #passed &= compare_results(display: "scarpe-wasm", config: "wasm")
   passed &= compare_results(display: "niente", config: "local")
   passed &= compare_results(display: "gtk-scarpe", config: "local-gtk")
@@ -21,6 +22,14 @@ task "shoes-spec" do
   Dir.chdir("implementations/scarpe-webview") do
     Bundler.with_unbundled_env do
       puts "Run Shoes-Spec for Scarpe-Webview"
+      system("bundle exec rake shoes-spec")
+    end
+  end
+
+  Dir["results/space-shoes/*.yaml"].each { |f| File.unlink f }
+  Dir.chdir("implementations/space-shoes") do
+    Bundler.with_unbundled_env do
+      puts "Run Shoes-Spec for SpaceShoes"
       system("bundle exec rake shoes-spec")
     end
   end
@@ -71,6 +80,7 @@ end
 task "perfect-compare" do
   compare_vs_perfect(display: "scarpe-webview", config: "local-tiranti")
   #compare_vs_perfect(display: "scarpe-wasm", config: "wasm")
+  compare_vs_perfect(display: "space-shoes", config: "embedded")
   compare_vs_perfect(display: "niente", config: "local")
 end
 

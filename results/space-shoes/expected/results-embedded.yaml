@@ -1,0 +1,20 @@
+---
+:display: space-shoes
+:config: embedded
+:results:
+  drawables/button:
+    basic_click: :pass
+    button_events: :pass
+  drawables/check:
+    check_default_value: :pass
+    check_initial_value: :pass
+  drawables/para:
+    para_replace: :pass
+  dsl/app:
+    add_drawables: :pass
+  dsl/slot:
+    self_slot: :pass
+  legacy_examples/simple:
+    calc: :pass
+  manual/examples:
+    example_1: :pass
