@@ -15,7 +15,7 @@ GIT
 
 GIT
   remote: https://github.com/scarpe-team/space_shoes.git
-  revision: 9bc023707d060ee71bd5755925fe0f8e3db6db99
+  revision: b949f1ee77647e60f71166162c34ecd8ac093b39
   specs:
     space_shoes (0.1.1)
       js (~> 2.6)
