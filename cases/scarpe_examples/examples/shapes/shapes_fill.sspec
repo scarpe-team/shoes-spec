@@ -1,0 +1,27 @@
+---
+# Auto-imported from scarpe/shapes/shapes_fill.rb
+# TODO: Add meaningful assertions
+----------- app code
+Shoes.app do
+    shape do
+        fill "blue"
+        stroke "green" # Lines use stroke, not fill, for their color
+        line 0,0, 100, 100
+
+        fill "red"
+        stroke "black" # Change the stroke back to black for the star
+        star 23, 0, 6, 50, 25
+    end
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for shapes_fill"

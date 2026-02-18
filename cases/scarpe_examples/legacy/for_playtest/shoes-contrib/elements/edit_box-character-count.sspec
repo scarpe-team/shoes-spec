@@ -1,0 +1,23 @@
+---
+# Auto-imported from scarpe/shoes-contrib/elements/edit_box-character-count.rb
+# TODO: Add meaningful assertions
+----------- app code
+Shoes.app do
+  edit_box do |e|
+    @counter.text = e.text.size
+  end
+  @counter = strong("0")
+  para @counter, " characters"
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for edit_box-character-count"

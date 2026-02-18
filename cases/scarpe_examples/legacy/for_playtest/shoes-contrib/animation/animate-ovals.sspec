@@ -1,0 +1,37 @@
+---
+# Auto-imported from scarpe/shoes-contrib/animation/animate-ovals.rb
+# TODO: Add meaningful assertions
+----------- app code
+Shoes.app(:width => 300,
+  :height => 400) do
+  
+  fill rgb(0, 0.6, 0.9, 0.1)
+  stroke rgb(0, 0.6, 0.9)
+  strokewidth 0.25
+ 
+  @shoes = [] 
+  10.times {
+    @shoes.push(oval :left => (-5..self.width).rand,
+      :top => (-5..self.height).rand,
+      :radius => (25..50).rand)
+  }
+
+  animate do |i|
+    @shoes.each do |s| 
+      s.top += (-20..20).rand
+      s.left += (-20..20).rand
+    end 
+  end
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for animate-ovals"

@@ -1,0 +1,31 @@
+---
+# Auto-imported from scarpe/turtle/spiral.rb
+# TODO: Add meaningful assertions
+----------- app code
+# Spiral — a simple turtle graphics demo
+require 'scarpe/turtle'
+
+Turtle.draw do
+  background black
+  pencolor green
+  pensize 1
+  goto 250, 250
+  setheading 0
+
+  200.times do |i|
+    forward i * 2
+    turnright 91
+  end
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for spiral"

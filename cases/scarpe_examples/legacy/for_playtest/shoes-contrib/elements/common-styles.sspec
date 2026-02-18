@@ -1,0 +1,29 @@
+---
+# Auto-imported from scarpe/shoes-contrib/elements/common-styles.rb
+# TODO: Add meaningful assertions
+----------- app code
+Shoes.app do
+  stack do
+    # background, text and a button: both are elements!
+    @back = background blue
+    @text = banner "This quick brown fox"
+    @press = button "Jumps over the lazy dog"
+
+    # And so, both can be styled.
+    @text.style :size => 24, :stroke => red, :margin => 10
+    @press.style :width => 400
+    @back.style :height => 10
+  end
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for common-styles"

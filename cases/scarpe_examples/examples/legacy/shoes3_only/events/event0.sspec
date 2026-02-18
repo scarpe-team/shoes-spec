@@ -1,0 +1,24 @@
+---
+# Auto-imported from scarpe/legacy/shoes3_only/events/event0.rb
+# TODO: Add meaningful assertions
+----------- app code
+Shoes.app do
+  stack do 
+    @ev = shoesevent type: :click, button: 1, x: 222, y: 333
+    para "Event #{@ev.type} #{@ev.button} #{@ev.x} #{@ev.y} will use: #{@ev.accept}"
+    @ev.accept = false
+    para "Event #{@ev.type} #{@ev.button} #{@ev.x} #{@ev.y} will use: #{@ev.accept}"
+  end
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for event0"

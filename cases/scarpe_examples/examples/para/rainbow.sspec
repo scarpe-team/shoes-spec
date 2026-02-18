@@ -1,0 +1,25 @@
+---
+# Auto-imported from scarpe/para/rainbow.rb
+# TODO: Add meaningful assertions
+----------- app code
+Shoes.app do
+  para "Paint", stroke: :red
+  para "the", stroke: :orange
+  para "Whole", stroke: :yellow
+  para "World", stroke: :green
+  para "with", stroke: :blue
+  para "a", stroke: :indigo
+  para "Rainbow", stroke: :violet
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for rainbow"

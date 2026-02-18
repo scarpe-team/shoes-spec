@@ -1,0 +1,43 @@
+---
+# Auto-imported from scarpe/legacy/for_playtest/simple/mask2.rb
+# TODO: Add meaningful assertions
+----------- app code
+xspeed, yspeed = 8.4, 6.6
+xdir, ydir = 1, 1
+
+Shoes.app do
+  background "#{DIR}/docs/static/stripe.png"
+
+  mask do
+    @icon = image "#{DIR}/docs/static/shoes-icon.png", :left => 100, :top => 100 do
+      alert "You're soooo quick."
+    end
+    title "STATIC !", weight: "ultrabold", :left => 150, :top => 150
+    @s = star 230,100,7, 50, 25
+  end
+
+  x, y = self.width / 2, self.height / 2
+  size = @icon.size
+  animate(30) do |f|
+    x += xspeed * xdir
+    y += yspeed * ydir
+
+    xdir *= -1 if x > self.width - size[0] or x < 0
+    ydir *= -1 if y > self.height - size[1] or y < 0
+
+    @icon.move x.to_i, y.to_i
+    @s.toggle if f % 10 == 0
+  end
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for mask2"

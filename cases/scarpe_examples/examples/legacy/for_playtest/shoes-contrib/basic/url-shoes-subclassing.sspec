@@ -1,0 +1,40 @@
+---
+# Auto-imported from scarpe/legacy/for_playtest/shoes-contrib/basic/url-shoes-subclassing.rb
+# TODO: Add meaningful assertions
+----------- app code
+class BookList < Shoes
+  url '/', :index
+  url '/twain', :twain
+  url '/kv', :vonnegut
+
+  def index
+    para "Books I've read: \n",
+      link("by Mark Twain\n", :click => "/twain"),
+      link("by Kurt Vonnegut\n", :click => "/kv")
+  end
+
+  def twain
+    para "Just Huck Finn.\n",
+     link("Go back.", :click => "/")
+  end
+
+  def vonnegut
+    para "Cat's Cradle. Sirens of Titan. ",
+      "Breakfast of Champions.\n",
+      link("Go back.", :click => "/")
+  end
+end
+
+Shoes.app :width => 400, :height => 500
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for url-shoes-subclassing"

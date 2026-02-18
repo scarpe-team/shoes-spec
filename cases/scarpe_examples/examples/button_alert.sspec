@@ -1,0 +1,22 @@
+---
+# Auto-imported from scarpe/button_alert.rb
+# TODO: Add meaningful assertions
+----------- app code
+Shoes.app do
+  @push = button "Push me"
+  @push.click {
+    alert "Aha! Click!"
+  }
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for button_alert"

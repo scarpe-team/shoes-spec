@@ -1,0 +1,19 @@
+---
+# Auto-imported from scarpe/simple/image-icon.rb
+# TODO: Add meaningful assertions
+----------- app code
+Shoes.app do
+  image "https://user-images.githubusercontent.com/7865030/217309905-7f25e3cf-1850-481d-811b-dfddea2df54a.png"
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for image-icon"

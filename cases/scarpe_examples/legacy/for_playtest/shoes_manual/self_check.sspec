@@ -1,0 +1,26 @@
+---
+# Auto-imported from scarpe/shoes_manual/self_check.rb
+# TODO: Add meaningful assertions
+----------- app code
+# self is same throughout due to the use of instance_eval. Caller
+# is Shoes instance.
+
+Shoes.app do
+ self.stack do
+   self.para "First"
+   self.para "Second"
+   self.para "Third"
+ end
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for self_check"

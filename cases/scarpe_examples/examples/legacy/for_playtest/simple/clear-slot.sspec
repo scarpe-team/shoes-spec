@@ -1,0 +1,22 @@
+---
+# Auto-imported from scarpe/legacy/for_playtest/simple/clear-slot.rb
+# TODO: Add meaningful assertions
+----------- app code
+Shoes.app do
+  @slot = stack { para "Old text" }
+  button "Update" do
+    @slot.clear { para "brand new text" }
+  end
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for clear-slot"

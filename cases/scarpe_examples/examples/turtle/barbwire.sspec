@@ -1,0 +1,32 @@
+---
+# Auto-imported from scarpe/turtle/barbwire.rb
+# TODO: Add meaningful assertions
+----------- app code
+# Turtle Barbwire — ported from Hackety Hack
+# Draws a barbwire pattern with random turns
+require 'scarpe/turtle'
+
+Turtle.start do
+  background yellow
+  pencolor brown
+  pensize 2
+  goto 30, 200
+  setheading 180
+  1000.times do
+    forward 20
+    turnleft rand(10)
+    backward 10
+  end
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for barbwire"

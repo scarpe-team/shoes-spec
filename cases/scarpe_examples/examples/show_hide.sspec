@@ -1,0 +1,22 @@
+---
+# Auto-imported from scarpe/show_hide.rb
+# TODO: Add meaningful assertions
+----------- app code
+Shoes.app do
+  @b1 = button("First")
+  @b2 = button("Hide First") { @b1.hide }
+  @b3 = button("Show everybody") { @b1.show; @b2.show; @b3.show; @b4.show }
+  @b4 = button("Toggle Hide-First") { @b2.toggle }
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for show_hide"

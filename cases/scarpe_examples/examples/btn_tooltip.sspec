@@ -1,0 +1,23 @@
+---
+# Auto-imported from scarpe/btn_tooltip.rb
+# TODO: Add meaningful assertions
+----------- app code
+Shoes.app do
+  @btn = button "who am i?", :tooltip => "i have no idea either"
+  @para = para "i am a button"
+  @btn.hover do
+    @para.replace "i am a button and i am being hovered"
+  end
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for btn_tooltip"

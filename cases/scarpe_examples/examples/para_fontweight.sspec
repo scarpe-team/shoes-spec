@@ -1,0 +1,28 @@
+---
+# Auto-imported from scarpe/para_fontweight.rb
+# TODO: Add meaningful assertions
+----------- app code
+Shoes.app do
+    para "This is normal"  
+
+    para "This is bolder" , font_weight: "bold"
+
+    para "This is a little less bold" , font_weight: 800
+
+    para "This is bolder than the last one " , font_weight: 700
+
+    para "Close to normal "  , font_weight: 300
+  
+  end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for para_fontweight"

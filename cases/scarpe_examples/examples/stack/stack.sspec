@@ -1,0 +1,43 @@
+---
+# Auto-imported from scarpe/stack/stack.rb
+# TODO: Add meaningful assertions
+----------- app code
+Shoes.app do
+  stack margin: 50 do
+    button "with 50px margin"
+  end
+
+  stack width: 0.5 do
+    button "50% width"
+  end
+
+  stack width: 80, height: 100 do
+    para "This para is in a stack that's 80px wide and 100px high"
+  end
+
+  stack width: -80 do
+    button "100% - 80px width"
+  end
+
+  flow do
+    stack width: 0.33 do
+      button "inside flow left 1/3"
+    end
+
+    stack width: 0.67 do
+      button "inside flow right 2/3"
+    end
+  end
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for stack"

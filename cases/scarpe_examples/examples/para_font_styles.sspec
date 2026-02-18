@@ -1,0 +1,32 @@
+---
+# Auto-imported from scarpe/para_font_styles.rb
+# TODO: Add meaningful assertions
+----------- app code
+Shoes.app do
+
+    para "this text is in normal styl" , emphasis:"italic"
+
+    para "this text is in italic style" , font: "italic normal bold 16px 'Times New Roman', serif;"
+
+
+    para "this text is in oblique style " , family: "'Pacifico', cursive;"
+
+    para "Text in Helvetica", font: "Helvetica;"
+      
+    para "And in Lucida", font: "'Pacifico', cursive;"
+      
+    para "From an example", font: "Trebuchet  bold"
+      
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for para_font_styles"

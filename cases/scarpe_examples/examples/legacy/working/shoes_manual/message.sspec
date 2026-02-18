@@ -1,0 +1,34 @@
+---
+# Auto-imported from scarpe/legacy/working/shoes_manual/message.rb
+# TODO: Add meaningful assertions
+----------- app code
+class Messenger
+ def initialize(stack)
+   @stack = stack
+ end
+ def add(msg)
+   @stack.app do
+     @stack.append do
+       para msg
+     end
+   end
+ end
+end
+
+Shoes.app do
+  @stack = stack do
+  end
+  Messenger.new(@stack).add('Hii')
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for message"

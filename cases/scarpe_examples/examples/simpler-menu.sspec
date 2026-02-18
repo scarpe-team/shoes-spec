@@ -1,0 +1,36 @@
+---
+# Auto-imported from scarpe/simpler-menu.rb
+# TODO: Add meaningful assertions
+----------- app code
+# Cut down from a more complicated example widget
+
+class MenuPanel < Shoes::Widget
+  @@boxes = []
+  def initialize(color, args)
+    @@boxes << self
+    background color
+    para "Box #{@@boxes.length}",
+        :margin => 18, :align => "center", :size => 20
+  end
+end
+
+Shoes.app :width => 400, :height => 130 do
+  #style(Link, :underline => nil)
+  #style(LinkHover, :fill => nil, :underline => nil)
+  menu_panel green,  :width => 175, :height => 120, :margin => 4
+  menu_panel blue,   :width => 140, :height => 120, :margin => 4
+  menu_panel red,    :width => 135, :height => 120, :margin => 4
+  menu_panel purple, :width => 125, :height => 120, :margin => 4
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for simpler-menu"

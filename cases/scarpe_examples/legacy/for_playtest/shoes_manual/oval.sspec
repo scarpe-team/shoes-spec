@@ -1,0 +1,23 @@
+---
+# Auto-imported from scarpe/shoes_manual/oval.rb
+# TODO: Add meaningful assertions
+----------- app code
+#!ruby
+ Shoes.app do
+   stroke blue
+   strokewidth 4
+   fill black
+   oval 10, 10, 50
+ end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for oval"

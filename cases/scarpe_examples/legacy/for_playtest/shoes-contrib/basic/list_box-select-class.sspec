@@ -1,0 +1,29 @@
+---
+# Auto-imported from scarpe/shoes-contrib/basic/list_box-select-class.rb
+# TODO: Add meaningful assertions
+----------- app code
+Shoes.app do
+  para "Choose your class:"
+  list_box :items => ["Wizard", "Warrior", "Rogue"],
+    :width => 120, :choose => "Rogue" do |list|
+      if list.text == "Wizard"
+        @player.text = "I put on my robe and wizard hat."
+      else
+        @player.text = list.text
+      end 
+  end
+
+  @player = para "No class selected."
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for list_box-select-class"

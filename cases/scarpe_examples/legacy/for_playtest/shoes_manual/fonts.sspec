@@ -1,0 +1,23 @@
+---
+# Auto-imported from scarpe/shoes_manual/fonts.rb
+# TODO: Add meaningful assertions
+----------- app code
+Shoes.app do
+  para "てすと (te-su-to)", font: case RUBY_PLATFORM
+  when /mingw/; "MS UI Gothic"
+  when /darwin/; "AppleGothic, Arial"
+  else "Arial"
+  end
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for fonts"

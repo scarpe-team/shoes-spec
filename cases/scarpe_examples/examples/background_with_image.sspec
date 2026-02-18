@@ -1,0 +1,41 @@
+---
+# Auto-imported from scarpe/background_with_image.rb
+# TODO: Add meaningful assertions
+----------- app code
+Shoes.app do
+
+  # Local file (path relative to this script)
+  stack width: 100, height: 100 do
+    background "../docs/static/avatar.png"
+    border blue, strokewidth: 4
+  end
+
+  # Solid color
+  stack width: 100, height: 100 do
+    background red
+  end
+
+  # RGBA string
+  stack width: 100, height: 100 do
+    background "rgba(255,200,0,255)"
+  end
+
+  # Remote URL
+  stack width: 100, height: 100 do
+    background "http://shoesrb.com/manual/static/shoes-icon.png"
+    border green, strokewidth: 4
+  end
+
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for background_with_image"

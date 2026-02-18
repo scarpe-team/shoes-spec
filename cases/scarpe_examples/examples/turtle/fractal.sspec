@@ -1,0 +1,42 @@
+---
+# Auto-imported from scarpe/turtle/fractal.rb
+# TODO: Add meaningful assertions
+----------- app code
+# Fractal — ported from Hackety Hack
+# A simple _/\_ fractal drawn with turtle graphics
+require 'scarpe/turtle'
+
+def base(scale)
+  forward scale
+end
+
+ANGLE = 70
+def fractal(scale)
+  method = scale < 3 ? :base : :fractal
+  scale /= 3.0
+  send method, scale
+  turnleft ANGLE
+  send method, scale
+  turnright ANGLE * 2
+  send method, scale
+  turnleft ANGLE
+  send method, scale
+end
+
+Turtle.draw do
+  goto 20, 300
+  turnright
+  fractal(1000)
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for fractal"

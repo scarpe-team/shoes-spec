@@ -1,0 +1,21 @@
+---
+# Auto-imported from scarpe/legacy/working/shoes-contrib/kernel/font.rb
+# TODO: Add meaningful assertions
+----------- app code
+if Shoes::FONTS.include? "Helvetica"
+  alert "Helvetica is available on this system."
+else
+  alert "You do not have the Helvetica font."
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for font"

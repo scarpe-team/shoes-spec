@@ -1,0 +1,37 @@
+---
+# Auto-imported from scarpe/legacy/for_playtest/shoes3-tests/cursor/c1.rb
+# TODO: Add meaningful assertions
+----------- app code
+Shoes.app do
+  stack do
+    para "Change cursor to"
+    flow do
+      button "arrow" do
+        app.cursor = :arrow_cursor
+      end
+      button "text" do
+        app.cursor = :text_cursor
+      end
+      button "watch" do
+        app.cursor = :watch_cursor
+      end
+      button "hand" do
+        app.cursor = :hand_cursor
+      end
+    end
+    para "app is #{app.class}"
+    para "Cursor is #{app.cursor.inspect}"
+  end
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for c1"

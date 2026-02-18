@@ -1,0 +1,25 @@
+---
+# Auto-imported from scarpe/font_shorthand.rb
+# TODO: Add meaningful assertions
+----------- app code
+Shoes.app do
+    
+    para "The family is not in font so it will change but size won't" , font:"italic bold 30px" , family:"cursive", size: 20
+
+    para "because  only things things who aren't present in font " , font:"bold", size: "16px"
+
+    para "will be used as their specific property", font: "cursive italic 20px ", font_weight:"bold"
+
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for font_shorthand"

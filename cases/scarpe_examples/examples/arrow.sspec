@@ -1,0 +1,26 @@
+---
+# Auto-imported from scarpe/arrow.rb
+# TODO: Add meaningful assertions
+----------- app code
+Shoes.app do
+  arrow 100, 100, 30
+
+  arrow 150, 120,40
+
+  arrow 30 ,60 ,40
+
+  arrow :left => 50, :top => 80,
+    :width => 40
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for arrow"

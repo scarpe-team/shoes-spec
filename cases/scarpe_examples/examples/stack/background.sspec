@@ -1,0 +1,51 @@
+---
+# Auto-imported from scarpe/stack/background.rb
+# TODO: Add meaningful assertions
+----------- app code
+Shoes.app do
+  stack width: 0.33 do
+    background "purple"
+    button "a button"
+  end
+  stack width: 0.33 do
+    background "red".."green"
+    para "Red to green gradient"
+  end
+  stack width: 0.33 do
+    background "purple"
+    button "a button"
+    flow do
+      background "purple"
+      button "a button"
+      stack width: 0.33 do
+        background "purple"
+        button "a button"
+        button "a button"
+      end
+      stack width: 0.34 do
+        background "purple"
+        button "a button"
+      end
+    end
+    flow do
+      background "purple"
+      button "a button"
+    end
+    flow do
+      background "purple"
+      button "a button"
+    end
+  end
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for background"

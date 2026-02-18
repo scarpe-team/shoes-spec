@@ -1,0 +1,19 @@
+---
+# Auto-imported from scarpe/legacy/for_playtest/shoes_manual/builtins/info.rb
+# TODO: Add meaningful assertions
+----------- app code
+#!ruby
+
+ info("You just ran the info example on Shoes #{Shoes::RELEASE_NAME}.")
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for info"

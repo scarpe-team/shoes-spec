@@ -1,0 +1,24 @@
+---
+# Auto-imported from scarpe/shoes-contrib/basic/scribble.rb
+# TODO: Add meaningful assertions
+----------- app code
+Shoes.app do
+  ox, oy = nil, nil
+  animate 24 do
+    b, x, y = self.mouse
+    line(ox, oy, x, y)  if b == 1
+    ox, oy = x, y
+  end
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for scribble"

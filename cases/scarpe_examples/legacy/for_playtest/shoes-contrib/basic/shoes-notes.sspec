@@ -1,0 +1,32 @@
+---
+# Auto-imported from scarpe/shoes-contrib/basic/shoes-notes.rb
+# TODO: Add meaningful assertions
+----------- app code
+Shoes.app do
+  stack :margin => 20, :width => 250 do
+    subtitle "Shoes Notebook"
+    para "Add a note."
+    @add = edit_line
+
+    button "Save" do
+      @notes.append do
+        para @add.text, " ",
+          link("delete") { |x| x.parent.remove }
+      end
+      @add.text = ""
+    end
+  end
+  @notes = stack :margin => 20, :width => -250
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for shoes-notes"

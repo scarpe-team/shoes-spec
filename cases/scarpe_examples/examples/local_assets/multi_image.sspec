@@ -1,0 +1,21 @@
+---
+# Auto-imported from scarpe/local_assets/multi_image.rb
+# TODO: Add meaningful assertions
+----------- app code
+Shoes.app do
+  image "http://shoesrb.com/manual/static/shoes-icon.png"
+  image "sample.gif", width: 120, height: 64 # an image big enough to be served with the asset server
+  image "small.png" # an image small enough to be served with a data URL
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for multi_image"

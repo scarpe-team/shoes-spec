@@ -1,0 +1,36 @@
+---
+# Auto-imported from scarpe/shoes-contrib/animation/pulsate.rb
+# TODO: Add meaningful assertions
+----------- app code
+#
+# From ashbb's shoes_hack_note #003
+# http://github.com/ashbb/shoes_hack_note/blob/master/md/hack003.md
+#
+Shoes.app :width => 200, :height => 200, :title => 'Pulse!' do
+  pulse = stack
+  logo = image File.join(__dir__, "../../../../../docs/static/shoes-icon-blue.png"), :top => 30, :left => 30
+
+  animate 10 do |i|
+    i %= 10
+    pulse.clear do
+      fill black(0.2 - (i * 0.02))
+      strokewidth(3.0 - (i * 0.2))
+      stroke rgb(0.7, 0.7, 0.9, 1.0 - (i * 0.1))
+      # Guard against nil dimensions on first frame
+      w = logo.width || 100
+      oval(logo.left - i, logo.top - i, w + (i * 2)) 
+    end
+  end
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for pulsate"

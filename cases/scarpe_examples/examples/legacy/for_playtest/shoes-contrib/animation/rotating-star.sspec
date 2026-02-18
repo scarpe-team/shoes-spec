@@ -1,0 +1,34 @@
+---
+# Auto-imported from scarpe/legacy/for_playtest/shoes-contrib/animation/rotating-star.rb
+# TODO: Add meaningful assertions
+----------- app code
+#
+# Example from juixe "Running with Shoes - Transform"
+# http://juixe.com/techknow/index.php/2007/10/23/running-with-shoes-transform/
+#
+Shoes.app :width => 600, :height => 500 do
+  # Move canvas to center of screen
+  translate width/2, height/2
+  animate(24) do
+    clear do
+      # Rotate one degree at each frame
+      rotate 1
+      # Scale the image up or down
+      scale((0.8..1.2).rand)
+      # draw triangle…
+      star 10, 10, 7 
+    end
+  end
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for rotating-star"

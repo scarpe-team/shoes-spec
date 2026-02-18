@@ -1,0 +1,33 @@
+---
+# Auto-imported from scarpe/font_family.rb
+# TODO: Add meaningful assertions
+----------- app code
+Shoes.app do
+
+    para "This is arial" ,size:"40px" , font:"arial"
+
+    para "This is time new roman" , size:"40px", font:"'Times New Roman'"
+
+    para "this is cursive", font: "cursive", size:"40px"
+
+    para "this is pacifico", font: "'Monaco'", size:"40px"
+
+    para "this is pacifico with quotes which is same", font: "Monaco", size:"40px"
+
+    para "This is helvetica", font: "Helvetica", size:"40px"
+
+    para "This is 'Trebuchet MS'", font: "'Trebuchet MS'", size:"40px"
+
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for font_family"

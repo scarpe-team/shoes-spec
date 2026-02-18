@@ -1,0 +1,35 @@
+---
+# Auto-imported from scarpe/simple/list_box-shape-report.rb
+# TODO: Add meaningful assertions
+----------- app code
+#
+# Example from Getting Started with Shoes on OS X blog post found here:
+# http://lethain.com/entry/2007/oct/15/getting-started-shoes-os-x/
+#
+shape = nil
+Shoes.app do
+  stack :width => 400, :height => 200, :margin => 50 do
+    shape = list_box :items => ["Square", "Oval", "Rectangle"]
+    button "Report" do
+      para [shape.text]
+    end
+    para "Just some filler text"
+  end
+  flow :margin => 10 do
+    para "Text"
+    para "More"
+    para "Less"
+  end
+end
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for list_box-shape-report"

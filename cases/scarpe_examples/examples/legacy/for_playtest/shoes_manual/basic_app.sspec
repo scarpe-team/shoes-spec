@@ -1,0 +1,23 @@
+---
+# Auto-imported from scarpe/legacy/for_playtest/shoes_manual/basic_app.rb
+# TODO: Add meaningful assertions
+----------- app code
+#!ruby
+ Shoes.app(title: "White Circle",
+   width: 200, height: 200, resizable: false) {
+     background black
+     fill white
+     oval top: 20, left: 20, radius: 160
+ }
+
+----------- test code
+# TODO: This test needs real assertions!
+# The app runs, but we need to verify behavior.
+#
+# Example assertions:
+#   assert_equal "expected", para().text
+#   button().trigger_click
+#   assert_equal "after click", para().text
+#
+# For now, this is a placeholder that will SKIP:
+skip "TODO: Add assertions for basic_app"
