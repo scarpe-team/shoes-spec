@@ -1,6 +1,4 @@
 ---
-# Auto-imported from scarpe/para/rainbow.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app do
   para "Paint", stroke: :red
@@ -13,13 +11,16 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for rainbow"
+# Each word should appear in the output
+html = dom_html
+
+assert html.include?("Paint"), "Expected 'Paint' in output"
+assert html.include?("the"), "Expected 'the' in output"
+assert html.include?("Whole"), "Expected 'Whole' in output"
+assert html.include?("World"), "Expected 'World' in output"
+assert html.include?("with"), "Expected 'with' in output"
+assert html.include?("Rainbow"), "Expected 'Rainbow' in output"
+
+# Stroke colors should render as CSS color property
+# Red = #FF0000
+assert html.include?("#FF0000") || html.include?("#ff0000"), "Expected red color (#FF0000)"

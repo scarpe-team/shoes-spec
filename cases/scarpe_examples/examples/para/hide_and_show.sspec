@@ -1,6 +1,4 @@
 ---
-# Auto-imported from scarpe/para/hide_and_show.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app do
   @banner = banner "This is a big banner!", hidden: true
@@ -13,13 +11,12 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for hide_and_show"
+# banner() creates a Para with size: :banner, so we use para() finder
+b = para("@banner")
+
+# Verify initial text
+assert_equal "This is a big banner!", b.text
+
+# Show and hide should work without error
+b.show
+b.hide

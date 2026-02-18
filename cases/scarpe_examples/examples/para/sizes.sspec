@@ -1,6 +1,4 @@
 ---
-# Auto-imported from scarpe/para/sizes.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app do
   para "Banner", size: :banner
@@ -13,13 +11,14 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for sizes"
+# Get all paras and verify their text content exists
+html = dom_html
+
+# Each size should render with its text
+assert html.include?("Banner"), "Expected 'Banner' text in output"
+assert html.include?("Title"), "Expected 'Title' text in output"
+assert html.include?("Subtitle"), "Expected 'Subtitle' text in output"
+assert html.include?("Tagline"), "Expected 'Tagline' text in output"
+assert html.include?("Caption"), "Expected 'Caption' text in output"
+assert html.include?("Para"), "Expected 'Para' text in output"
+assert html.include?("Inscription"), "Expected 'Inscription' text in output"

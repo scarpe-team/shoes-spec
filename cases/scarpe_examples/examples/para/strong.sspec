@@ -1,19 +1,15 @@
 ---
-# Auto-imported from scarpe/para/strong.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app do
   para "Hello world, I'm ", strong("strong")
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for strong"
+p = para()
+# Text content should include the strong text
+assert_equal "Hello world, I'm strong", p.text
+
+# DOM should contain a strong tag
+html = dom_html
+assert html.include?("<strong"), "Expected HTML to contain <strong> tag"
+assert html.include?("strong</strong>"), "Expected 'strong' text in strong tag"
