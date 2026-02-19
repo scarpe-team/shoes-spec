@@ -14,5 +14,5 @@ end
 ----------- test code
 # Verify image container and ovals exist
 assert image(), "Should have an image container"
-ovals = oval(:all)
-assert_equal 300, ovals.count, "Should have 300 ovals inside image"
+all_ovals = ovals()
+assert_equal 300, all_ovals.count, "Should have 300 ovals inside image"

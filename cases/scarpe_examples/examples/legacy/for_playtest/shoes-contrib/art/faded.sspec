@@ -21,5 +21,5 @@ end
 
 ----------- test code
 # Art test - verify faded circles are rendered
-ovals = oval(:all)
-assert ovals.count > 0, "Should render multiple faded oval circles"
+all_ovals = ovals()
+assert all_ovals.count > 0, "Should render multiple faded oval circles"

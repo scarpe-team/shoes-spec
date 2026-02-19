@@ -11,5 +11,5 @@ end
 
 ----------- test code
 # Verify 100 ovals are rendered
-ovals = oval(:all)
-assert_equal 100, ovals.count, "Should have exactly 100 ovals"
+all_ovals = ovals()
+assert_equal 100, all_ovals.count, "Should have exactly 100 ovals"

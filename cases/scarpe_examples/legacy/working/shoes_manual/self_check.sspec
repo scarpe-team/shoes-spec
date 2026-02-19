@@ -16,8 +16,8 @@ end
 ----------- test code
 # Tests that self references work in Shoes.app block
 # self.stack and self.para should work same as stack/para
-paras = find_all("para")
-assert_equal 3, paras.length, "Should have 3 paras"
-assert_equal "First", paras[0].text
-assert_equal "Second", paras[1].text
-assert_equal "Third", paras[2].text
+all_paras = paras()
+assert_equal 3, all_paras.length, "Should have 3 paras"
+assert_equal "First", all_paras[0].text
+assert_equal "Second", all_paras[1].text
+assert_equal "Third", all_paras[2].text

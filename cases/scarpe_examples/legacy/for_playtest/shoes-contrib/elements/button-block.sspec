@@ -13,9 +13,10 @@ end
 
 ----------- test code
 # Tests buttons with click handlers that append paras
-assert_equal "OK!", button(0).text
-assert_equal "Are you sure?", button(1).text
+all_buttons = buttons()
+assert_equal "OK!", all_buttons[0].text
+assert_equal "Are you sure?", all_buttons[1].text
 
 # Test button click appends text
-button(0).trigger_click
+all_buttons[0].trigger_click
 assert_includes para().text, "Well okay then."

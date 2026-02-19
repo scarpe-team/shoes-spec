@@ -39,9 +39,10 @@ end
 
 ----------- test code
 # Verify initial state of wheel demo - find paras by content
-delta_para = para("Delta: 0")
-total_para = para("Total: 0")
-events_para = para("Events: 0")
+all_paras = paras()
+delta_para = all_paras.find { |p| p.text.start_with?("Delta:") }
+total_para = all_paras.find { |p| p.text.start_with?("Total:") }
+events_para = all_paras.find { |p| p.text.start_with?("Events:") }
 
 assert_equal "Delta: 0", delta_para.text
 assert_equal "Total: 0", total_para.text

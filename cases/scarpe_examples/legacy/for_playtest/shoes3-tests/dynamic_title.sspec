@@ -31,8 +31,9 @@ end
 
 ----------- test code
 # Test the dynamic title UI elements
+all_buttons = buttons()
 assert_equal "Click buttons to change window title:", para().text
-assert_equal "Title 1", button(0).text
-assert_equal "Title 2", button(1).text
-assert_equal "Counter Title", button(2).text
-assert_equal "Custom Title", button(3).text
+assert_equal "Title 1", all_buttons[0].text
+assert_equal "Title 2", all_buttons[1].text
+assert_equal "Counter Title", all_buttons[2].text
+assert_equal "Custom Title", all_buttons[3].text

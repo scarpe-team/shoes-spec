@@ -23,11 +23,13 @@ p = para()
 assert p, "Expected a para label"
 assert_includes p.text, "start", "Initial text should mention 'start'"
 
-# Check buttons exist
-start_btn = button("Start")
-stop_btn = button("Stop")
-assert start_btn, "Expected Start button"
-assert stop_btn, "Expected Stop button"
+# Check buttons exist (Start and Stop)
+btns = buttons()
+assert_equal 2, btns.length, "Expected 2 buttons"
+start_btn = btns[0]
+stop_btn = btns[1]
+assert_equal "Start", start_btn.text
+assert_equal "Stop", stop_btn.text
 
 # Click Start and verify text changes
 start_btn.trigger_click

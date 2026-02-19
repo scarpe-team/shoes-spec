@@ -77,15 +77,17 @@ end
 ----------- test code
 # Tests full calculator app
 # Find calculator buttons and test basic math
-buttons = find_all("button")
-assert buttons.length >= 16, "Should have number/operator buttons"
+all_buttons = buttons()
+assert all_buttons.length >= 16, "Should have number/operator buttons"
 
 # Initial display should be 0
 assert_includes para().text, "0"
 
-# Test: 2 + 3 = 5
-find_button("2").trigger_click
-find_button("+").trigger_click
-find_button("3").trigger_click
-find_button("=").trigger_click
+# Buttons are in order: 7 8 9 / 4 5 6 * 1 2 3 - 0 Clr = +
+# Test: 2 + 3 = 5 → button indices: 2 is at [10], + is at [15], 3 is at [10], = is at [14]
+# Actually: 7(0) 8(1) 9(2) /(3) 4(4) 5(5) 6(6) *(7) 1(8) 2(9) 3(10) -(11) 0(12) Clr(13) =(14) +(15)
+all_buttons[9].trigger_click  # 2
+all_buttons[15].trigger_click # +
+all_buttons[10].trigger_click # 3
+all_buttons[14].trigger_click # =
 assert_includes para().text, "5"

@@ -28,6 +28,7 @@ assert_equal ["Square", "Oval", "Rectangle"], list_box().items
 # Verify button exists
 assert_equal "Report", button().text
 # Verify para text in flow
-assert para(:text => "Text")
-assert para(:text => "More")
-assert para(:text => "Less")
+all_paras = paras()
+assert all_paras.any? { |p| p.text == "Text" }, "Should have 'Text' para"
+assert all_paras.any? { |p| p.text == "More" }, "Should have 'More' para"
+assert all_paras.any? { |p| p.text == "Less" }, "Should have 'Less' para"

@@ -27,5 +27,5 @@ end
 
 ----------- test code
 # Art test - verify ovals are rendered
-ovals = oval(:all)
-assert ovals.count > 0, "Should render multiple ovals for bullseye pattern"
+all_ovals = ovals()
+assert all_ovals.count > 0, "Should render multiple ovals for bullseye pattern"

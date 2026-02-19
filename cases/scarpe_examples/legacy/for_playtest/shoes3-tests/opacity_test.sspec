@@ -50,10 +50,12 @@ end
 
 ----------- test code
 # Test the opacity demo UI elements
+all_paras = paras()
+all_buttons = buttons()
 assert_equal "App Opacity Demo", title().text
-assert_includes para(0).text, "Click buttons to change window opacity"
-assert_includes para(1).text, "Opacity: 1.0"
-assert_equal "100%", button(0).text
-assert_equal "75%", button(1).text
-assert_equal "50%", button(2).text
-assert_equal "25%", button(3).text
+assert_includes all_paras[0].text, "Click buttons to change window opacity"
+assert_includes all_paras[1].text, "Opacity: 1.0"
+assert_equal "100%", all_buttons[0].text
+assert_equal "75%", all_buttons[1].text
+assert_equal "50%", all_buttons[2].text
+assert_equal "25%", all_buttons[3].text

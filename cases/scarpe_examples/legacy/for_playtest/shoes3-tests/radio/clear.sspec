@@ -25,7 +25,8 @@ end
 
 ----------- test code
 # Test the radio clear demo
+all_paras = paras()
 assert_equal "Reset", button().text
-assert_equal "Radio-0", para(0).text
-assert_equal "Radio-1", para(1).text
-assert_equal "Radio-2", para(2).text
+assert_equal "Radio-0", all_paras[0].text
+assert_equal "Radio-1", all_paras[1].text
+assert_equal "Radio-2", all_paras[2].text

@@ -41,14 +41,17 @@ end
 
 ----------- test code
 # Test the editbox demo UI elements
-assert_equal "Normal ", para(0).text
-assert_equal "Font  ", para(1).text
-assert_equal "Stroke ", para(2).text
-assert_equal "Both   ", para(3).text
-assert_equal "Append to", button(0).text
-assert_equal "change all", button(1).text
+all_paras = paras()
+all_buttons = buttons()
+all_edit_boxes = edit_boxes()
+assert_equal "Normal ", all_paras[0].text
+assert_equal "Font  ", all_paras[1].text
+assert_equal "Stroke ", all_paras[2].text
+assert_equal "Both   ", all_paras[3].text
+assert_equal "Append to", all_buttons[0].text
+assert_equal "change all", all_buttons[1].text
 # Test edit_box initial values
-assert_equal "Normal", edit_box(0).text
-assert_equal "Font Is?", edit_box(1).text
-assert_equal "Stroke", edit_box(2).text
-assert_equal "Font and Stroke", edit_box(3).text
+assert_equal "Normal", all_edit_boxes[0].text
+assert_equal "Font Is?", all_edit_boxes[1].text
+assert_equal "Stroke", all_edit_boxes[2].text
+assert_equal "Font and Stroke", all_edit_boxes[3].text

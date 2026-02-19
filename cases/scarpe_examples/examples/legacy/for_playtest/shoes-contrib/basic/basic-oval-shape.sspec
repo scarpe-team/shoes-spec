@@ -14,5 +14,5 @@ end
 ----------- test code
 # Verify shape with ovals is rendered
 assert shape(), "Should have a shape container"
-ovals = oval(:all)
-assert_equal 100, ovals.count, "Should have 100 ovals inside shape"
+all_ovals = ovals()
+assert_equal 100, all_ovals.count, "Should have 100 ovals inside shape"

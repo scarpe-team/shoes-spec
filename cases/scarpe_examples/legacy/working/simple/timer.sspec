@@ -18,13 +18,13 @@ end
 
 ----------- test code
 # Tests start/stop timer
-buttons = find_all("button")
-assert_equal 2, buttons.length, "Should have Start and Stop buttons"
+all_buttons = buttons()
+assert_equal 2, all_buttons.length, "Should have Start and Stop buttons"
 
-start_btn = find_button("Start")
-stop_btn = find_button("Stop")
-assert start_btn, "Start button should exist"
-assert stop_btn, "Stop button should exist"
+start_btn = all_buttons[0]
+stop_btn = all_buttons[1]
+assert_equal "Start", start_btn.text
+assert_equal "Stop", stop_btn.text
 
 # Initial para text
 assert_includes para().text, "start"

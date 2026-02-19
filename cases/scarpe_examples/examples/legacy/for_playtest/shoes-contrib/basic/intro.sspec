@@ -28,7 +28,7 @@ end
 assert_equal "Press start to begin timing.", para().text
 
 # Verify buttons exist
-buttons = button(:all)
-assert_equal 2, buttons.count, "Should have Start and Stop buttons"
-assert_equal "Start", buttons[0].text
-assert_equal "Stop", buttons[1].text
+all_buttons = buttons()
+assert_equal 2, all_buttons.count, "Should have Start and Stop buttons"
+assert_equal "Start", all_buttons[0].text
+assert_equal "Stop", all_buttons[1].text

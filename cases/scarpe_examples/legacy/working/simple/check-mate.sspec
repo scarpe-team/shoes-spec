@@ -20,16 +20,16 @@ end
 
 ----------- test code
 # Tests checkboxes with name list
-checks = find_all("check")
-assert_equal 3, checks.length, "Should have 3 checkboxes"
+all_checks = checks()
+assert_equal 3, all_checks.length, "Should have 3 checkboxes"
 
 # All should be unchecked initially
-checks.each { |c| refute c.checked? }
+all_checks.each { |c| refute c.checked? }
 
 # Check first one and verify button behavior
-checks[0].checked = true
-assert checks[0].checked?
+all_checks[0].checked = true
+assert all_checks[0].checked?
 
 # Button should exist
-btn = find_button("Who dat?")
-assert btn, "Who dat? button should exist"
+btn = button()
+assert_equal "Who dat?", btn.text

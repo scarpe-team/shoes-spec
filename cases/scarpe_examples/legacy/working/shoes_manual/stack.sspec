@@ -12,8 +12,8 @@ Shoes.app do
 
 ----------- test code
 # Tests basic stack with para elements
-paras = find_all("para")
-assert_equal 3, paras.length, "Should have 3 paras in stack"
-assert_equal "First", paras[0].text
-assert_equal "Second", paras[1].text
-assert_equal "Third", paras[2].text
+all_paras = paras()
+assert_equal 3, all_paras.length, "Should have 3 paras in stack"
+assert_equal "First", all_paras[0].text
+assert_equal "Second", all_paras[1].text
+assert_equal "Third", all_paras[2].text

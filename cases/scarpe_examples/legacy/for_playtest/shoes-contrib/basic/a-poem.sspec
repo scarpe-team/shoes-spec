@@ -29,6 +29,7 @@ end
 
 ----------- test code
 # Tests poem display with banner and multiple paras
+all_paras = paras()
 assert_equal "A POEM", banner().text
-assert_includes para(1).text, "Goes like:"
-assert_includes para(2).text, "the sun"
+assert_includes all_paras[1].text, "Goes like:"
+assert_includes all_paras[2].text, "the sun"

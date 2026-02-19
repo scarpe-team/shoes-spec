@@ -18,6 +18,7 @@ end
 
 ----------- test code
 # Tests button animation with displace
-assert_equal "One", button(0).text
-assert_equal "Two", button(1).text
-assert_equal "Three", button(2).text
+all_buttons = buttons()
+assert_equal "One", all_buttons[0].text
+assert_equal "Two", all_buttons[1].text
+assert_equal "Three", all_buttons[2].text

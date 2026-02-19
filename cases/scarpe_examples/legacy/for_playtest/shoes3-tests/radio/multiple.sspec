@@ -37,11 +37,12 @@ end
 
 ----------- test code
 # Test the multiple radio groups demo
-assert_equal "default", para(0).text
-assert_equal "still more default", para(1).text
-assert_equal "one", para(2).text
-assert_equal "two", para(3).text
-assert_equal "================", para(4).text
-assert_equal "near", para(5).text
-assert_equal "far", para(6).text
+all_paras = paras()
+assert_equal "default", all_paras[0].text
+assert_equal "still more default", all_paras[1].text
+assert_equal "one", all_paras[2].text
+assert_equal "two", all_paras[3].text
+assert_equal "================", all_paras[4].text
+assert_equal "near", all_paras[5].text
+assert_equal "far", all_paras[6].text
 assert_equal "Now check", button().text

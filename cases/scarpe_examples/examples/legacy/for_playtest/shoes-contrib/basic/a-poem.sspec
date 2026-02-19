@@ -32,8 +32,8 @@ end
 assert_equal "A POEM", banner().text
 
 # Check the "Goes like:" label exists
-paras = para(:all)
-assert paras.any? { |p| p.text.include?("Goes like:") }, "Should have 'Goes like:' label"
+all_paras = paras()
+assert all_paras.any? { |p| p.text.include?("Goes like:") }, "Should have 'Goes like:' label"
 
 # Check the poem content exists  
-assert paras.any? { |p| p.text.include?("the sun") }, "Should contain poem text"
+assert all_paras.any? { |p| p.text.include?("the sun") }, "Should contain poem text"

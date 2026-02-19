@@ -18,6 +18,7 @@ end
 
 ----------- test code
 # Tests list_box with RPG class selection
-assert_includes para(0).text, "Choose your class:"
+all_paras = paras()
+assert_includes all_paras[0].text, "Choose your class:"
 assert_equal "Rogue", list_box().text  # Default selection
-assert_equal "No class selected.", para(1).text
+assert_equal "No class selected.", all_paras[1].text

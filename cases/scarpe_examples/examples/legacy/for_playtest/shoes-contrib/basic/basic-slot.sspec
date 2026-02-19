@@ -13,9 +13,9 @@ end
 
 ----------- test code
 # Verify 60 paragraphs are created
-paras = para(:all)
-assert_equal 60, paras.count, "Should have exactly 60 paragraphs"
+all_paras = paras()
+assert_equal 60, all_paras.count, "Should have exactly 60 paragraphs"
 
 # Verify paragraph content pattern
-assert_equal "Paragraph No. 0", paras[0].text
-assert_equal "Paragraph No. 59", paras[59].text
+assert_equal "Paragraph No. 0", all_paras[0].text
+assert_equal "Paragraph No. 59", all_paras[59].text

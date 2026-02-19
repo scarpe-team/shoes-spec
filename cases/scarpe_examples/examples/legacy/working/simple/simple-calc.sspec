@@ -83,11 +83,12 @@ assert display, "Expected a para for number display"
 btns = buttons()
 assert_equal 16, btns.length, "Expected 16 calculator buttons"
 
+# Buttons are in order: 7 8 9 / 4 5 6 * 1 2 3 - 0 Clr = +
 # Test a simple calculation: 7 + 3 = 10
-button("7").trigger_click
-button("+").trigger_click
-button("3").trigger_click
-button("=").trigger_click
+btns[0].trigger_click  # 7
+btns[15].trigger_click # +
+btns[10].trigger_click # 3
+btns[14].trigger_click # =
 
 # The para should now show "10"
 assert_includes para().text, "10", "Expected result to show 10 after 7+3="

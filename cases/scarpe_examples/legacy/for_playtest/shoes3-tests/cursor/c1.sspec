@@ -26,9 +26,11 @@ end
 
 ----------- test code
 # Test the cursor change UI
-assert_equal "Change cursor to", para(0).text
-assert_equal "arrow", button(0).text
-assert_equal "text", button(1).text
-assert_equal "watch", button(2).text
-assert_equal "hand", button(3).text
-assert_includes para(1).text, "app is"
+all_paras = paras()
+all_buttons = buttons()
+assert_equal "Change cursor to", all_paras[0].text
+assert_equal "arrow", all_buttons[0].text
+assert_equal "text", all_buttons[1].text
+assert_equal "watch", all_buttons[2].text
+assert_equal "hand", all_buttons[3].text
+assert_includes all_paras[1].text, "app is"

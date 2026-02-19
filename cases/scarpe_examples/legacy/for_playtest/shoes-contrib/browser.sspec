@@ -27,4 +27,4 @@ end
 ----------- test code
 # Example browser with category/example list_boxes
 # Tests initial UI state
-assert_includes para(0).text, "Choose a category:"
+assert_includes paras()[0].text, "Choose a category:"

@@ -25,6 +25,7 @@ end
 
 ----------- test code
 # Stopwatch app with Start/Stop buttons
-assert_equal "Start", button(0).text
-assert_equal "Stop", button(1).text
+all_buttons = buttons()
+assert_equal "Start", all_buttons[0].text
+assert_equal "Stop", all_buttons[1].text
 assert_equal "Press start to begin timing.", para().text

@@ -26,6 +26,7 @@ end
 
 ----------- test code
 # Test the mouse wheel demo UI
-assert_equal "None", para(0).text
-assert_equal "Flow 1", para(1).text
-assert_equal "Flow 2", para(2).text
+all_paras = paras()
+assert_equal "None", all_paras[0].text
+assert_equal "Flow 1", all_paras[1].text
+assert_equal "Flow 2", all_paras[2].text

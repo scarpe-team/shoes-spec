@@ -14,7 +14,8 @@
 
 ----------- test code
 # Test the no-group radio demo
-assert_equal "Among these films, which do you prefer?", para(0).text
-assert_equal "The Taste of Tea by Katsuhito Ishii", para(1).text
-assert_equal "Kin-Dza-Dza by Georgi Danelia", para(2).text
-assert_equal "Children of Heaven by Majid Majidi", para(3).text
+all_paras = paras()
+assert_equal "Among these films, which do you prefer?", all_paras[0].text
+assert_equal "The Taste of Tea by Katsuhito Ishii", all_paras[1].text
+assert_equal "Kin-Dza-Dza by Georgi Danelia", all_paras[2].text
+assert_equal "Children of Heaven by Majid Majidi", all_paras[3].text

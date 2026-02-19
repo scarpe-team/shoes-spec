@@ -13,5 +13,6 @@ end
 
 ----------- test code
 # Tests scrollable stack with 60 numbered paragraphs
-assert_equal "Paragraph No. 0", para(0).text
-assert_equal "Paragraph No. 59", para(59).text
+all_paras = paras()
+assert_equal "Paragraph No. 0", all_paras[0].text
+assert_equal "Paragraph No. 59", all_paras[59].text

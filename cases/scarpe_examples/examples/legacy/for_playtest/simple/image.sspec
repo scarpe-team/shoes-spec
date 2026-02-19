@@ -29,5 +29,5 @@ end
 el = edit_line()
 assert_equal "http://shoes.mvmanila.com/public/images/dino.jpg", el.text
 
-btn = button("Download")
+btn = button()
 assert_equal "Download", btn.text

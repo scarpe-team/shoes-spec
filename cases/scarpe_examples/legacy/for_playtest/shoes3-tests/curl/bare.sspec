@@ -39,7 +39,8 @@ end
 
 ----------- test code
 # Test the download UI elements are present
-assert_equal "Enter a URL to download:", para(0).text
+all_paras = paras()
+assert_equal "Enter a URL to download:", all_paras[0].text
 assert_equal "Download", button().text
 # The edit_line should have the default URL
 assert_includes edit_line().text, "walkabout.mvmanila.com"

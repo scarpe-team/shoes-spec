@@ -29,5 +29,7 @@ end
 
 ----------- test code
 # Verify key controls exist
-btn = button("Standard")
-assert_equal "Standard", btn.text
+btns = buttons()
+assert btns.length >= 2, "Expected at least 2 buttons"
+# First button should be "Standard"
+assert_equal "Standard", btns[0].text

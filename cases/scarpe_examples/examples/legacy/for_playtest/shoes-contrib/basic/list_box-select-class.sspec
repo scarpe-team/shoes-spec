@@ -18,8 +18,8 @@ end
 
 ----------- test code
 # Verify initial UI elements
-paras = para(:all)
-assert paras[0].text.include?("Choose your class"), "Should have class selection prompt"
+all_paras = paras()
+assert all_paras[0].text.include?("Choose your class"), "Should have class selection prompt"
 
 # Verify list_box exists and has default selection
 lb = list_box()

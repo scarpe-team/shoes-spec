@@ -75,15 +75,16 @@ end
 
 ----------- test code
 # Tests simple calculator app
-buttons = find_all("button")
-assert buttons.length >= 16, "Should have number/operator buttons"
+all_buttons = buttons()
+assert all_buttons.length >= 16, "Should have number/operator buttons"
 
 # Initial display should be 0
 assert_includes para().text, "0"
 
+# Buttons are in order: 7(0) 8(1) 9(2) /(3) 4(4) 5(5) 6(6) *(7) 1(8) 2(9) 3(10) -(11) 0(12) Clr(13) =(14) +(15)
 # Test: 5 * 4 = 20
-find_button("5").trigger_click
-find_button("*").trigger_click
-find_button("4").trigger_click
-find_button("=").trigger_click
+all_buttons[5].trigger_click  # 5
+all_buttons[7].trigger_click  # *
+all_buttons[4].trigger_click  # 4
+all_buttons[14].trigger_click # =
 assert_includes para().text, "20"

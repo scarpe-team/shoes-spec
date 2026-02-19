@@ -32,13 +32,15 @@ end
 
 ----------- test code
 # Test the editline demo UI elements
-assert_equal "Normal ", para(0).text
-assert_equal "Font  ", para(1).text
-assert_equal "Stroke ", para(2).text
-assert_equal "Both", para(3).text
+all_paras = paras()
+all_edit_lines = edit_lines()
+assert_equal "Normal ", all_paras[0].text
+assert_equal "Font  ", all_paras[1].text
+assert_equal "Stroke ", all_paras[2].text
+assert_equal "Both", all_paras[3].text
 assert_equal "change contents", button().text
 # Test edit_line initial values
-assert_equal "Normal", edit_line(0).text
-assert_equal "Font Is?", edit_line(1).text
-assert_equal "Stroke", edit_line(2).text
-assert_equal "Stroke and Font", edit_line(3).text
+assert_equal "Normal", all_edit_lines[0].text
+assert_equal "Font Is?", all_edit_lines[1].text
+assert_equal "Stroke", all_edit_lines[2].text
+assert_equal "Stroke and Font", all_edit_lines[3].text
