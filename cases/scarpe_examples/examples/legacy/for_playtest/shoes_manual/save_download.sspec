@@ -17,8 +17,17 @@
 
 ----------- test code
 # Verify download UI elements (actual download depends on network)
+# Note: The app uses `title "...", size: 16` which creates a Para with numeric size,
+# not a :title sized para. So we look for the para directly.
 assert stacks().length >= 1, "Expected a stack container"
-assert titles().length >= 1, "Expected a title element"
-assert_includes title().text, "Downloading"
-assert paras().length >= 1, "Expected status para"
-assert_equal "One moment...", para().text
+
+all_paras = paras()
+assert all_paras.length >= 2, "Expected at least 2 paras (title-style + status)"
+
+# First para has the "Downloading" text (styled as title but with size: 16)
+download_para = all_paras.find { |p| p.text.include?("Downloading") }
+assert download_para, "Expected para with 'Downloading' text"
+
+# Status para starts with "One moment..."
+status_para = all_paras.find { |p| p.text.include?("One moment") }
+assert status_para, "Expected status para"

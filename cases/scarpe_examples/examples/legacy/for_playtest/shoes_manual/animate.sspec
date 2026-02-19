@@ -17,6 +17,11 @@
 # Para should exist
 p = para()
 assert p, "Para should exist"
-assert p.text == "STARTING", "Para should initially show STARTING"
+
+# Animation runs at 24fps - by the time test runs, animation may have
+# already started. Text could be "STARTING" or "FRAME N".
+text = p.text
+valid_states = text == "STARTING" || text.start_with?("FRAME ")
+assert valid_states, "Para should show STARTING or FRAME N, got: #{text}"
 
 assert true, "Animate test completed"

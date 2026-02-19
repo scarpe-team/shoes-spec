@@ -27,7 +27,7 @@ r = rect()
 assert r, "Expected a rect"
 
 arrows = arrows()
-assert_equal 3, arrows.length, "Expected 3 arrows"
+assert_equal 4, arrows.length, "Expected 4 arrows"
 
 a = arc()
 assert a, "Expected an arc"

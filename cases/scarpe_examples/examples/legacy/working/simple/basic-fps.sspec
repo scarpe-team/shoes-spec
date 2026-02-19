@@ -12,4 +12,9 @@ end
 ----------- test code
 # Verify counter para exists via instance variable
 counter = drawable(Shoes::Para, "@counter")
-assert_equal "STARTING", counter.text
+
+# Animation runs at 24fps - by the time test code executes,
+# the animation may have already updated the text.
+text = counter.text
+valid = text == "STARTING" || text.start_with?("FRAME ")
+assert valid, "Counter should show STARTING or FRAME N, got: #{text}"
