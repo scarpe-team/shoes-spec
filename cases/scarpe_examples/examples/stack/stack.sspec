@@ -1,6 +1,4 @@
 ---
-# Auto-imported from scarpe/stack/stack.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app do
   stack margin: 50 do
@@ -31,13 +29,15 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for stack"
+html = dom_html
+
+# All buttons and para should render
+assert html.include?("with 50px margin"), "Expected margin button"
+assert html.include?("50% width"), "Expected 50% width button"
+assert html.include?("80px wide"), "Expected dimension para"
+assert html.include?("100% - 80px"), "Expected calc width button"
+assert html.include?("inside flow left"), "Expected flow left button"
+assert html.include?("inside flow right"), "Expected flow right button"
+
+# Check for margin styling
+assert html.include?("margin") || html.include?("50px"), "Expected margin styling"

@@ -1,6 +1,4 @@
 ---
-# Auto-imported from scarpe/stack/background.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app do
   stack width: 0.33 do
@@ -39,13 +37,11 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for background"
+html = dom_html
+
+# Should render nested stacks with backgrounds
+assert html.include?("a button"), "Expected buttons to render"
+assert html.include?("Red to green gradient"), "Expected gradient para"
+
+# Purple background should be applied
+assert html.include?("purple") || html.include?("800080"), "Expected purple background"
