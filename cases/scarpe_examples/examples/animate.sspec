@@ -1,6 +1,4 @@
 ---
-# Auto-imported from scarpe/animate.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app do
   stack do
@@ -23,13 +21,13 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for animate"
+html = dom_html
+
+# Labels should render
+assert html.include?("10 fps"), "Expected '10 fps' label"
+assert html.include?("20 fps"), "Expected '20 fps' label"
+assert html.include?("3spf"), "Expected '3spf' label"
+
+# Animation updates the para text - initial state is "-"
+# After some frames, it should have numbers
+# We can't easily test animation timing, but the structure should be there

@@ -1,9 +1,5 @@
 ---
-# Auto-imported from scarpe/flow.rb
-# TODO: Add meaningful assertions
 ----------- app code
-# frozen_string_literal: true
-
 Shoes.app(title: "Flow example") do
   flow do
     %w[One Two Three Four Five Six Seven Eight].each do |num|
@@ -15,13 +11,14 @@ Shoes.app(title: "Flow example") do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for flow"
+html = dom_html
+
+# All numbers should render
+assert html.include?("One"), "Expected 'One'"
+assert html.include?("Two"), "Expected 'Two'"
+assert html.include?("Three"), "Expected 'Three'"
+assert html.include?("Four"), "Expected 'Four'"
+assert html.include?("Five"), "Expected 'Five'"
+assert html.include?("Six"), "Expected 'Six'"
+assert html.include?("Seven"), "Expected 'Seven'"
+assert html.include?("Eight"), "Expected 'Eight'"

@@ -1,6 +1,4 @@
 ---
-# Auto-imported from scarpe/progress.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app(width: 400, height: 300) do
     flow do
@@ -35,13 +33,15 @@ Shoes.app(width: 400, height: 300) do
   end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for progress"
+html = dom_html
+
+# Labels should render
+assert html.include?("30%"), "Expected 30% label"
+assert html.include?("60%"), "Expected 60% label"
+assert html.include?("80%"), "Expected 80% label"
+
+# Start button should render
+assert html.include?("Start"), "Expected Start button"
+
+# Progress elements should be in DOM
+assert html.include?("progress"), "Expected progress elements"

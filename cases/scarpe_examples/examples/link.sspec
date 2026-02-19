@@ -1,6 +1,4 @@
 ---
-# Auto-imported from scarpe/link.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app do
   def collapsed
@@ -24,13 +22,12 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for link"
+html = dom_html
+
+# Initial collapsed state should show
+assert html.include?("Scarpe"), "Expected 'Scarpe' text"
+assert html.include?("Italian"), "Expected Italian reference"
+assert html.include?("show more"), "Expected 'show more' link"
+
+# Link should be in DOM
+assert html.include?("<a") || html.include?("href"), "Expected link element"
