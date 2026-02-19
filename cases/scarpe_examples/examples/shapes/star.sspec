@@ -1,19 +1,13 @@
 ---
-# Auto-imported from scarpe/shapes/star.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app do
   star 230, 100, 6, 50, 25
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for star"
+# Star should render as SVG
+html = dom_html
+
+# Should contain SVG elements for the star
+assert html.include?("svg") || html.include?("polygon") || html.include?("path"), 
+       "Expected SVG/polygon/path elements for star"

@@ -1,24 +1,17 @@
 ---
-# Auto-imported from scarpe/shapes/shapes.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app do
   shape do
     move_to(90, 55)
     line_to(400,10)
     line_to(400,90)
-
   end
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for shapes"
+# Shape with line_to should render
+html = dom_html
+
+# Should contain SVG/canvas elements
+assert html.include?("svg") || html.include?("path") || html.include?("canvas"),
+       "Expected SVG or canvas elements for shape"
