@@ -1,6 +1,4 @@
 ---
-# Auto-imported from scarpe/button_go_away.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app do
   @b = button "Go away, button"
@@ -10,13 +8,14 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for button_go_away"
+btn = button("@b")
+
+# Button should exist initially
+assert_equal "Go away, button", btn.text
+
+# Click should destroy the button
+btn.trigger_click
+
+# After destroy, the button should no longer be in the DOM
+html = dom_html
+refute html.include?("Go away, button"), "Button should be destroyed after click"

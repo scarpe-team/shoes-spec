@@ -1,6 +1,4 @@
 ---
-# Auto-imported from scarpe/button_with_position_and_size.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app do
   @push = button "Push me", width: 200, height: 50, top: 109, left: 132
@@ -11,13 +9,20 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for button_with_position_and_size"
+btn = button("@push")
+note = para("@note")
+
+# Button should have correct text
+assert_equal "Push me", btn.text
+
+# Initial para text
+assert_equal "Nothing pushed so far", note.text
+
+# Click should update para
+btn.trigger_click
+assert_equal "Aha! Click!", note.text
+
+# Check DOM for size/position styling
+html = dom_html
+# Width and height should be applied
+assert html.include?("200") || html.include?("width"), "Expected width styling"

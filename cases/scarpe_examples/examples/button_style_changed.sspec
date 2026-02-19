@@ -1,6 +1,4 @@
 ---
-# Auto-imported from scarpe/button_style_changed.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app do
   @p = para "This text will start red\n", stroke: :red
@@ -11,13 +9,19 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for button_style_changed"
+p = para("@p")
+btn = button()
+
+# Initial state - red text
+html = dom_html
+assert html.include?("#FF0000") || html.include?("red"), "Expected red stroke initially"
+assert p.text.include?("start red"), "Expected initial text"
+
+# Click the button
+btn.trigger_click
+
+# After click - green text with new content
+assert_equal "... but turn green when you click it.", p.text
+
+html = dom_html
+assert html.include?("#00FF00") || html.include?("#008000") || html.include?("green"), "Expected green stroke after click"

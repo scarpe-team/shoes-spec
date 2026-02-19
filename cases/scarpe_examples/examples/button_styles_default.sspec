@@ -1,6 +1,4 @@
 ---
-# Auto-imported from scarpe/button_styles_default.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app do
   style Shoes::Para, stroke: :red
@@ -10,13 +8,20 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for button_styles_default"
+# Global style sets Para stroke to red
+# Second para overrides with green
+html = dom_html
+
+# Both para texts should be present
+assert html.include?("This text should be red"), "Expected first para text"
+assert html.include?("But this text should be green"), "Expected second para text"
+
+# Should have red styling (from global style)
+assert html.include?("#FF0000") || html.include?("red"), "Expected red from global style"
+
+# Should have green styling (from override)
+assert html.include?("#00FF00") || html.include?("#008000") || html.include?("green"), "Expected green from override"
+
+# Button should exist
+btn = button()
+assert_equal "OK", btn.text

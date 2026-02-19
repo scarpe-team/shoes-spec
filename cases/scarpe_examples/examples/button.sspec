@@ -1,6 +1,4 @@
 ---
-# Auto-imported from scarpe/button.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app do
   @push = button "Push me"
@@ -14,13 +12,18 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for button"
+btn = button("@push")
+note = para("@note")
+
+# Initial state
+assert_equal "Nothing pushed so far", note.text
+
+# Click the button
+btn.trigger_click
+
+# Para should now have the click text plus link
+assert note.text.include?("Aha! Click!"), "Expected 'Aha! Click!' after button click"
+
+# DOM should contain a link
+html = dom_html
+assert html.include?("Go back"), "Expected 'Go back' link in DOM"
