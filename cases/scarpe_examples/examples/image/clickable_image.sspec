@@ -1,21 +1,15 @@
 ---
-# Auto-imported from scarpe/image/clickable_image.rb
-# TODO: Add meaningful assertions
 ----------- app code
-# frozen_string_literal: true
-
 Shoes.app do
   image "http://shoesrb.com/manual/static/shoes-icon.png", click: "http://github.com/schwad/scarpe"
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for clickable_image"
+html = dom_html
+
+# Image should be present
+assert html.include?("shoes-icon.png"), "Expected shoes-icon image"
+
+# Click URL should be associated (as href or onclick)
+assert html.include?("github.com/schwad/scarpe") || html.include?("click"),
+       "Expected click URL association"
