@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-02-19 11:21:44",
-  "elapsed_seconds": 802.31,
+  "timestamp": "2026-02-19 12:09:39",
+  "elapsed_seconds": 800.62,
   "total": 801,
   "specs": [
     {
@@ -367,11 +367,9 @@
       "name": "list_box_choose",
       "category": "scarpe_examples/examples",
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/list_box_choose.sspec",
-      "status": "fail",
-      "failures": [
-        "unexpected"
-      ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::InvalidAttributeValueError: Don't know how to find drawables by \\\"Guess\\\"!\\n    /Users/nickschwaderer/Progrumms/scarpe/lacci/lib/shoes/app."
+      "status": "pass",
+      "failures": [],
+      "error_message": null
     },
     {
       "name": "local_fonts",
@@ -409,11 +407,9 @@
       "name": "motion_events",
       "category": "scarpe_examples/examples",
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/motion_events.sspec",
-      "status": "fail",
-      "failures": [
-        "unexpected"
-      ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::InvalidAttributeValueError: Don't know how to find drawables by \\\"button 1\\\"!\\n    /Users/nickschwaderer/Progrumms/scarpe/lacci/lib/shoes/a"
+      "status": "pass",
+      "failures": [],
+      "error_message": null
     },
     {
       "name": "oval",
@@ -439,7 +435,7 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'title' for an instance of ScarpeExamplesExamples\\n    (eval at /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_sp"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::MultipleDrawablesFoundError: Found more than one para matching []!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:281"
     },
     {
       "name": "para_cursor_demo",
@@ -531,27 +527,23 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::InvalidAttributeValueError: Don't know how to find drawables by \\\"Race!\\\"!\\n    /Users/nickschwaderer/Progrumms/scarpe/lacci/lib/shoes/app."
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::MultipleDrawablesFoundError: Found more than one para matching []!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:281"
     },
     {
       "name": "scarpe_ext",
       "category": "scarpe_examples/examples",
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/scarpe_ext.sspec",
-      "status": "fail",
-      "failures": [
-        "unexpected"
-      ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::InvalidAttributeValueError: Don't know how to find drawables by \\\"OK\\\"!\\n    /Users/nickschwaderer/Progrumms/scarpe/lacci/lib/shoes/app.rb:"
+      "status": "pass",
+      "failures": [],
+      "error_message": null
     },
     {
       "name": "selfitude",
       "category": "scarpe_examples/examples",
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/selfitude.sspec",
-      "status": "fail",
-      "failures": [
-        "unexpected"
-      ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::InvalidAttributeValueError: Don't know how to find drawables by \\\"Clickity\\\"!\\n    /Users/nickschwaderer/Progrumms/scarpe/lacci/lib/shoes/a"
+      "status": "pass",
+      "failures": [],
+      "error_message": null
     },
     {
       "name": "shoes_school",
@@ -569,7 +561,7 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::MultipleDrawablesFoundError: Found more than one para matching []!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:277"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::MultipleDrawablesFoundError: Found more than one para matching []!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:281"
     },
     {
       "name": "shoes_subclass_app",
@@ -883,27 +875,23 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::InvalidAttributeValueError: Don't know how to find drawables by \\\"Beginner\\\"!\\n    /Users/nickschwaderer/Progrumms/scarpe/lacci/lib/shoes/a"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::MultipleDrawablesFoundError: Found more than one para matching []!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:281"
     },
     {
       "name": "othello",
       "category": "scarpe_examples/examples/legacy/for_playtest/expert",
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/for_playtest/expert/othello.sspec",
-      "status": "fail",
-      "failures": [
-        "unexpected"
-      ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::InvalidAttributeValueError: Don't know how to find drawables by \\\"Player 1\\\"!\\n    /Users/nickschwaderer/Progrumms/scarpe/lacci/lib/shoes/a"
+      "status": "pass",
+      "failures": [],
+      "error_message": null
     },
     {
       "name": "pong",
       "category": "scarpe_examples/examples/legacy/for_playtest/expert",
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/for_playtest/expert/pong.sspec",
-      "status": "fail",
-      "failures": [
-        "unexpected"
-      ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'all_rects' for an instance of ScarpeExamplesExamplesLegacyForPlaytestExpert\\n    (eval at /Users/nickschwaderer/Progrumms"
+      "status": "pass",
+      "failures": [],
+      "error_message": null
     },
     {
       "name": "tankspank",
@@ -929,17 +917,15 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::InvalidAttributeValueError: Don't know how to find drawables by \\\"Welcome to My Demo app\\\"!\\n    /Users/nickschwaderer/Progrumms/scarpe/lac"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::NoDrawablesFoundError: Found no para matching []!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:282:in 'block (2 lev"
     },
     {
       "name": "console",
       "category": "scarpe_examples/examples/legacy/for_playtest/good",
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/for_playtest/good/console.sspec",
-      "status": "fail",
-      "failures": [
-        "unexpected"
-      ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::InvalidAttributeValueError: Don't know how to find drawables by \\\"This will show the console\\\"!\\n    /Users/nickschwaderer/Progrumms/scarpe"
+      "status": "pass",
+      "failures": [],
+      "error_message": null
     },
     {
       "name": "plots",
@@ -949,7 +935,7 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::InvalidAttributeValueError: Don't know how to find drawables by \\\"Line\\\"!\\n    /Users/nickschwaderer/Progrumms/scarpe/lacci/lib/shoes/app.r"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'plot' for an instance of Shoes::App\\n    /Users/nickschwaderer/Progrumms/scarpe/lacci/lib/shoes/drawable.rb:833:in 'Shoes"
     },
     {
       "name": "svgview",
@@ -967,7 +953,7 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'title' for an instance of ScarpeExamplesExamplesLegacyForPlaytestPhilippe\\n    (eval at /Users/nickschwaderer/Progrumms/s"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"ArgumentError: wrong number of arguments (given 1, expected 0)\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:304:in 'block (2 level"
     },
     {
       "name": "fill_pattern_demo",
@@ -977,7 +963,7 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'title' for an instance of ScarpeExamplesExamplesLegacyForPlaytestPhilippe\\n    (eval at /Users/nickschwaderer/Progrumms/s"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"ArgumentError: wrong number of arguments (given 1, expected 0)\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:304:in 'block (2 level"
     },
     {
       "name": "guessing_game",
@@ -987,7 +973,7 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'title' for an instance of ScarpeExamplesExamplesLegacyForPlaytestPhilippe\\n    (eval at /Users/nickschwaderer/Progrumms/s"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"ArgumentError: wrong number of arguments (given 1, expected 0)\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:304:in 'block (2 level"
     },
     {
       "name": "hh_patterns_test",
@@ -997,27 +983,23 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'title' for an instance of ScarpeExamplesExamplesLegacyForPlaytestPhilippe\\n    (eval at /Users/nickschwaderer/Progrumms/s"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"ArgumentError: wrong number of arguments (given 1, expected 0)\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:304:in 'block (2 level"
     },
     {
       "name": "image_events_test",
       "category": "scarpe_examples/examples/legacy/for_playtest/philippe",
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/for_playtest/philippe/image_events_test.sspec",
-      "status": "fail",
-      "failures": [
-        "unexpected"
-      ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::InvalidAttributeValueError: Don't know how to find drawables by \\\"Waiting for events...\\\"!\\n    /Users/nickschwaderer/Progrumms/scarpe/lacc"
+      "status": "pass",
+      "failures": [],
+      "error_message": null
     },
     {
       "name": "minimal_editor",
       "category": "scarpe_examples/examples/legacy/for_playtest/philippe",
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/for_playtest/philippe/minimal_editor.sspec",
-      "status": "fail",
-      "failures": [
-        "unexpected"
-      ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::InvalidAttributeValueError: Don't know how to find drawables by \\\"Minimal Editor Test (click to position cursor, type to insert)\\\"!\\n    /U"
+      "status": "pass",
+      "failures": [],
+      "error_message": null
     },
     {
       "name": "shape_curves",
@@ -1033,9 +1015,9 @@
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/for_playtest/philippe_checked/accordion.sspec",
       "status": "fail",
       "failures": [
-        "unexpected"
+        "exception"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::InvalidAttributeValueError: Don't know how to find drawables by \\\"0.0\\\"!\\n    /Users/nickschwaderer/Progrumms/scarpe/lacci/lib/shoes/app.rb"
+      "error_message": "Should have at least 3 page links"
     },
     {
       "name": "basic-edit-box",
@@ -1051,51 +1033,41 @@
       "name": "button",
       "category": "scarpe_examples/examples/legacy/for_playtest/philippe_checked",
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/for_playtest/philippe_checked/button.sspec",
-      "status": "fail",
-      "failures": [
-        "unexpected"
-      ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::InvalidAttributeValueError: Don't know how to find drawables by \\\"OK!\\\"!\\n    /Users/nickschwaderer/Progrumms/scarpe/lacci/lib/shoes/app.rb"
+      "status": "pass",
+      "failures": [],
+      "error_message": null
     },
     {
       "name": "calc",
       "category": "scarpe_examples/examples/legacy/for_playtest/philippe_checked",
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/for_playtest/philippe_checked/calc.sspec",
-      "status": "fail",
-      "failures": [
-        "unexpected"
-      ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::InvalidAttributeValueError: Don't know how to find drawables by \\\"7\\\"!\\n    /Users/nickschwaderer/Progrumms/scarpe/lacci/lib/shoes/app.rb:3"
+      "status": "pass",
+      "failures": [],
+      "error_message": null
     },
     {
       "name": "check-mate",
       "category": "scarpe_examples/examples/legacy/for_playtest/philippe_checked",
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/for_playtest/philippe_checked/check-mate.sspec",
-      "status": "fail",
-      "failures": [
-        "unexpected"
-      ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::InvalidAttributeValueError: Don't know how to find drawables by \\\"Frances Johnson\\\"!\\n    /Users/nickschwaderer/Progrumms/scarpe/lacci/lib/"
+      "status": "pass",
+      "failures": [],
+      "error_message": null
     },
     {
       "name": "editor",
       "category": "scarpe_examples/examples/legacy/for_playtest/philippe_checked",
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/for_playtest/philippe_checked/editor.sspec",
-      "status": "fail",
-      "failures": [
-        "unexpected"
-      ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::InvalidAttributeValueError: Don't know how to find drawables by \\\"TEXT EDITOR\\\"!\\n    /Users/nickschwaderer/Progrumms/scarpe/lacci/lib/shoe"
+      "status": "pass",
+      "failures": [],
+      "error_message": null
     },
     {
       "name": "gradient-shoes",
       "category": "scarpe_examples/examples/legacy/for_playtest/philippe_checked",
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/for_playtest/philippe_checked/gradient-shoes.sspec",
-      "status": "fail",
-      "failures": [
-        "unexpected"
-      ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'title' for an instance of ScarpeExamplesExamplesLegacyForPlaytestPhilippeChecked\\n    (eval at /Users/nickschwaderer/Prog"
+      "status": "pass",
+      "failures": [],
+      "error_message": null
     },
     {
       "name": "list_box",
@@ -1109,21 +1081,17 @@
       "name": "simple-calc",
       "category": "scarpe_examples/examples/legacy/for_playtest/philippe_checked",
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/for_playtest/philippe_checked/simple-calc.sspec",
-      "status": "fail",
-      "failures": [
-        "unexpected"
-      ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::InvalidAttributeValueError: Don't know how to find drawables by \\\"5\\\"!\\n    /Users/nickschwaderer/Progrumms/scarpe/lacci/lib/shoes/app.rb:3"
+      "status": "pass",
+      "failures": [],
+      "error_message": null
     },
     {
       "name": "timer",
       "category": "scarpe_examples/examples/legacy/for_playtest/philippe_checked",
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/for_playtest/philippe_checked/timer.sspec",
-      "status": "fail",
-      "failures": [
-        "unexpected"
-      ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::InvalidAttributeValueError: Don't know how to find drawables by \\\"Start\\\"!\\n    /Users/nickschwaderer/Progrumms/scarpe/lacci/lib/shoes/app."
+      "status": "pass",
+      "failures": [],
+      "error_message": null
     },
     {
       "name": "browser",
@@ -1137,11 +1105,9 @@
       "name": "animate-ovals",
       "category": "scarpe_examples/examples/legacy/for_playtest/shoes-contrib/animation",
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/for_playtest/shoes-contrib/animation/animate-ovals.sspec",
-      "status": "fail",
-      "failures": [
-        "unexpected"
-      ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'all_ovals' for an instance of ScarpeExamplesExamplesLegacyForPlaytestShoesContribAnimation\\n    (eval at /Users/nickschwa"
+      "status": "pass",
+      "failures": [],
+      "error_message": null
     },
     {
       "name": "flowers",
@@ -1167,17 +1133,15 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::MultipleDrawablesFoundError: Found more than one oval matching []!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:277"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::MultipleDrawablesFoundError: Found more than one oval matching []!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:281"
     },
     {
       "name": "oval-motion",
       "category": "scarpe_examples/examples/legacy/for_playtest/shoes-contrib/animation",
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/for_playtest/shoes-contrib/animation/oval-motion.sspec",
-      "status": "fail",
-      "failures": [
-        "unexpected"
-      ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'title' for an instance of ScarpeExamplesExamplesLegacyForPlaytestShoesContribAnimation\\n    (eval at /Users/nickschwadere"
+      "status": "pass",
+      "failures": [],
+      "error_message": null
     },
     {
       "name": "pink-bubbles",
@@ -1211,7 +1175,7 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'title' for an instance of ScarpeExamplesExamplesLegacyForPlaytestShoesContribApp\\n    (eval at /Users/nickschwaderer/Prog"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::NoDrawablesFoundError: Found no title!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:308:in 'block (2 levels) in <mo"
     },
     {
       "name": "download-and-save",
@@ -1221,7 +1185,7 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'title' for an instance of ScarpeExamplesExamplesLegacyForPlaytestShoesContribApp\\n    (eval at /Users/nickschwaderer/Prog"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::NoDrawablesFoundError: Found no title!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:308:in 'block (2 levels) in <mo"
     },
     {
       "name": "get-google",
@@ -1231,7 +1195,7 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'title' for an instance of ScarpeExamplesExamplesLegacyForPlaytestShoesContribApp\\n    (eval at /Users/nickschwaderer/Prog"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::NoDrawablesFoundError: Found no title!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:308:in 'block (2 levels) in <mo"
     },
     {
       "name": "mouse-detection",
@@ -1281,11 +1245,9 @@
       "name": "mask",
       "category": "scarpe_examples/examples/legacy/for_playtest/shoes-contrib/art",
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/for_playtest/shoes-contrib/art/mask.sspec",
-      "status": "fail",
-      "failures": [
-        "unexpected"
-      ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'title' for an instance of ScarpeExamplesExamplesLegacyForPlaytestShoesContribArt\\n    (eval at /Users/nickschwaderer/Prog"
+      "status": "pass",
+      "failures": [],
+      "error_message": null
     },
     {
       "name": "oval-gradient",
@@ -1311,7 +1273,7 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'banner' for an instance of ScarpeExamplesExamplesLegacyForPlaytestShoesContribBasic\\n    (eval at /Users/nickschwaderer/P"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::InvalidAttributeValueError: Don't know how to find drawables by :all!\\n    /Users/nickschwaderer/Progrumms/scarpe/lacci/lib/shoes/app.rb:34"
     },
     {
       "name": "basic-blocks",
@@ -1393,11 +1355,9 @@
       "name": "definr",
       "category": "scarpe_examples/examples/legacy/for_playtest/shoes-contrib/basic",
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/for_playtest/shoes-contrib/basic/definr.sspec",
-      "status": "fail",
-      "failures": [
-        "unexpected"
-      ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'caption' for an instance of ScarpeExamplesExamplesLegacyForPlaytestShoesContribBasic\\n    (eval at /Users/nickschwaderer/"
+      "status": "pass",
+      "failures": [],
+      "error_message": null
     },
     {
       "name": "funnies",
@@ -2321,17 +2281,15 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::MultipleDrawablesFoundError: Found more than one para matching []!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:277"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::MultipleDrawablesFoundError: Found more than one para matching []!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:281"
     },
     {
       "name": "fixed_width",
       "category": "scarpe_examples/examples/legacy/for_playtest/shoes_manual",
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/for_playtest/shoes_manual/fixed_width.sspec",
-      "status": "fail",
-      "failures": [
-        "unexpected"
-      ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'captions' for an instance of ScarpeExamplesExamplesLegacyForPlaytestShoesManual\\n    (eval at /Users/nickschwaderer/Progr"
+      "status": "pass",
+      "failures": [],
+      "error_message": null
     },
     {
       "name": "focus",
@@ -2475,11 +2433,9 @@
       "name": "progress_bar",
       "category": "scarpe_examples/examples/legacy/for_playtest/shoes_manual",
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/for_playtest/shoes_manual/progress_bar.sspec",
-      "status": "fail",
-      "failures": [
-        "unexpected"
-      ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'titles' for an instance of ScarpeExamplesExamplesLegacyForPlaytestShoesManual\\n    (eval at /Users/nickschwaderer/Progrum"
+      "status": "pass",
+      "failures": [],
+      "error_message": null
     },
     {
       "name": "radio",
@@ -2527,9 +2483,9 @@
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/for_playtest/shoes_manual/save_download.sspec",
       "status": "fail",
       "failures": [
-        "unexpected"
+        "exception"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'titles' for an instance of ScarpeExamplesExamplesLegacyForPlaytestShoesManual\\n    (eval at /Users/nickschwaderer/Progrum"
+      "error_message": "Expected a title element"
     },
     {
       "name": "self_check",
@@ -2551,11 +2507,9 @@
       "name": "stack",
       "category": "scarpe_examples/examples/legacy/for_playtest/shoes_manual",
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/for_playtest/shoes_manual/stack.sspec",
-      "status": "fail",
-      "failures": [
-        "unexpected"
-      ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::InvalidAttributeValueError: Don't know how to find drawables by \\\"First\\\"!\\n    /Users/nickschwaderer/Progrumms/scarpe/lacci/lib/shoes/app."
+      "status": "pass",
+      "failures": [],
+      "error_message": null
     },
     {
       "name": "start",
@@ -2767,7 +2721,7 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::NoDrawablesFoundError: Found no para matching []!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:278:in 'block (2 lev"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::NoDrawablesFoundError: Found no para matching []!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:282:in 'block (2 lev"
     },
     {
       "name": "control-sizes",
@@ -2921,7 +2875,7 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'caption' for an instance of ScarpeExamplesExamplesLegacyForPlaytestSimple\\n    (eval at /Users/nickschwaderer/Progrumms/s"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"ArgumentError: wrong number of arguments (given 1, expected 0)\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:304:in 'block (2 level"
     },
     {
       "name": "width-introspec",
@@ -4483,7 +4437,7 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'banner' for an instance of ScarpeExamplesLegacyForPlaytestShoesContribBasic\\n    (eval at /Users/nickschwaderer/Progrumms"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::InvalidAttributeValueError: Don't know how to find drawables by 1!\\n    /Users/nickschwaderer/Progrumms/scarpe/lacci/lib/shoes/app.rb:349:i"
     },
     {
       "name": "basic-blocks",
@@ -4563,7 +4517,7 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::MultipleDrawablesFoundError: Found more than one para matching []!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:277"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::MultipleDrawablesFoundError: Found more than one para matching []!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:281"
     },
     {
       "name": "funnies",
@@ -4625,7 +4579,7 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'subtitle' for an instance of ScarpeExamplesLegacyForPlaytestShoesContribBasic\\n    (eval at /Users/nickschwaderer/Progrum"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::MultipleDrawablesFoundError: Found more than one para matching []!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:281"
     },
     {
       "name": "two-column",
@@ -4635,7 +4589,7 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'caption' for an instance of ScarpeExamplesLegacyForPlaytestShoesContribBasic\\n    (eval at /Users/nickschwaderer/Progrumm"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"ArgumentError: wrong number of arguments (given 1, expected 0)\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:304:in 'block (2 level"
     },
     {
       "name": "url-shoes-subclassing",
@@ -4679,7 +4633,7 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'banner' for an instance of ScarpeExamplesLegacyForPlaytestShoesContribElements\\n    (eval at /Users/nickschwaderer/Progru"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::NoDrawablesFoundError: Found no banner!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:308:in 'block (2 levels) in <m"
     },
     {
       "name": "displace-animation",
@@ -5175,7 +5129,7 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'title' for an instance of ScarpeExamplesLegacyForPlaytestShoes3Tests\\n    (eval at /Users/nickschwaderer/Progrumms/scarpe"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::InvalidAttributeValueError: Don't know how to find drawables by 0!\\n    /Users/nickschwaderer/Progrumms/scarpe/lacci/lib/shoes/app.rb:349:i"
     },
     {
       "name": "tooltips",
@@ -5231,7 +5185,7 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'title' for an instance of ScarpeExamplesLegacyForPlaytestShoes3TestsCurl\\n    (eval at /Users/nickschwaderer/Progrumms/sc"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::NoDrawablesFoundError: Found no title!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:308:in 'block (2 levels) in <mo"
     },
     {
       "name": "m2",
@@ -5241,7 +5195,7 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'title' for an instance of ScarpeExamplesLegacyForPlaytestShoes3TestsCurl\\n    (eval at /Users/nickschwaderer/Progrumms/sc"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::NoDrawablesFoundError: Found no title!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:308:in 'block (2 levels) in <mo"
     },
     {
       "name": "m3",
@@ -5251,7 +5205,7 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'title' for an instance of ScarpeExamplesLegacyForPlaytestShoes3TestsCurl\\n    (eval at /Users/nickschwaderer/Progrumms/sc"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::NoDrawablesFoundError: Found no title!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:308:in 'block (2 levels) in <mo"
     },
     {
       "name": "m4",
@@ -5959,17 +5913,15 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::NoDrawablesFoundError: Found no para matching []!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:278:in 'block (2 lev"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::NoDrawablesFoundError: Found no para matching []!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:282:in 'block (2 lev"
     },
     {
       "name": "control-sizes",
       "category": "scarpe_examples/legacy/for_playtest/simple",
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/simple/control-sizes.sspec",
-      "status": "fail",
-      "failures": [
-        "unexpected"
-      ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'progresses' for an instance of ScarpeExamplesLegacyForPlaytestSimple\\n    (eval at /Users/nickschwaderer/Progrumms/scarpe"
+      "status": "pass",
+      "failures": [],
+      "error_message": null
     },
     {
       "name": "curve-control-points",
@@ -6119,11 +6071,9 @@
       "name": "speedometer_app",
       "category": "scarpe_examples/legacy/working",
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/speedometer_app.sspec",
-      "status": "fail",
-      "failures": [
-        "unexpected"
-      ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'assert_include' for an instance of ScarpeExamplesLegacyWorking\\n    (eval at /Users/nickschwaderer/Progrumms/scarpe/lib/s"
+      "status": "pass",
+      "failures": [],
+      "error_message": null
     },
     {
       "name": "guessing_game",
@@ -6133,7 +6083,7 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::MultipleDrawablesFoundError: Found more than one para matching []!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:277"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::MultipleDrawablesFoundError: Found more than one para matching []!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:281"
     },
     {
       "name": "a-poem",
@@ -6383,7 +6333,7 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::MultipleDrawablesFoundError: Found more than one para matching []!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:277"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::MultipleDrawablesFoundError: Found more than one para matching []!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:281"
     },
     {
       "name": "self_check",
@@ -6393,7 +6343,7 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'find_all' for an instance of ScarpeExamplesLegacyWorkingShoesManual\\n    (eval at /Users/nickschwaderer/Progrumms/scarpe/"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::InvalidAttributeValueError: Don't know how to find drawables by \\\"para\\\"!\\n    /Users/nickschwaderer/Progrumms/scarpe/lacci/lib/shoes/app.r"
     },
     {
       "name": "stack",
@@ -6403,7 +6353,7 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'find_all' for an instance of ScarpeExamplesLegacyWorkingShoesManual\\n    (eval at /Users/nickschwaderer/Progrumms/scarpe/"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::InvalidAttributeValueError: Don't know how to find drawables by \\\"para\\\"!\\n    /Users/nickschwaderer/Progrumms/scarpe/lacci/lib/shoes/app.r"
     },
     {
       "name": "style_info",
@@ -6465,7 +6415,7 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'find_all' for an instance of ScarpeExamplesLegacyWorkingSimple\\n    (eval at /Users/nickschwaderer/Progrumms/scarpe/lib/s"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::InvalidAttributeValueError: Don't know how to find drawables by \\\"button\\\"!\\n    /Users/nickschwaderer/Progrumms/scarpe/lacci/lib/shoes/app"
     },
     {
       "name": "check-mate",
@@ -6475,7 +6425,7 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'find_all' for an instance of ScarpeExamplesLegacyWorkingSimple\\n    (eval at /Users/nickschwaderer/Progrumms/scarpe/lib/s"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::InvalidAttributeValueError: Don't know how to find drawables by \\\"check\\\"!\\n    /Users/nickschwaderer/Progrumms/scarpe/lacci/lib/shoes/app."
     },
     {
       "name": "clear-slot",
@@ -6493,37 +6443,31 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::NoDrawablesFoundError: Found no para matching []!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:278:in 'block (2 lev"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::NoDrawablesFoundError: Found no para matching []!\\n    /Users/nickschwaderer/Progrumms/scarpe/lib/scarpe/shoes_spec.rb:282:in 'block (2 lev"
     },
     {
       "name": "gradient-shoes",
       "category": "scarpe_examples/legacy/working/simple",
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/simple/gradient-shoes.sspec",
-      "status": "fail",
-      "failures": [
-        "unexpected"
-      ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'title' for an instance of ScarpeExamplesLegacyWorkingSimple\\n    (eval at /Users/nickschwaderer/Progrumms/scarpe/lib/scar"
+      "status": "pass",
+      "failures": [],
+      "error_message": null
     },
     {
       "name": "image",
       "category": "scarpe_examples/legacy/working/simple",
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/simple/image.sspec",
-      "status": "fail",
-      "failures": [
-        "unexpected"
-      ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'assert_include' for an instance of ScarpeExamplesLegacyWorkingSimple\\n    (eval at /Users/nickschwaderer/Progrumms/scarpe"
+      "status": "pass",
+      "failures": [],
+      "error_message": null
     },
     {
       "name": "image-icon",
       "category": "scarpe_examples/legacy/working/simple",
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/simple/image-icon.sspec",
-      "status": "fail",
-      "failures": [
-        "unexpected"
-      ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'assert_include' for an instance of ScarpeExamplesLegacyWorkingSimple\\n    (eval at /Users/nickschwaderer/Progrumms/scarpe"
+      "status": "pass",
+      "failures": [],
+      "error_message": null
     },
     {
       "name": "list_box",
@@ -6537,11 +6481,9 @@
       "name": "list_box-shape-report",
       "category": "scarpe_examples/legacy/working/simple",
       "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/simple/list_box-shape-report.sspec",
-      "status": "fail",
-      "failures": [
-        "unexpected"
-      ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'find_button' for an instance of ScarpeExamplesLegacyWorkingSimple\\n    (eval at /Users/nickschwaderer/Progrumms/scarpe/li"
+      "status": "pass",
+      "failures": [],
+      "error_message": null
     },
     {
       "name": "phat-button",
@@ -6559,7 +6501,7 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'find_all' for an instance of ScarpeExamplesLegacyWorkingSimple\\n    (eval at /Users/nickschwaderer/Progrumms/scarpe/lib/s"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::InvalidAttributeValueError: Don't know how to find drawables by \\\"button\\\"!\\n    /Users/nickschwaderer/Progrumms/scarpe/lacci/lib/shoes/app"
     },
     {
       "name": "sqlite3",
@@ -6585,7 +6527,7 @@
       "failures": [
         "unexpected"
       ],
-      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"NoMethodError: undefined method 'find_all' for an instance of ScarpeExamplesLegacyWorkingSimple\\n    (eval at /Users/nickschwaderer/Progrumms/scarpe/lib/s"
+      "error_message": "{\"json_class\":\"Minitest::UnexpectedError\",\"m\":\"Shoes::Errors::InvalidAttributeValueError: Don't know how to find drawables by \\\"button\\\"!\\n    /Users/nickschwaderer/Progrumms/scarpe/lacci/lib/shoes/app"
     },
     {
       "name": "width-introspec",
