@@ -12,6 +12,7 @@ namespace :scarpe do
   CASES_DIR = File.join(ROOT_DIR, "cases")
   RESULTS_DIR = File.join(ROOT_DIR, "results", "scarpe-suite")
   RESULTS_FILE = File.join(RESULTS_DIR, "results.json")
+  IMPL_DIR = File.join(ROOT_DIR, "implementations", "scarpe-webview")
 
   desc "Run all shoes-spec tests for Scarpe"
   task :all do
@@ -120,9 +121,25 @@ namespace :scarpe do
     def list_categories
       categories = discover_categories
       puts "\nAvailable categories (#{categories.length}):"
-      categories.sort.each do |cat|
-        count = Dir.glob("#{CASES_DIR}/#{cat}/*.sspec").length
-        puts "  #{cat} (#{count} specs)"
+      
+      # Group by top-level for cleaner display
+      by_top = categories.group_by { |c| c.split("/").first }
+      by_top.keys.sort.each do |top|
+        cats = by_top[top]
+        if cats.length == 1 && cats.first == top
+          count = Dir.glob("#{CASES_DIR}/#{top}/*.sspec").length
+          puts "  #{top}/ (#{count} specs)"
+        else
+          total = cats.sum { |c| Dir.glob("#{CASES_DIR}/#{c}/*.sspec").length }
+          puts "  #{top}/ (#{total} specs total)"
+          cats.sort.each do |cat|
+            next if cat == top
+            count = Dir.glob("#{CASES_DIR}/#{cat}/*.sspec").length
+            next if count == 0
+            indent = cat.sub(top + "/", "")
+            puts "    └── #{indent} (#{count})"
+          end
+        end
       end
     end
 
@@ -229,7 +246,7 @@ namespace :scarpe do
           return result
         end
 
-        # Run the spec using scarpe
+        # Run the spec using scarpe-webview implementation
         sspec_file = run_scarpe_test(spec, app_code, test_code)
         
         if sspec_file.nil? || !File.exist?(sspec_file.to_s)
@@ -250,7 +267,11 @@ namespace :scarpe do
     end
 
     def run_scarpe_test(spec, app_code, test_code)
-      sspec_output = File.join(Dir.tmpdir, "sspec_#{$$}_#{rand(100000)}.json")
+      # Use the scarpe-webview implementation's run_single.rb approach
+      sspec_output = File.join(IMPL_DIR, "sspec.json")
+      
+      # Clean up previous result
+      File.unlink(sspec_output) if File.exist?(sspec_output)
 
       app_file = Tempfile.new(["shoes-spec-app", ".rb"])
       app_file.write(app_code)
@@ -260,6 +281,7 @@ namespace :scarpe do
       test_file.write(test_code)
       test_file.close
 
+      # Build the environment
       env = {
         "SHOES_SPEC_TEST" => test_file.path,
         "SCARPE_DISPLAY_SERVICE" => "wv_local",
@@ -269,22 +291,23 @@ namespace :scarpe do
         "SHOES_MINITEST_METHOD_NAME" => spec[:test_name].gsub("-", "_")
       }
 
-      # Find scarpe executable
-      scarpe_bin = `which scarpe 2>/dev/null`.strip
-      scarpe_bin = File.join(ENV["HOME"], "Progrumms/scarpe/exe/scarpe") if scarpe_bin.empty?
-
-      pid = spawn(env, RbConfig.ruby, scarpe_bin, "--dev", app_file.path,
-                  [:out, :err] => "/dev/null")
-      
-      # Wait with timeout (30 seconds)
-      begin
-        Timeout.timeout(30) { Process.wait(pid) }
-      rescue Timeout::Error
-        Process.kill("TERM", pid) rescue nil
-        Process.wait(pid) rescue nil
-        app_file.unlink rescue nil
-        test_file.unlink rescue nil
-        return nil
+      # Use bundle exec scarpe from scarpe-webview implementation
+      Dir.chdir(IMPL_DIR) do
+        Bundler.with_unbundled_env do
+          pid = spawn(env, "bundle", "exec", "scarpe", "--dev", app_file.path,
+                      [:out, :err] => "/dev/null")
+          
+          # Wait with timeout (30 seconds)
+          begin
+            Timeout.timeout(30) { Process.wait(pid) }
+          rescue Timeout::Error
+            Process.kill("TERM", pid) rescue nil
+            Process.wait(pid) rescue nil
+            app_file.unlink rescue nil
+            test_file.unlink rescue nil
+            return nil
+          end
+        end
       end
       
       app_file.unlink rescue nil
@@ -300,7 +323,6 @@ namespace :scarpe do
       unless entry
         result["status"] = "error"
         result["error_message"] = "Empty result file"
-        File.unlink(file) rescue nil
         return
       end
 
@@ -332,8 +354,6 @@ namespace :scarpe do
         
         result["failures"] = failures.map { |f| f.first }
       end
-
-      File.unlink(file) rescue nil
     end
 
     def save_results(results, elapsed)
