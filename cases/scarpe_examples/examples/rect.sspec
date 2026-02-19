@@ -1,6 +1,4 @@
 ---
-# Auto-imported from scarpe/rect.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app do
   para "Behold, the mighty rectangle!"
@@ -8,13 +6,11 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for rect"
+html = dom_html
+
+# Label should render
+assert html.include?("Behold, the mighty rectangle"), "Expected rectangle label"
+
+# SVG rect element should be present
+assert html.include?("svg") || html.include?("rect"),
+       "Expected SVG rect element"

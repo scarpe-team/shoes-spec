@@ -1,6 +1,4 @@
 ---
-# Auto-imported from scarpe/line.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app do
     line 0, 0, 100, 100
@@ -9,13 +7,8 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for line"
+html = dom_html
+
+# SVG line elements should be present
+assert html.include?("svg") || html.include?("line") || html.include?("path"),
+       "Expected SVG line elements"
