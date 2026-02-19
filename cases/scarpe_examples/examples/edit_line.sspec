@@ -1,6 +1,4 @@
 ---
-# Auto-imported from scarpe/edit_line.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app do
   para "Name:"
@@ -12,13 +10,12 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for edit_line"
+html = dom_html
+
+# Label and greeting should render
+assert html.include?("Name:"), "Expected Name label"
+assert html.include?("Hello John!"), "Expected initial greeting with default value"
+
+# Edit line should be present
+el = edit_line("@name")
+assert_equal "John", el.text

@@ -1,6 +1,4 @@
 ---
-# Auto-imported from scarpe/edit_box.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app do
   para "Manuscript:"
@@ -12,13 +10,14 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for edit_box"
+html = dom_html
+
+# Label should render
+assert html.include?("Manuscript:"), "Expected Manuscript label"
+
+# Character count should render (lorem is 148 chars)
+assert html.include?("characters"), "Expected character count"
+
+# Edit box should contain lorem ipsum
+eb = edit_box("@manuscript")
+assert eb.text.include?("Lorem ipsum"), "Expected lorem ipsum in edit box"

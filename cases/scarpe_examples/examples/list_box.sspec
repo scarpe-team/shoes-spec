@@ -1,6 +1,4 @@
 ---
-# Auto-imported from scarpe/list_box.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app :width => 320, :height => 420 do
   stack :margin => 40 do
@@ -12,13 +10,10 @@ Shoes.app :width => 320, :height => 420 do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for list_box"
+html = dom_html
+
+# Label should render
+assert html.include?("Name"), "Expected Name label"
+
+# List box items should be in DOM (as options or similar)
+assert html.include?("Phyllis") || html.include?("select"), "Expected list box with Phyllis option"
