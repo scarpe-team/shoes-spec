@@ -43,5 +43,9 @@ end
 # Player guesses 1-100, gets high/low feedback
 # Uses native macOS dialogs for input
 
-assert_equal "I'm thinking of a number between 1 and 100.", para().text
-assert_equal "Make a guess!", button().text
+p = paras().first
+assert p, "Should have info para"
+assert_equal "I'm thinking of a number between 1 and 100.", p.text
+btn = buttons().first
+assert btn, "Should have guess button"
+assert_equal "Make a guess!", btn.text

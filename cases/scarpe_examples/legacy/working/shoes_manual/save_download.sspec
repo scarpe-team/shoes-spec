@@ -18,6 +18,8 @@
 ----------- test code
 # Tests download with save: option
 # Verifies initial status message
-assert_includes para().text, "One moment"
+p = paras().first
+assert p, "Should have status para"
+assert_includes p.text, "One moment"
 
 # Note: download completion is async, can't easily test

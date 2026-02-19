@@ -21,6 +21,10 @@ end
 
 ----------- test code
 # Notebook app with Save button and note management
-assert_includes subtitle().text, "Shoes Notebook"
-assert_includes para().text, "Add a note."
-assert_equal "Save", button().text
+s = subtitles().first
+assert s, "Should have subtitle"
+assert_includes s.text, "Shoes Notebook"
+p = paras().first
+assert p, "Should have para"
+assert_includes p.text, "Add a note."
+assert_equal "Save", buttons().first.text

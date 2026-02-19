@@ -31,5 +31,5 @@ Shoes.app do
 end
 
 ----------- test code
-# Animation test - verify app runs and oval exists
-assert oval(), "Should have an oval element for the satellite animation"
+# Animation test - verify app runs and ovals exist (creates multiple)
+assert ovals().length > 0, "Should have oval elements for the satellite animation"

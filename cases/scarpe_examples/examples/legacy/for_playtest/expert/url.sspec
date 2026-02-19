@@ -44,14 +44,14 @@ Shoes.app :width => 400, :height => 300, :margin => 5
 # Test url.sspec - demonstrates URL routing between screens
 
 # Initially on root "/" - setupscreen
-p = para()
+p = paras().first
 assert p, "Should show welcome message on root"
 btns = buttons()
 assert btns.length >= 2, "Should have entry and help buttons"
 
 # Navigate to entry screen  
 btns[0].trigger_click
-el = edit_line()
+el = edit_lines().first
 assert el, "Should have edit_line for secret"
 
 # Navigate using buttons on entry screen
@@ -61,5 +61,5 @@ btns[1].trigger_click # help button
 # Navigate back home
 btns = buttons()
 btns[1].trigger_click # home button
-p = para()
+p = paras().first
 assert p, "Should return to home screen"

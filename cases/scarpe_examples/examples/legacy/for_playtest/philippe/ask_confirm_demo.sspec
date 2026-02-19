@@ -51,10 +51,13 @@ end
 # Note: Dialog interactions require special test support
 
 # Verify title exists
-assert title("Ask & Confirm Demo"), "Should have title"
+t = titles().first
+assert t, "Should have title"
+assert_includes t.text, "Ask & Confirm Demo"
 
 # Verify initial result text
-assert para("Click a button to test dialogs."), "Should have instruction para"
+p = paras().find { |p| p.text.include?("Click a button") }
+assert p, "Should have instruction para"
 
 # Verify all buttons exist
 assert button("ask()"), "Should have ask() button"

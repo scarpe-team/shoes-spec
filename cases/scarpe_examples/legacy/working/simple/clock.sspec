@@ -57,8 +57,9 @@ end
 ----------- test code
 # Tests animated clock display
 # Clock should show current date/time
-p = para()
-assert p, "Para should exist with time display"
+# Note: Clock uses clear() in animate(), para may be recreated each frame
+ps = paras()
+assert ps.length > 0, "Para should exist with time display"
 
 # Should contain time-like text (includes :)
-assert_includes p.text, ":"
+assert_includes ps.first.text, ":"

@@ -16,5 +16,9 @@ end
 
 ----------- test code
 # Verify initial UI state
-assert_equal "GET Google", title().text
-assert_equal "One moment...", para().text
+t = titles().first
+assert t, "Should have a title"
+assert_equal "GET Google", t.text
+p = paras().first
+assert p, "Should have a para"
+assert_equal "One moment...", p.text

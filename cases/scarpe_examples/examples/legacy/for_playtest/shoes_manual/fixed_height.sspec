@@ -15,4 +15,4 @@ end
 # Verify scrollable stack with fixed dimensions contains paragraphs
 assert stacks().length >= 1, "Expected a stack container"
 assert paras().length == 100, "Expected 100 paragraphs from loop"
-assert_includes para().text, "Paragraph No."
+assert_includes paras().first.text, "Paragraph No."

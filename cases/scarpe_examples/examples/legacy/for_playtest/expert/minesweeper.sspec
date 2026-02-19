@@ -277,8 +277,8 @@ end
 btns = buttons()
 assert btns.length >= 3, "Should have at least 3 difficulty buttons"
 
-# Verify instruction para exists
-p = para()
+# Verify instruction para exists (last para has instructions)
+p = paras().last
 assert p, "Should have game instructions"
 
 # Click first button (Beginner) to start a new game

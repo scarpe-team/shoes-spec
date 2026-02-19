@@ -58,7 +58,8 @@ end
 # Test: Analog clock with digital time display
 # Thomas Bell's Shoes Clock from 2007
 
-# Clock has para with date/time info
-assert para(), "Time para should exist"
+# Clock has para with date/time info (uses clear() in animate)
+ps = paras()
+assert ps.length > 0, "Time para should exist"
 # The para contains the current time, so just verify it exists and has content
-assert para().text.length > 0, "Time display should have content"
+assert ps.first.text.length > 0, "Time display should have content"

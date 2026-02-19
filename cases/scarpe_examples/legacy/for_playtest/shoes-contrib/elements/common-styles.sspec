@@ -18,5 +18,9 @@ end
 
 ----------- test code
 # Tests styling of banner and button elements
-assert_equal "This quick brown fox", banner().text
-assert_equal "Jumps over the lazy dog", button().text
+b = banners().first
+assert b, "Should have a banner"
+assert_equal "This quick brown fox", b.text
+btn = buttons().first
+assert btn, "Should have a button"
+assert_equal "Jumps over the lazy dog", btn.text

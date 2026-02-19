@@ -16,5 +16,9 @@ Shoes.app do
 
 ----------- test code
 # Test the initial UI elements
-assert_equal "Downloading Google image", title().text
-assert_equal "One moment...", para().text
+t = titles().first
+assert t, "Should have a title"
+assert_equal "Downloading Google image", t.text
+p = paras().first
+assert p, "Should have a para"
+assert_equal "One moment...", p.text

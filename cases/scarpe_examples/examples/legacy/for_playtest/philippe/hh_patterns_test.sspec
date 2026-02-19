@@ -195,12 +195,17 @@ end
 # Test hh_patterns_test.sspec - Hackety Hack patterns test suite
 
 # Verify main title
-assert title("HH Patterns Test Suite"), "Should have main title"
+t = titles().first
+assert t, "Should have main title"
+assert_includes t.text, "HH Patterns Test Suite"
 
 # Verify test section subtitles exist
-assert subtitle("Test 2 - Glossy Button Pattern"), "Should have glossy button test"
-assert subtitle("Test 3 - Icon Button Pattern"), "Should have icon button test"
-assert subtitle("Test 4 - Tab Switching"), "Should have tab switching test"
+glossy = subtitles().find { |s| s.text.include?("Glossy Button Pattern") }
+assert glossy, "Should have glossy button test"
+icon = subtitles().find { |s| s.text.include?("Icon Button Pattern") }
+assert icon, "Should have icon button test"
+tab = subtitles().find { |s| s.text.include?("Tab Switching") }
+assert tab, "Should have tab switching test"
 
 # Verify tab switching buttons work
 assert button("Show Tab 1"), "Should have Show Tab 1 button"

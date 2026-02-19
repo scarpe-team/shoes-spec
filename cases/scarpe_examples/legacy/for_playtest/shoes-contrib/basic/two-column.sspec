@@ -17,7 +17,9 @@ end
 
 ----------- test code
 # Tests two-column layout with fixed and fluid widths
-assert_equal "Column one", caption(0).text
-assert_equal "Column two", caption(1).text
-assert_includes para(0).text, "200 pixels wide"
-assert_includes para(1).text, "100% minus 200 pixels"
+caps = captions()
+assert_equal "Column one", caps[0].text
+assert_equal "Column two", caps[1].text
+ps = paras()
+assert_includes ps[0].text, "200 pixels wide"
+assert_includes ps[1].text, "100% minus 200 pixels"

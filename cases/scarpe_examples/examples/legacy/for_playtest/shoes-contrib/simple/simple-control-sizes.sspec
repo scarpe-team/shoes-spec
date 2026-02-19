@@ -35,8 +35,10 @@ end
 # Fixed window: 360x600
 # Grid lines for visual size verification
 
-# Verify standard controls exist
-assert_equal "Standard", button().text
+# Verify standard controls exist (multiple buttons)
+btns = buttons()
+assert btns.length >= 2, "Should have multiple buttons"
+assert_equal "Standard", btns.first.text
 
 # Verify edit_line exists with expected text
 # Note: Multiple edit_lines - first should have "Standard"

@@ -48,11 +48,11 @@ end
 ----------- test code
 # Test: Page-based navigation with visit()
 # Initial state should be home page
-t = title()
+t = titles().first
 assert t, "Expected a title"
 assert_includes t.text, "Home", "Should start on Home Page"
 
-p = para()
+p = paras().first
 assert_includes p.text, "Welcome", "Home page should have welcome text"
 
 # Check navigation buttons exist
@@ -63,4 +63,4 @@ assert btn_floop, "Expected FlooperLand navigation button"
 
 # Navigate to Razzmatazz
 btn_razz.trigger_click
-assert_includes title().text, "Razzmatazz", "Should be on Razzmatazz page after click"
+assert_includes titles().first.text, "Razzmatazz", "Should be on Razzmatazz page after click"

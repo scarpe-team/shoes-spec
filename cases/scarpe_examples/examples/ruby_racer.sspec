@@ -70,6 +70,6 @@ assert_includes ebs[1].text, "times do"
 btn = drawable(Shoes::Button, "@push")
 assert btn, "Expected 'Race!' button"
 
-# Results para should exist
-results = para()
+# Results para should exist (last para in the list)
+results = paras().last
 assert results, "Expected results para"

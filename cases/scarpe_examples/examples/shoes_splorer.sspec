@@ -155,8 +155,8 @@ end
 
 ----------- test code
 # Test: Shoes API explorer/introspector
-# Check title para
-p = para()
+# Check title para (first para has the title question)
+p = paras().first
 assert p, "Expected a para"
 assert_includes p.text, "methods", "Para should mention methods"
 

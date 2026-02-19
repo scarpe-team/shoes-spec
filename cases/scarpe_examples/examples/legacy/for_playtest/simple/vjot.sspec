@@ -62,9 +62,11 @@ end
 ----------- test code
 # vJot note-taking clone
 # Verify caption
-assert caption(:text => "vJot")
+c = captions().first
+assert c, "Should have a caption"
+assert_equal "vJot", c.text
 # Verify edit controls exist
-assert edit_line()
-assert edit_box()
+assert edit_lines().first
+assert edit_boxes().first
 # Verify initial note is loaded
-assert_equal "Welcome to the vJot Clone", edit_line().text
+assert_equal "Welcome to the vJot Clone", edit_lines().first.text

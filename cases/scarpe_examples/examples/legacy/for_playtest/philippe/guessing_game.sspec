@@ -43,10 +43,13 @@ end
 # Note: Dialog interactions require special test support
 
 # Verify title exists
-assert title("Number Guessing Game"), "Should have title"
+t = titles().first
+assert t, "Should have title"
+assert_includes t.text, "Number Guessing Game"
 
 # Verify initial info para
-assert para("I'm thinking of a number between 1 and 100."), "Should have initial instruction"
+p = paras().find { |p| p.text.include?("I'm thinking of a number") }
+assert p, "Should have initial instruction"
 
 # Verify guess button exists
 assert button("Make a guess!"), "Should have guess button"

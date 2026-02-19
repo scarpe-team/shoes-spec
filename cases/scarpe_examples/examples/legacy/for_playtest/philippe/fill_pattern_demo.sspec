@@ -41,11 +41,16 @@ end
 # Test fill_pattern_demo.sspec - image pattern fills demo
 
 # Verify title exists
-assert title("Image Pattern Fills"), "Should have title"
+t = titles().first
+assert t, "Should have title"
+assert_includes t.text, "Image Pattern Fills"
 
 # Verify description para
-assert para("Shapes can be filled with images instead of solid colors!"), "Should have description"
+p = paras().find { |p| p.text.include?("Shapes can be filled") }
+assert p, "Should have description"
 
 # Verify the instruction paras exist
-assert para("Star with image fill:"), "Should have star description"
-assert para("Oval with gradient:"), "Should have oval description"
+star_p = paras().find { |p| p.text.include?("Star with image fill") }
+assert star_p, "Should have star description"
+oval_p = paras().find { |p| p.text.include?("Oval with gradient") }
+assert oval_p, "Should have oval description"
