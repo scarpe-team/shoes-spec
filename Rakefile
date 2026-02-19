@@ -3,6 +3,9 @@
 require_relative "lib/shoes-spec/report_results"
 require "fileutils"
 
+# Load custom rake tasks
+Dir.glob("lib/tasks/**/*.rake").each { |r| load r }
+
 include ShoesSpec
 
 def compare_all_results

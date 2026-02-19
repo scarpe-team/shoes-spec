@@ -1,10 +1,16 @@
 ---
 # Auto-imported from scarpe/shoes_manual/alert_button.rb
-# TODO: Add meaningful assertions
+# Tests the alert button with stubbing
 ----------- app code
 #!ruby
- Shoes.app { button("Click me!") { alert("Good job.") } }
+Shoes.app { button("Click me!") { alert("Good job.") } }
 
 ----------- test code
 # Test the alert button demo
 assert_equal "Click me!", button().text
+
+# Stub alert() so clicking the button doesn't block
+stub_alert
+button().trigger_click
+# If we get here without blocking, the test passes!
+assert true, "Alert was stubbed successfully"

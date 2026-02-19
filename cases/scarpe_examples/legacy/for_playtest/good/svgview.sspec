@@ -117,6 +117,8 @@ Shoes.app width: 500, height: 610, title: "SVG Viewer" do
 end
 
 ----------- test code
-# SVG Viewer - uses svg() widget and Nokogiri for parsing
-# Complex app with file dialogs and SVG manipulation
-assert true, "SVG viewer app should render without error"
+# SKIP: Requires nokogiri gem for SVG parsing
+skip "EXTERNAL_DEPS: Requires nokogiri gem for SVG parsing"
+
+# Original test:
+# assert true, "SVG viewer app should render without error"

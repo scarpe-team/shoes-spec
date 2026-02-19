@@ -1,6 +1,6 @@
 ---
 # Auto-imported from scarpe/shoes3-tests/dialogs/ask.rb
-# TODO: Add meaningful assertions
+# Tests the ask dialog with stubbing
 ----------- app code
 Shoes.app do
   button "ask" do
@@ -10,6 +10,12 @@ Shoes.app do
 end
 
 ----------- test code
-# Test the ask dialog button is present
-# Note: Can't easily test dialog interaction without user input
+# Verify button exists
 assert_equal "ask", button().text
+
+# Stub ask() to return a known value, then trigger the button
+stub_ask(returns: "Very lucky!")
+button().trigger_click
+
+# The para should now contain our stubbed response
+assert_equal "Very lucky!", para().text

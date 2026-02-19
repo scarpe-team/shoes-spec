@@ -8,9 +8,18 @@ module ShoesSpec
 
   ROOT_DIR = File.expand_path File.join(__dir__, "../..")
   CASES_DIR = File.join ROOT_DIR, "cases"
-  CATEGORIES = Dir.glob("*/*", base: CASES_DIR).select do |f|
-    File.directory?("#{CASES_DIR}/#{f}") # e.g. "drawables/button"
+  
+  # Discover all directories containing .sspec files (recursive)
+  def discover_categories
+    # Find all .sspec files recursively
+    all_specs = Dir.glob("**/*.sspec", base: CASES_DIR)
+    
+    # Extract unique parent directories (relative to CASES_DIR)
+    categories = all_specs.map { |f| File.dirname(f) }.uniq.sort
+    categories
   end
+  
+  CATEGORIES = discover_categories
 
   private
 

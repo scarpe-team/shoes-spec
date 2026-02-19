@@ -1,15 +1,21 @@
 ---
 # Auto-imported from scarpe/shoes3-tests/dialogs/confirm.rb
-# TODO: Add meaningful assertions
+# Tests the confirm dialog with stubbing
 ----------- app code
 Shoes.app do
   button "confirm" do
     ans = confirm "Feeling lucky?"
-    para ans
+    para ans.to_s
   end
 end
 
 ----------- test code
-# Test the confirm dialog button is present
-# Note: Can't easily test dialog interaction without user input
+# Verify button exists
 assert_equal "confirm", button().text
+
+# Stub confirm() to return true, then trigger the button
+stub_confirm(returns: true)
+button().trigger_click
+
+# The para should show "true"
+assert_equal "true", para().text
