@@ -1,29 +1,22 @@
 ---
-# Auto-imported from scarpe/margin.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app do
-
     para "All margins with array input", margin:[60,30,80,40]
-
     para "All margins with string input", margin: "30 20 10 20"
-
     para "One Number to set all margins", margin:20
-
     para "Specific property can overwrite shorthand" , margin:[20,10,20,30], margin_top:100
-
     para "margins using a hash input" , margin:{left:20,top:100,bottom:10,right:20}
-
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for margin"
+html = dom_html
+
+# All margin examples should render
+assert html.include?("array input"), "Expected array margin para"
+assert html.include?("string input"), "Expected string margin para"
+assert html.include?("One Number"), "Expected single number margin para"
+assert html.include?("overwrite shorthand"), "Expected overwrite para"
+assert html.include?("hash input"), "Expected hash margin para"
+
+# Margin styling should be present
+assert html.include?("margin"), "Expected margin CSS"

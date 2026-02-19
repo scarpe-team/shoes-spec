@@ -1,6 +1,4 @@
 ---
-# Auto-imported from scarpe/spacing.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app(title: "Spacing") do
   stack margin: 50 do
@@ -22,13 +20,13 @@ Shoes.app(title: "Spacing") do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for spacing"
+html = dom_html
+
+# All spacing descriptions should render
+assert html.include?("50px margin"), "Expected 50px margin para"
+assert html.include?("10px margin-left"), "Expected 10px margin para"
+assert html.include?("15px margin-left"), "Expected 15px margin para"
+assert html.include?("20px margin-left"), "Expected 20px margin para"
+
+# Background colors should be applied
+assert html.include?("purple") || html.include?("800080"), "Expected purple background"

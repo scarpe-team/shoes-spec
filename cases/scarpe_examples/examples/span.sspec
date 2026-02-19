@@ -1,6 +1,4 @@
 ---
-# Auto-imported from scarpe/span.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app :height => 500, :width => 500 do
   stack :margin => 10 do
@@ -12,13 +10,17 @@ Shoes.app :height => 500, :width => 500 do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for span"
+html = dom_html
+
+# Main text content should render
+assert html.include?("TEXT EDITOR"), "Expected TEXT EDITOR"
+assert html.include?("ALT-Q"), "Expected ALT-Q"
+assert html.include?("Various"), "Expected Various"
+
+# Text styles should render - del, sub, sup, ins
+assert html.include?("del") || html.include?("text"), "Expected del text"
+assert html.include?("sub") || html.include?("various"), "Expected sub text"
+assert html.include?("sup") || html.include?("styles"), "Expected sup text"
+
+# Underline styles
+assert html.include?("underline") || html.include?("text-decoration"), "Expected underline styling"

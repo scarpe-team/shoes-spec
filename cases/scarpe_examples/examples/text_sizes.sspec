@@ -1,6 +1,4 @@
 ---
-# Auto-imported from scarpe/text_sizes.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app(title: "Text Sizes") do
   banner "Banner"
@@ -14,13 +12,14 @@ Shoes.app(title: "Text Sizes") do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for text_sizes"
+html = dom_html
+
+# All text sizes should render
+assert html.include?("Banner"), "Expected Banner"
+assert html.include?("Title"), "Expected Title"
+assert html.include?("Subtitle"), "Expected Subtitle"
+assert html.include?("Tagline"), "Expected Tagline"
+assert html.include?("Caption"), "Expected Caption"
+assert html.include?("Para"), "Expected Para"
+assert html.include?("Inscription"), "Expected Inscription"
+assert html.include?("via ins"), "Expected ins shorthand"
