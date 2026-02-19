@@ -61,4 +61,4 @@ p = para()
 assert p, "Para should exist with time display"
 
 # Should contain time-like text (includes :)
-assert_include p.text, ":"
+assert_includes p.text, ":"

@@ -27,8 +27,8 @@ assert start_btn, "Start button should exist"
 assert stop_btn, "Stop button should exist"
 
 # Initial para text
-assert_include para().text, "start"
+assert_includes para().text, "start"
 
 # Click Start
 start_btn.trigger_click
-assert_include para().text, "Stop watch started"
+assert_includes para().text, "Stop watch started"

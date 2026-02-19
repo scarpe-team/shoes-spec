@@ -61,7 +61,7 @@ end
 # Tests custom Speedometer widget
 para_el = para()
 assert para_el, "Para with instructions should exist"
-assert_include para_el.text, "number between 0 and 100"
+assert_includes para_el.text, "number between 0 and 100"
 
 edit = edit_line()
 assert edit, "Edit line for input should exist"

@@ -38,4 +38,4 @@ skip "EXTERNAL_DEPS: Requires sqlite3 gem and LIB_DIR constant"
 # paras = find_all("para")
 # assert paras.length >= 4, "Should display database rows"
 # texts = paras.map(&:text).join
-# assert_include texts, "sample data"
+# assert_includes texts, "sample data"

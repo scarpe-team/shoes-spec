@@ -18,4 +18,4 @@ assert initial =~ /STARTING|FRAME/, "Should show STARTING or FRAME"
 # Wait a bit and verify animation is running
 wait 0.1
 later_text = para().text
-assert_include later_text, "FRAME"
+assert_includes later_text, "FRAME"

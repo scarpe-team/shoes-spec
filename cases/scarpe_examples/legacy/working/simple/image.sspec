@@ -31,7 +31,7 @@ assert img, "Image element should exist"
 
 edit = edit_line()
 assert edit, "Edit line for URL should exist"
-assert_include edit.text, "dino.jpg"
+assert_includes edit.text, "dino.jpg"
 
 btn = find_button("Download")
 assert btn, "Download button should exist"

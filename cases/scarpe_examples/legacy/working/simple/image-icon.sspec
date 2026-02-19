@@ -12,4 +12,4 @@ img = image()
 assert img, "Image element should exist"
 
 # Should have the URL as source
-assert_include img.url, "githubusercontent.com"
+assert_includes img.url, "githubusercontent.com"

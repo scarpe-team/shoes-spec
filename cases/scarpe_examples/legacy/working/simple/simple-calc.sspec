@@ -79,11 +79,11 @@ buttons = find_all("button")
 assert buttons.length >= 16, "Should have number/operator buttons"
 
 # Initial display should be 0
-assert_include para().text, "0"
+assert_includes para().text, "0"
 
 # Test: 5 * 4 = 20
 find_button("5").trigger_click
 find_button("*").trigger_click
 find_button("4").trigger_click
 find_button("=").trigger_click
-assert_include para().text, "20"
+assert_includes para().text, "20"
