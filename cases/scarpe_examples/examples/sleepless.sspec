@@ -1,42 +1,21 @@
 ---
-# Auto-imported from scarpe/sleepless.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app title: "Sleepless", width: 80, height: 120 do
-  @push = button "☕️"
-  @note = para "😪"
+  @push = button "Coffee"
+  @note = para "Sleepy"
   @push.click {
-    if @pid.nil?
-      if RUBY_PLATFORM =~ /darwin/
-        @pid = spawn("caffeinate -d")
-      elsif RUBY_PLATFORM =~ /linux/
-        @pid = spawn("xset s off -dpms")
-      elsif RUBY_PLATFORM =~ /win32|win64|\.NET/
-        @pid = spawn("powercfg -change -monitor-timeout-ac 0")
-      end
-      @note.replace "😳"
-    else
-      if RUBY_PLATFORM =~ /darwin/
-        system("kill #{@pid}")
-      elsif RUBY_PLATFORM =~ /linux/
-        system("kill -9 #{@pid}")
-      elsif RUBY_PLATFORM =~ /win32|win64|\.NET/
-        system("taskkill /pid #{@pid} /f")
-      end
-      @pid = nil
-      @note.replace "😪"
-    end
+    @note.replace "Awake"
   }
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for sleepless"
+btn = button("@push")
+note = para("@note")
+
+# Initial state
+assert_equal "Coffee", btn.text
+assert_equal "Sleepy", note.text
+
+# Click changes text
+btn.trigger_click
+assert_equal "Awake", note.text
