@@ -1,6 +1,4 @@
 ---
-# Auto-imported from scarpe/text_change.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app do
   p = para "Hello"
@@ -8,13 +6,7 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for text_change"
+# Para starts with Hello, then immediately replaced with Goodbye
+# By the time we query, it should be Goodbye
+p = para()
+assert_equal "Goodbye", p.text

@@ -1,6 +1,4 @@
 ---
-# Auto-imported from scarpe/fonts.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app do
     para "Hello, world!", font: "Arial", size: 20
@@ -9,13 +7,11 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for fonts"
+html = dom_html
+
+# All three paras should render Hello world
+assert html.include?("Hello, world!"), "Expected Hello world text"
+
+# Should have different font families
+assert html.include?("font-family") || html.include?("Arial") || html.include?("Courier"),
+       "Expected font styling"
