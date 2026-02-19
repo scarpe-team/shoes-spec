@@ -1,9 +1,5 @@
 ---
-# Auto-imported from scarpe/info.rb
-# TODO: Add meaningful assertions
 ----------- app code
-# frozen_string_literal: true
-
 Shoes.app do
   info <<~SHOES
     His calculations were, sadly, very completely wrong. And when he went to try the shoes out, he found that he had not
@@ -13,13 +9,8 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for info"
+# info() is a console logging method, not a visual element
+# It prints to stdout, not the DOM
+# Just verify the app renders without error
+html = dom_html
+assert html.include?("div"), "App should render basic structure"

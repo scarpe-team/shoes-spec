@@ -1,6 +1,4 @@
 ---
-# Auto-imported from scarpe/clear_and_append.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app do
   stack do
@@ -28,13 +26,12 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for clear_and_append"
+html = dom_html
+
+# Initial state
+assert html.include?("Good Morning"), "Expected initial 'Good Morning' para"
+
+# Buttons should render
+assert html.include?("More Stuff!"), "Expected More Stuff button"
+assert html.include?("No Stuff!"), "Expected No Stuff button"
+assert html.include?("Different Stuff!"), "Expected Different Stuff button"

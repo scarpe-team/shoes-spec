@@ -1,6 +1,4 @@
 ---
-# Auto-imported from scarpe/border.rb
-# TODO: Add meaningful assertions
 ----------- app code
 Shoes.app(width: 300, height: 50) do
   stack height: 50 do
@@ -15,13 +13,11 @@ Shoes.app(width: 300, height: 50) do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for border"
+html = dom_html
+
+# Both paras should render
+assert html.include?("Border is on top of text"), "Expected first border para"
+assert html.include?("also on top of text"), "Expected second border para"
+
+# Border styling should be present
+assert html.include?("border"), "Expected border CSS"
