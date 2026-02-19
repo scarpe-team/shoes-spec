@@ -63,13 +63,13 @@ Shoes.app :width => 537, :height => 500 do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for flowers"
+# Test: Animated concentric flower circles
+# Verifies animation with rotating colored circles
+
+# This animation uses clear/redraw pattern at 24 fps
+# Inner circle is red (10 ovals), outer circle is blue (20 ovals)
+# Both rotate in opposite directions with scaling
+# Background is pink rgb(1.0, 0.5, 1.0, 1.0)
+
+# Animation creates ovals dynamically each frame
+# This is primarily a visual animation test

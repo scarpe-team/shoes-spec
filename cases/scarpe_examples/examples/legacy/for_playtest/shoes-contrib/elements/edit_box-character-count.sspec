@@ -11,13 +11,8 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for edit_box-character-count"
+# Edit box with change handler updating character count
+# Initial state should show "0 characters"
+p = para()
+assert p.text.include?("0"), "Initial character count is 0"
+assert p.text.include?("characters"), "Para shows 'characters' label"

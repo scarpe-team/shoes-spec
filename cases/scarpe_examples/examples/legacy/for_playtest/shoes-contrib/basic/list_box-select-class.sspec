@@ -17,13 +17,12 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for list_box-select-class"
+# Verify initial UI elements
+paras = para(:all)
+assert paras[0].text.include?("Choose your class"), "Should have class selection prompt"
+
+# Verify list_box exists and has default selection
+lb = list_box()
+assert_equal "Rogue", lb.text, "Rogue should be pre-selected"
+
+# Note: Interaction tests would require list_box selection triggers

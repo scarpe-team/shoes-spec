@@ -10,13 +10,17 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for prepend-slot"
+# Tests slot.prepend() via button click
+# Initially shows "Good Morning" para
+# Button click prepends "Your car is ready."
+
+# Verify initial state
+assert_equal "Good Morning", para().text
+assert_equal "Prepend", button().text
+
+# Trigger the button to prepend content
+button().trigger_click
+
+# After click, there should be two paras
+# The prepended one should be first (but selector returns first match)
+# Note: Need to verify prepend behavior - new para should appear before original

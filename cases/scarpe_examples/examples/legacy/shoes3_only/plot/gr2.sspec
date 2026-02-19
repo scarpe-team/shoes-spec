@@ -43,13 +43,9 @@ Shoes.app width: 800, height: 500 do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for gr2"
+# Tests Shoes 3 multiple plot widgets:
+# - Two plots side by side
+# - chart: "line" type
+# - background: color option
+# - nil values in data (gaps in line)
+skip "Shoes 3 only: plot widget (multiple plots, line chart) not in Scarpe"

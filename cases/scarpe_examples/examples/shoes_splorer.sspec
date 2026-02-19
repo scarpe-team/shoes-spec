@@ -154,13 +154,16 @@ Shoes.app(title: "Shoes-splorer!") do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for shoes_splorer"
+# Test: Shoes API explorer/introspector
+# Check title para
+p = para()
+assert p, "Expected a para"
+assert_includes p.text, "methods", "Para should mention methods"
+
+# The app generates paras for each API category
+ps = paras()
+assert ps.length >= 2, "Expected multiple paras showing API categories"
+
+# Should have code elements for method names
+codes = codes()
+assert codes.length > 0, "Expected code elements showing method names"

@@ -28,13 +28,6 @@ Shoes.app :width => 360, :height => 600, :resizable => false do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for simple-control-sizes"
+# Test UI controls rendering at specified sizes
+# Tests button, edit_line, list_box, progress, edit_box against grid
+skip "PLAYTEST: Visual sizing against grid - requires manual inspection"

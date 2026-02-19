@@ -15,13 +15,10 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for background-hover"
+# Verify the stack with background exists
+stk = stack()
+assert stk, "Expected stack element to exist"
+
+bg = background()
+assert bg, "Expected background element to exist"
+# Hover/leave behavior requires mouse events - manual playtest needed

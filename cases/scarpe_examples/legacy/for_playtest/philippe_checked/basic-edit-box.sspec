@@ -12,13 +12,17 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for basic-edit-box"
+# Test: Basic edit_box with callback
+# Verifies edit_box change callback updates a para
+
+# Check that edit_box exists
+assert edit_box(), "Should have an edit_box element"
+
+# Check that para exists
+assert para(), "Should have a para element"
+
+# Verify stack exists
+assert stack(), "Should have a stack"
+
+# The edit_box callback updates the para with typed text
+# This is an interactive test - typing in edit_box updates para

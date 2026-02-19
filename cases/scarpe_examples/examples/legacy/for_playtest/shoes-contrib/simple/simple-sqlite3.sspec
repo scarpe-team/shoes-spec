@@ -16,13 +16,19 @@ Shoes.app :width => 350, :height => 130 do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
+# Tests SQLite3 integration
+# Creates table, inserts rows, selects and displays data
+# Includes Unicode test: "Aurélio, Küng, Stärk, Uña, Łuksza"
 #
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
+# Requires: sqlite3 gem
+# Creates file: simple-sqlite3.db in working directory
 #
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for simple-sqlite3"
+# Window: 350x130
+
+# This test has side effects (creates database file)
+# and requires external gem
+skip "Requires sqlite3 gem and creates database file"
+
+# If dependencies available, could verify:
+# - 4 paras created (one per row)
+# - Unicode characters rendered correctly

@@ -74,13 +74,11 @@ Shoes.app :height => 250, :width => 200, :resizable => false do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
+# Test: Simple calculator app
+# Verifies basic calculation functionality
 #
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
+# Elements: buttons (0-9, +, -, *, /, =, Clr), para (display), stack, flow, background
+# Features: Calc class handles math, gradient background
+# Similar to calc.sspec but simpler implementation
 #
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for simple-calc"
+# Simple calculator with 0-9, +, -, *, /, =, Clr buttons

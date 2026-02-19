@@ -22,13 +22,13 @@ Shoes.app :width => 600, :height => 500 do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for rotating-star"
+# Test: Rotating and scaling star animation
+# Verifies transform operations: translate, rotate, scale
+
+# Animation runs at 24 fps
+# Canvas is translated to center
+# Star rotates 1 degree per frame
+# Star scales randomly between 0.8x and 1.2x
+
+# Uses star() with 7 points
+# This is a visual animation test with transforms

@@ -50,13 +50,10 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for mon1"
+# Tests Shoes 3 multi-monitor window management:
+# - Shoes.settings.monitor_count / monitor_default
+# - Shoes.settings.monitor_geometry(mon)
+# - window(..., monitor: n) to launch on specific monitor
+# - app.monitor = n to move window between monitors
+# - self.left, self.top, self.move(x, y)
+skip "Shoes 3 only: multi-monitor window management not in Scarpe"

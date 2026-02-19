@@ -1,0 +1,176 @@
+[
+  {
+    "name": "image_events_test",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/philippe/image_events_test.sspec"
+  },
+  {
+    "name": "minimal_editor",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/philippe/minimal_editor.sspec"
+  },
+  {
+    "name": "shape_curves",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/philippe/shape_curves.sspec"
+  },
+  {
+    "name": "accordion",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/philippe_checked/accordion.sspec"
+  },
+  {
+    "name": "basic-edit-box",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/philippe_checked/basic-edit-box.sspec"
+  },
+  {
+    "name": "button",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/philippe_checked/button.sspec"
+  },
+  {
+    "name": "calc",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/philippe_checked/calc.sspec"
+  },
+  {
+    "name": "check-mate",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/philippe_checked/check-mate.sspec"
+  },
+  {
+    "name": "editor",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/philippe_checked/editor.sspec"
+  },
+  {
+    "name": "gradient-shoes",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/philippe_checked/gradient-shoes.sspec"
+  },
+  {
+    "name": "list_box",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/philippe_checked/list_box.sspec"
+  },
+  {
+    "name": "simple-calc",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/philippe_checked/simple-calc.sspec"
+  },
+  {
+    "name": "timer",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/philippe_checked/timer.sspec"
+  },
+  {
+    "name": "animate-ovals",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/animation/animate-ovals.sspec"
+  },
+  {
+    "name": "flowers",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/animation/flowers.sspec"
+  },
+  {
+    "name": "happy-trails",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/animation/happy-trails.sspec"
+  },
+  {
+    "name": "mice-satellites",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/animation/mice-satellites.sspec"
+  },
+  {
+    "name": "oval-motion",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/animation/oval-motion.sspec"
+  },
+  {
+    "name": "pink-bubbles",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/animation/pink-bubbles.sspec"
+  },
+  {
+    "name": "pulsate",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/animation/pulsate.sspec"
+  },
+  {
+    "name": "rotating-star",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/animation/rotating-star.sspec"
+  },
+  {
+    "name": "download-and-save",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/app/download-and-save.sspec"
+  },
+  {
+    "name": "download",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/app/download.sspec"
+  },
+  {
+    "name": "get-google",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/app/get-google.sspec"
+  },
+  {
+    "name": "mouse-detection",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/app/mouse-detection.sspec"
+  },
+  {
+    "name": "resizeable-false",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/app/resizeable-false.sspec"
+  },
+  {
+    "name": "bubble-bullseye",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/art/bubble-bullseye.sspec"
+  },
+  {
+    "name": "faded",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/art/faded.sspec"
+  },
+  {
+    "name": "fill-oval",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/art/fill-oval.sspec"
+  }
+]

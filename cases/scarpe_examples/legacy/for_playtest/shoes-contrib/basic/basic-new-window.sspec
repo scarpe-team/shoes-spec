@@ -12,13 +12,6 @@ Shoes.app :title => "MAIN" do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for basic-new-window"
+# Tests main window with spawn button
+# Note: Child window spawning is complex to test
+assert_equal "Spawn", button().text

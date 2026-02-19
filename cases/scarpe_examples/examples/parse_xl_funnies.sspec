@@ -65,13 +65,6 @@ Shoes.app width: 800, height: 600 do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for parse_xl_funnies"
+# Skip: Requires nokogiri gem and network access
+# This example fetches RSS feed from xkcd.com and parses with Nokogiri
+skip "Requires nokogiri gem and network access (xkcd RSS feed)"

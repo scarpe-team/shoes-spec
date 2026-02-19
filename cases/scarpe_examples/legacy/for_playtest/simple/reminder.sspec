@@ -178,13 +178,10 @@ Shoes.app :title => "A Gentle Reminder",
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for reminder"
+# Test: Todo/reminder app with YAML persistence
+# Has add field, todo list, completed section
+
+assert edit_line(), "Add input should exist"
+assert_equal "Add", button().text
+# Caption and info paras exist
+assert paras().count >= 2, "Should have instruction paras"

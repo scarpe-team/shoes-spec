@@ -10,13 +10,13 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for border-cat"
+# Verify stack exists with 50px width
+s = stack()
+assert_equal 50, s.width
+
+# Verify border exists
+b = border()
+refute_nil b
+
+# Verify cat face para
+assert_equal "=^.^=", para().text

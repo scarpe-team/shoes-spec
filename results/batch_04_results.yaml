@@ -1,0 +1,88 @@
+---
+- test_name: rect-arrow
+  status: pass
+  message: 1 assertions
+- test_name: scribble
+  status: pass
+  message: 1 assertions
+- test_name: search
+  status: pass
+  message: 1 assertions
+- test_name: shoes-notes
+  status: pass
+  message: 1 assertions
+- test_name: two-column
+  status: pass
+  message: 1 assertions
+- test_name: url-shoes-subclassing
+  status: pass
+  message: 1 assertions
+- test_name: browser
+  status: pass
+  message: 1 assertions
+- test_name: background-column
+  status: pass
+  message: 1 assertions
+- test_name: background
+  status: pass
+  message: 1 assertions
+- test_name: button-block
+  status: pass
+  message: 1 assertions
+- test_name: common-styles
+  status: pass
+  message: 1 assertions
+- test_name: displace-animation
+  status: pass
+  message: 1 assertions
+- test_name: edit_box-character-count
+  status: pass
+  message: 2 assertions
+- test_name: edit_box
+  status: pass
+  message: 1 assertions
+- test_name: edit_line-character-count
+  status: pass
+  message: 2 assertions
+- test_name: move-flow-animate
+  status: pass
+  message: 1 assertions
+- test_name: popup
+  status: pass
+  message: 1 assertions
+- test_name: progress-bar
+  status: pass
+  message: 1 assertions
+- test_name: radio-dreamcast-favs
+  status: pass
+  message: 1 assertions
+- test_name: timer
+  status: pass
+  message: 1 assertions
+- test_name: background-hover
+  status: pass
+  message: 1 assertions
+- test_name: motion-detect
+  status: pass
+  message: 1 assertions
+- test_name: pressed-key
+  status: pass
+  message: 1 assertions
+- test_name: expert-othello
+  status: pass
+  message: 1 assertions
+- test_name: good-arc
+  status: pass
+  message: 1 assertions
+- test_name: alert
+  status: pass
+  message: 1 assertions
+- test_name: ask
+  status: pass
+  message: 1 assertions
+- test_name: ask_color
+  status: pass
+  message: 1 assertions
+- test_name: ask_open_file
+  status: pass
+  message: 1 assertions

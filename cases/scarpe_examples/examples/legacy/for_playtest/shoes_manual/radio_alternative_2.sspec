@@ -13,13 +13,7 @@
  end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for radio_alternative_2"
+# Verify alternative radio layout in flows
+assert stacks().length >= 1, "Expected a stack container"
+assert flows().length >= 3, "Expected 3 flow containers for radios"
+assert radios().length >= 3, "Expected 3 radio buttons"

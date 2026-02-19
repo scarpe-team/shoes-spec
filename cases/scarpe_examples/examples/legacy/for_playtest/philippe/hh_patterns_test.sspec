@@ -192,13 +192,22 @@ Shoes.app(title: "HH Patterns Test", width: 600, height: 500) do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for hh_patterns_test"
+# Test hh_patterns_test.sspec - Hackety Hack patterns test suite
+
+# Verify main title
+assert title("HH Patterns Test Suite"), "Should have main title"
+
+# Verify test section subtitles exist
+assert subtitle("Test 2 - Glossy Button Pattern"), "Should have glossy button test"
+assert subtitle("Test 3 - Icon Button Pattern"), "Should have icon button test"
+assert subtitle("Test 4 - Tab Switching"), "Should have tab switching test"
+
+# Verify tab switching buttons work
+assert button("Show Tab 1"), "Should have Show Tab 1 button"
+assert button("Show Tab 2"), "Should have Show Tab 2 button"
+
+# Verify the Remove button for finish callback test
+assert button("Remove test_stack"), "Should have Remove test_stack button"
+
+# Verify the Increment button for clear/replace test
+assert button("Increment"), "Should have Increment button"

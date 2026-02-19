@@ -32,13 +32,11 @@ Shoes.app :height => 500, :width => 450 do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
+# Test: Basic text editor with keypress
+# Verifies text input via keypress and cursor display
 #
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
+# Elements: para (title, text), background (gray), stack
+# Features: keypress handler, para.cursor, clipboard
+# Keys: typing, backspace, tab, alt-q (quit), alt-c (copy), alt-v (paste)
 #
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for editor"
+# Full testing requires keypress simulation

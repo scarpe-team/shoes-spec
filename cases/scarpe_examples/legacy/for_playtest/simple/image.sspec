@@ -25,13 +25,10 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for image"
+# Test: Image downloader with URL input
+# Shows local image initially, downloads from URL on click
+
+assert images().count >= 1, "Should have at least one image"
+assert edit_line(), "URL input should exist"
+assert_equal "http://shoes.mvmanila.com/public/images/dino.jpg", edit_line().text
+assert_equal "Download", button().text

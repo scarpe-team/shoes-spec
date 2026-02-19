@@ -48,13 +48,7 @@ Shoes.app :width => 640, :height => 700,
   :title => "Incidents, a Book"
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for _why-stories"
+# _why's Incidents story reader
+# Requires YAML file at DIR/samples/good/_why-stories.yaml
+# Uses Shoes URL routing
+skip "Requires _why-stories.yaml file and Shoes URL routing"

@@ -55,13 +55,10 @@ Shoes.app :height => 260, :width => 250 do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for clock"
+# Test: Analog clock with digital time display
+# Thomas Bell's Shoes Clock from 2007
+
+# Clock has para with date/time info
+assert para(), "Time para should exist"
+# The para contains the current time, so just verify it exists and has content
+assert para().text.length > 0, "Time display should have content"

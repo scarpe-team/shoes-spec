@@ -28,13 +28,11 @@ Shoes.app menus: true, width: 300, height: 200 do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for menu2"
+# Tests Shoes 3 menu widgets:
+# - menubar - creates menu bar
+# - menu "Title" - creates menu
+# - menuitem "Title", key: "control_h" { block } - creates menu item with shortcut
+# - menu << menuitem (append item to menu)
+# - menubar << menu (append menu to bar)
+# - menuitem.title=, menuitem.block=, menuitem.enable=
+skip "Shoes 3 only: menu widgets (menubar, menu, menuitem) not in Scarpe"

@@ -25,13 +25,13 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for image"
+# Verify image exists via instance variable
+img = drawable(Shoes::Image, "@img")
+refute_nil img
+
+# Verify edit_line exists via instance variable
+url = drawable(Shoes::EditLine, "@url")
+refute_nil url
+
+# Verify Download button
+assert_equal "Download", button().text

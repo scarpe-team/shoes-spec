@@ -26,13 +26,14 @@ Shoes.app :width => 600, :height => 600 do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for bubble-bullseye"
+# Test: Recursive bullseye circles with bubble mask
+# Verifies recursive drawing and mask effect
+
+# Uses recursive draw_circle method to create concentric rings
+# Inner circles are redder, outer circles fade
+# nofill is set for the concentric rings
+
+# mask() creates 250 random bubble ovals as clipping region
+# The bullseye shows through the bubble shapes
+
+# This is a visual art test with mask and recursive drawing

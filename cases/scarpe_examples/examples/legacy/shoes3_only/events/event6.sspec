@@ -55,13 +55,8 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for event6"
+# Tests Shoes 3 global event system with multiple event types:
+# - :click, :keypress, :keydown, :keyup, :motion, :release, :wheel
+# Also tests keyup/keydown handlers which are Shoes 3-specific.
+# The check widget controls whether keydown/keyup events are accepted.
+skip "Shoes 3 only: global event system and keyup/keydown handlers not in Scarpe"

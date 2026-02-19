@@ -148,13 +148,14 @@ Shoes.app(title: 'Templates') do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for gen"
+# Test Scarpe file generator UI
+html = dom_html
+
+# All form labels should render
+assert html.include?("Enter the filename"), "Expected filename label"
+assert html.include?("Shoes styles"), "Expected styles label"
+assert html.include?("generate"), "Expected generate choice label"
+assert html.include?("template"), "Expected template choice label"
+
+# Generate button should exist
+assert html.include?("Generate Files"), "Expected generate button"

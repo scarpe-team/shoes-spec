@@ -7,13 +7,10 @@ Shoes.app(features: :html) do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for scarpe_ext"
+# Test: Scarpe HTML extension feature
+# Note: features: :html is Scarpe-specific
+btn = button("OK")
+assert btn, "Expected an OK button"
+assert_equal "OK", btn.text
+
+# html_class is a Scarpe extension - may not be available in all implementations

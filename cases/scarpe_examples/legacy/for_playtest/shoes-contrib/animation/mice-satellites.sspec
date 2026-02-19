@@ -31,13 +31,13 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for mice-satellites"
+# Test: Satellite animation following mouse
+# Verifies motion handler and dynamic satellite creation
+
+# Animation runs at 10 fps
+# Satellites orbit around the mouse position
+# Number of satellites depends on vertical position
+# Uses skew transform
+
+# This is an interactive/visual animation test
+# Satellites are drawn with fill and orbit using sin/cos

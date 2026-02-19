@@ -23,13 +23,11 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for list_box-shape-report"
+# Verify list_box has correct items
+assert_equal ["Square", "Oval", "Rectangle"], list_box().items
+# Verify button exists
+assert_equal "Report", button().text
+# Verify para text in flow
+assert para(:text => "Text")
+assert para(:text => "More")
+assert para(:text => "Less")

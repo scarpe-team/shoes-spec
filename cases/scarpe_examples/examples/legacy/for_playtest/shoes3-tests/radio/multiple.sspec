@@ -36,13 +36,15 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for multiple"
+# Tests multiple radio groups on same page
+# Verifies radios from different groups render
+
+# Should have 6 radios total: 2 default, 2 :group, 2 :newgrp
+radios = Shoes::App.find_drawables_by(Shoes::Radio)
+assert radios.length >= 6, "Should have at least 6 radio buttons"
+
+# Verify button exists
+buttons = Shoes::App.find_drawables_by(Shoes::Button)
+assert buttons.length >= 1, "Should have Now check button"
+
+assert true, "Multiple radio groups test completed"

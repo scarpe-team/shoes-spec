@@ -19,13 +19,11 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
+# Test: Checkboxes with selection
+# Verifies checkboxes can be checked and queried
 #
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
+# Elements: check (3 checkboxes), para (names), button, stack, flow
+# Features: check.checked?, alert() with selected names
+# Names: Frances Johnson, Ignatius J. Reilly, Winston Niles Rumfoord
 #
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for check-mate"
+# The button shows an alert with selected names

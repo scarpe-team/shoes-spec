@@ -1,0 +1,214 @@
+[
+  {
+    "name": "cursor",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "assertions": 0
+  },
+  {
+    "name": "ed",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "assertions": 0
+  },
+  {
+    "name": "el",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "assertions": 0
+  },
+  {
+    "name": "logattr",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "assertions": 0
+  },
+  {
+    "name": "tests_color",
+    "status": "error",
+    "failures": [
+      "failed to run"
+    ],
+    "assertions": 0
+  },
+  {
+    "name": "tests_svg",
+    "status": "error",
+    "failures": [
+      "failed to run"
+    ],
+    "assertions": 0
+  },
+  {
+    "name": "tests_video_vlc",
+    "status": "error",
+    "failures": [
+      "failed to run"
+    ],
+    "assertions": 0
+  },
+  {
+    "name": "video-player",
+    "status": "error",
+    "failures": [
+      "failed to run"
+    ],
+    "assertions": 0
+  },
+  {
+    "name": "video_vlc",
+    "status": "error",
+    "failures": [
+      "failed to run"
+    ],
+    "assertions": 0
+  },
+  {
+    "name": "guessing_game",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "assertions": 0
+  },
+  {
+    "name": "a-poem",
+    "status": "pass",
+    "failures": [],
+    "assertions": 1
+  },
+  {
+    "name": "basic-blocks-instances",
+    "status": "pass",
+    "failures": [],
+    "assertions": 3
+  },
+  {
+    "name": "basic-blocks",
+    "status": "pass",
+    "failures": [],
+    "assertions": 1
+  },
+  {
+    "name": "basic-slot",
+    "status": "pass",
+    "failures": [],
+    "assertions": 1
+  },
+  {
+    "name": "class-book",
+    "status": "error",
+    "failures": [
+      "failed to run"
+    ],
+    "assertions": 0
+  },
+  {
+    "name": "intro",
+    "status": "pass",
+    "failures": [],
+    "assertions": 1
+  },
+  {
+    "name": "two-column",
+    "status": "pass",
+    "failures": [],
+    "assertions": 1
+  },
+  {
+    "name": "edit_box",
+    "status": "pass",
+    "failures": [],
+    "assertions": 1
+  },
+  {
+    "name": "alert",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "assertions": 0
+  },
+  {
+    "name": "confirm",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "assertions": 0
+  },
+  {
+    "name": "font",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "assertions": 0
+  },
+  {
+    "name": "simple-sqlite3",
+    "status": "error",
+    "failures": [
+      "failed to run"
+    ],
+    "assertions": 0
+  },
+  {
+    "name": "expert-game-of-life",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "assertions": 0
+  },
+  {
+    "name": "expert-othello",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "assertions": 0
+  },
+  {
+    "name": "ask_open_file",
+    "status": "error",
+    "failures": [
+      "failed to run"
+    ],
+    "assertions": 0
+  },
+  {
+    "name": "editline",
+    "status": "pass",
+    "failures": [],
+    "assertions": 4
+  },
+  {
+    "name": "alert_button",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "assertions": 0
+  },
+  {
+    "name": "animate",
+    "status": "pass",
+    "failures": [],
+    "assertions": 1
+  },
+  {
+    "name": "background_para",
+    "status": "pass",
+    "failures": [],
+    "assertions": 1
+  }
+]

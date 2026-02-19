@@ -13,13 +13,10 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for font_shorthand"
+# Test font shorthand styling on paras
+html = dom_html
+
+# All three paras should render with their explanatory text
+assert html.include?("family is not in font"), "Expected first para"
+assert html.include?("only things things who aren"), "Expected second para"
+assert html.include?("specific property"), "Expected third para"

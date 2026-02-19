@@ -9,13 +9,6 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for ask_open_file"
+# ask_open_file() triggers native file picker dialog before app starts
+# Cannot automate without mocking the file dialog
+skip "ask_open_file() shows native file picker - cannot automate"

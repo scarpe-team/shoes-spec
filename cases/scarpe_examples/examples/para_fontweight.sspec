@@ -16,13 +16,12 @@ Shoes.app do
   end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for para_fontweight"
+# Test: Paras with various font weights
+ps = paras()
+assert_equal 5, ps.length, "Expected 5 paras with different font weights"
+
+assert_includes ps[0].text, "normal"
+assert_includes ps[1].text, "bolder"
+assert_includes ps[2].text, "less bold"
+assert_includes ps[3].text, "bolder than"
+assert_includes ps[4].text, "Close to normal"

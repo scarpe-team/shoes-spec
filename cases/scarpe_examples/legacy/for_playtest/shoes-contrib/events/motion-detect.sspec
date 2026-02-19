@@ -13,13 +13,10 @@ Shoes.app :width => 200, :height => 200 do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for motion-detect"
+# Verify the oval (circle) exists for motion tracking
+o = oval()
+assert o, "Expected oval element to exist"
+
+bg = background()
+assert bg, "Expected background element to exist"
+# Motion events require mouse movement - manual playtest needed

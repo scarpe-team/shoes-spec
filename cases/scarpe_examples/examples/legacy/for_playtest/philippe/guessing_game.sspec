@@ -39,13 +39,14 @@ Shoes.app :width => 350, :height => 300, :title => "Guessing Game" do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for guessing_game"
+# Test guessing_game.sspec - number guessing game with ask() dialog
+# Note: Dialog interactions require special test support
+
+# Verify title exists
+assert title("Number Guessing Game"), "Should have title"
+
+# Verify initial info para
+assert para("I'm thinking of a number between 1 and 100."), "Should have initial instruction"
+
+# Verify guess button exists
+assert button("Make a guess!"), "Should have guess button"

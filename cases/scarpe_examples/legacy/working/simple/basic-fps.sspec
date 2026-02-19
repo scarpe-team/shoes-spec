@@ -10,13 +10,12 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for basic-fps"
+# Tests animate at 24fps
+# Initial text should be STARTING or already animating
+initial = para().text
+assert initial =~ /STARTING|FRAME/, "Should show STARTING or FRAME"
+
+# Wait a bit and verify animation is running
+wait 0.1
+later_text = para().text
+assert_include later_text, "FRAME"

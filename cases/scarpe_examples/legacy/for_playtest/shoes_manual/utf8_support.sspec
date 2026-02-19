@@ -12,13 +12,9 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for utf8_support"
+# Edit box syncs to para (UTF-8 support test)
+edit = edit_box()
+assert edit, "Should have an edit_box"
+
+p = para()
+assert p, "Should have a para"

@@ -58,13 +58,11 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for speedometer_app"
+# Test: Speedometer widget with input
+# Custom Speedometer widget displays 0-100 range gauge
+
+assert para(), "Instruction para should exist"
+assert edit_line(), "Number input should exist"
+assert_equal "OK", button().text
+# Speedometer widget creates shapes for gauge
+assert ovals().count >= 1, "Speedometer should have gauge ovals"

@@ -36,13 +36,12 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for multiple"
+# Test the multiple radio groups demo
+assert_equal "default", para(0).text
+assert_equal "still more default", para(1).text
+assert_equal "one", para(2).text
+assert_equal "two", para(3).text
+assert_equal "================", para(4).text
+assert_equal "near", para(5).text
+assert_equal "far", para(6).text
+assert_equal "Now check", button().text

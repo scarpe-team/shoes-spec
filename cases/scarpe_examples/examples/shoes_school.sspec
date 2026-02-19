@@ -70,13 +70,24 @@ Shoes.app(title: "Shoes School", height: 800, width: 1000) do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for shoes_school"
+# Test: Shoes School tutorial IDE
+# Check banner
+b = banner()
+assert b, "Expected a banner"
+assert_includes b.text, "Shoes School"
+
+# Check edit_box with code
+eb = edit_box()
+assert eb, "Expected an edit_box for code"
+assert_includes eb.text, "Shoes.app", "Edit box should contain Shoes.app code"
+
+# Check lecture para
+p = para()
+assert p, "Expected a para with lecture text"
+assert_includes p.text, "Welcome", "Lecture should welcome the user"
+
+# Check buttons
+run_btn = button("Run 🏃")
+next_btn = button("Next ✅")
+assert run_btn, "Expected 'Run' button"
+assert next_btn, "Expected 'Next' button"

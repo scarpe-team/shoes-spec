@@ -19,13 +19,7 @@ b = Bloops.new
 sleep 0.5 while not b.stopped?
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for simpsons_theme_song_by_why"
+# NOT A SHOES APP - Pure bloopsaphone audio script by _why
+# This file plays the Simpsons theme using bloopsaphone.
+# It has no Shoes.app block to test.
+skip "NOT_A_SHOES_APP: Pure bloopsaphone audio script without GUI"

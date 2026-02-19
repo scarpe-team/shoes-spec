@@ -12,13 +12,6 @@
  end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for window_owner"
+# Verify main window has popup button
+btn = button()
+assert_equal "Pop up?", btn.text

@@ -14,13 +14,14 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for instance_variable_check"
+# Verify stack exists via instance variable
+s = drawable(Shoes::Stack, "@s")
+refute_nil s
+
+# Verify paras via instance variables
+p1 = drawable(Shoes::Para, "@p1")
+p2 = drawable(Shoes::Para, "@p2")
+p3 = drawable(Shoes::Para, "@p3")
+assert_equal "First", p1.text
+assert_equal "Second", p2.text
+assert_equal "Third", p3.text

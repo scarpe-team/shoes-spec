@@ -13,13 +13,16 @@
  end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for button"
+# Test button.sspec - buttons that append paras on click
+
+# Initially there should be two buttons
+assert_equal "OK!", button("OK!").text
+assert_equal "Are you sure?", button("Are you sure?").text
+
+# Click OK button - should append "Well okay then."
+button("OK!").trigger_click
+assert para("Well okay then."), "Clicking OK should append para"
+
+# Click the other button
+button("Are you sure?").trigger_click
+assert para("Your confidence is inspiring."), "Clicking 'Are you sure?' should append para"

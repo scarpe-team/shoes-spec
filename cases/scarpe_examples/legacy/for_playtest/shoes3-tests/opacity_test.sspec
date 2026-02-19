@@ -49,13 +49,11 @@ Shoes.app(title: "App Opacity Demo", width: 400, height: 300) do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for opacity_test"
+# Test the opacity demo UI elements
+assert_equal "App Opacity Demo", title().text
+assert_includes para(0).text, "Click buttons to change window opacity"
+assert_includes para(1).text, "Opacity: 1.0"
+assert_equal "100%", button(0).text
+assert_equal "75%", button(1).text
+assert_equal "50%", button(2).text
+assert_equal "25%", button(3).text

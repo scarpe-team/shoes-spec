@@ -44,13 +44,8 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for downloader"
+# Test the download UI elements are present
+assert_equal "Enter a URL to download:", para(0).text
+assert_equal "Download", button().text
+# The edit_line should have the default URL
+assert_includes edit_line().text, "walkabout.mvmanila.com"

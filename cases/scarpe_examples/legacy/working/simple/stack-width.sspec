@@ -7,13 +7,8 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for stack-width"
+# Tests stack with explicit width
+stk = stack()
+assert stk, "Stack should exist"
+assert_equal 150, stk.style[:width]
+assert_equal "Now that's precision.", para().text

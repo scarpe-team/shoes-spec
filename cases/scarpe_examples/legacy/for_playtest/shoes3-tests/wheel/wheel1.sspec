@@ -25,13 +25,7 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for wheel1"
+# Test the mouse wheel demo UI
+assert_equal "None", para(0).text
+assert_equal "Flow 1", para(1).text
+assert_equal "Flow 2", para(2).text

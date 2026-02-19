@@ -16,13 +16,9 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for fixed_width"
+# Verify two-column layout with fixed width stacks
+assert flows().length >= 1, "Expected a flow container"
+assert stacks().length >= 2, "Expected two stack columns"
+assert captions().length >= 2, "Expected two caption elements"
+assert_includes captions()[0].text, "Column one"
+assert_includes captions()[1].text, "Column two"

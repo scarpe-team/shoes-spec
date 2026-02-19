@@ -28,13 +28,8 @@ Shoes.app(title: "curve_to control points", width: 256, height: 256) do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for curve-control-points"
+# Test: Bezier curve with visible control points
+# 4 ovals represent control points, shape draws the curve
+
+assert_equal 4, ovals().count, "Should have 4 control point ovals"
+assert shape(), "Curve shape should exist"

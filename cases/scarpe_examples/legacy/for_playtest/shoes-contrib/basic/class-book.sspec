@@ -47,13 +47,6 @@ Shoes.app :width => 640, :height => 700,
   :title => "Incidents, a Book"
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for class-book"
+# Complex URL-routed book app requiring external YAML file
+# Cannot test without class-book.yaml dependency
+skip "Requires external class-book.yaml file"

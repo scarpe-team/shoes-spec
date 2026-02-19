@@ -18,13 +18,9 @@
  end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for move"
+# Verify animated button movement with three buttons
+assert flows().length >= 1, "Expected a flow container"
+assert buttons().length >= 3, "Expected 3 buttons"
+assert_equal "One", buttons()[0].text
+assert_equal "Two", buttons()[1].text
+assert_equal "Three", buttons()[2].text

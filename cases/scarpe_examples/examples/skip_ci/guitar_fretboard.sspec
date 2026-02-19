@@ -141,13 +141,6 @@ Shoes.app(width: 1280, height: 400) do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for guitar_fretboard"
+# Skip: Requires 'bloops' gem for audio synthesis
+# This app plays guitar chords using the bloops library
+skip "Requires bloops gem for audio synthesis"

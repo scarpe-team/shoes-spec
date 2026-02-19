@@ -14,13 +14,9 @@
  end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for list_box"
+# Verify list_box with items and default selection
+assert paras().length >= 2, "Expected 2 para elements"
+assert_includes paras()[0].text, "Choose a fruit"
+assert list_boxes().length >= 1, "Expected a list_box element"
+# Default selection is Apricots
+assert_equal "Apricots", list_box().text

@@ -34,13 +34,10 @@ Shoes.app :width => 320, :height => 420 do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for form"
+# Test: Form with name dropdown, address/phone inputs, save button
+# Note: Uses background images that may not exist
+
+# Two list_boxes - one standalone, one for Name field
+assert list_boxes().count >= 2, "Should have list boxes"
+assert_equal 2, edit_lines().count, "Should have Address and Phone inputs"
+assert_equal "Save", button().text

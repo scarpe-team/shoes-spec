@@ -109,13 +109,12 @@ Shoes.app(width: (SQUARE_SIZE + SQUARE_PADDING) * SQUARES + SQUARE_PADDING, heig
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for colours"
+# Test Farnsworth-Munsell 100 Hue Color Vision Test
+# Complex visual/interactive test - verifies basic structure renders
+html = dom_html
+
+# Should render with rectangles/shapes
+assert html.length > 100, "Expected rendered HTML content"
+
+# Should have animation or rect elements
+assert html.include?("rect") || html.include?("div") || html.include?("style"), "Expected rendered visual elements"

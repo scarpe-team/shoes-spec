@@ -11,13 +11,14 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for mouse-detection"
+# Test: Mouse position detection
+# Verifies self.mouse returns button, x, y
+
+# Check para exists for mouse display
+assert para(), "Should have a para element"
+
+# Animation continuously updates the para with mouse info
+# Format: "mouse: button, left, top"
+# button is 0 (none), 1 (left), 2 (middle), 3 (right)
+
+# This is an interactive test - displays current mouse state

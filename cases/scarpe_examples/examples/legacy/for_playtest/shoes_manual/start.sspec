@@ -23,13 +23,12 @@ Shoes.app(title: "Start Callback Demo", width: 300, height: 200) do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for start"
+# Verify start callback fires and sets initial text
+# After start callback, label should be updated
+p = para()
+assert_equal "App started! Click the button.", p.text
+
+# Verify button click increments counter
+btn = button()
+btn.trigger_click
+assert_equal "Counter: 2", para().text

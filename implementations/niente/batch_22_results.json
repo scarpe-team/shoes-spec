@@ -1,0 +1,176 @@
+[
+  {
+    "name": "motion",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes_manual/motion.sspec"
+  },
+  {
+    "name": "mouse",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes_manual/mouse.sspec"
+  },
+  {
+    "name": "move",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes_manual/move.sspec"
+  },
+  {
+    "name": "nested_ovals",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes_manual/nested_ovals.sspec"
+  },
+  {
+    "name": "oval",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes_manual/oval.sspec"
+  },
+  {
+    "name": "ovals",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes_manual/ovals.sspec"
+  },
+  {
+    "name": "ovals_image",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes_manual/ovals_image.sspec"
+  },
+  {
+    "name": "prepend",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes_manual/prepend.sspec"
+  },
+  {
+    "name": "progress_bar",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes_manual/progress_bar.sspec"
+  },
+  {
+    "name": "radio",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes_manual/radio.sspec"
+  },
+  {
+    "name": "radio_alternative_1",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes_manual/radio_alternative_1.sspec"
+  },
+  {
+    "name": "radio_alternative_2",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes_manual/radio_alternative_2.sspec"
+  },
+  {
+    "name": "rectangle",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes_manual/rectangle.sspec"
+  },
+  {
+    "name": "rotate_rectangle",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes_manual/rotate_rectangle.sspec"
+  },
+  {
+    "name": "save_download",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes_manual/save_download.sspec"
+  },
+  {
+    "name": "self_check",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes_manual/self_check.sspec"
+  },
+  {
+    "name": "shape",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes_manual/shape.sspec"
+  },
+  {
+    "name": "stack",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes_manual/stack.sspec"
+  },
+  {
+    "name": "start",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes_manual/start.sspec"
+  },
+  {
+    "name": "stroke",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes_manual/stroke.sspec"
+  },
+  {
+    "name": "style",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes_manual/style.sspec"
+  },
+  {
+    "name": "style_alternative_1",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes_manual/style_alternative_1.sspec"
+  },
+  {
+    "name": "style_alternative_2",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes_manual/style_alternative_2.sspec"
+  },
+  {
+    "name": "style_info",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes_manual/style_info.sspec"
+  },
+  {
+    "name": "style_length",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes_manual/style_length.sspec"
+  },
+  {
+    "name": "timer",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes_manual/timer.sspec"
+  },
+  {
+    "name": "trigger_window",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes_manual/trigger_window.sspec"
+  },
+  {
+    "name": "utf8_support",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes_manual/utf8_support.sspec"
+  },
+  {
+    "name": "wheel",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes_manual/wheel.sspec"
+  }
+]

@@ -74,13 +74,20 @@ Shoes.app :height => 250, :width => 200, :resizable => false do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for simple-calc"
+# Test: Calculator app - verify UI elements exist
+# Check that the number display exists
+display = para()
+assert display, "Expected a para for number display"
+
+# Check calculator buttons exist (16 buttons: 0-9, /, *, -, +, Clr, =)
+btns = buttons()
+assert_equal 16, btns.length, "Expected 16 calculator buttons"
+
+# Test a simple calculation: 7 + 3 = 10
+button("7").trigger_click
+button("+").trigger_click
+button("3").trigger_click
+button("=").trigger_click
+
+# The para should now show "10"
+assert_includes para().text, "10", "Expected result to show 10 after 7+3="

@@ -28,13 +28,14 @@ Shoes.app :width => 360, :height => 600, :resizable => false do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for control-sizes"
+# Test: Various UI control sizes against a grid
+# Tests button, edit_line, list_box, progress, edit_box sizing
+
+assert_equal 2, buttons().count, "Should have 2 buttons"
+assert_equal "Standard", buttons()[0].text
+assert_equal "Margin: 2, Height: 30", buttons()[1].text
+
+assert_equal 2, edit_lines().count, "Should have 2 edit_lines"
+assert_equal 2, list_boxes().count, "Should have 2 list_boxes"
+assert_equal 2, progresses().count, "Should have 2 progress bars"
+assert edit_box(), "Should have an edit_box"

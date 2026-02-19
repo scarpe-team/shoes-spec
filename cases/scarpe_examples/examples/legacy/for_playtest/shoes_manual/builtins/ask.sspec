@@ -6,13 +6,9 @@
 ask("Please, enter your name:")
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for ask"
+# Tests ask() modal dialog
+# ask() opens a text input dialog - requires user interaction
+
+# This is a blocking modal that opens before any app window
+# Cannot be tested in headless mode
+skip "ask() is a blocking modal dialog requiring user interaction"

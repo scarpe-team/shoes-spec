@@ -40,13 +40,9 @@ Shoes.app width: 620, height: 480 do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for gr7"
+# Tests Shoes 3 radar chart with advanced options:
+# - grid_lines: 3 (number of concentric rings)
+# - label_radius: 1.10 (label positioning)
+# - Multiple data series (pre-test, practice, post-test)
+# - column_settings with hash format: {label:, min:, max:, format:}
+skip "Shoes 3 only: plot widget (radar chart with grid options) not in Scarpe"

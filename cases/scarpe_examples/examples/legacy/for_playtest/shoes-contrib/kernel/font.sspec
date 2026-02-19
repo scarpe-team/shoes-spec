@@ -9,13 +9,11 @@ else
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
+# This spec requires dialog mocking (alert)
+# The app checks Shoes::FONTS for "Helvetica" and shows an alert
 #
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
+# Testing would require alert stubbing
+# We can at least verify Shoes::FONTS constant exists (done in app code)
 #
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for font"
+# Required capability: dialog mocking/stubbing
+skip "Requires dialog mocking: alert() blocks execution"

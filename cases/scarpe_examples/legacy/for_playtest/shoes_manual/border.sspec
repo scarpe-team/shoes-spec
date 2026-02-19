@@ -13,13 +13,6 @@
  end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for border"
+# Verify border creates nested stacks with para
+# border() is a visual style, not a drawable itself
+assert para(), "Should have para"

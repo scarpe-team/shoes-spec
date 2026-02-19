@@ -38,13 +38,14 @@ Shoes.app(title: "Image Pattern Fill", width: 500, height: 400) do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for fill_pattern_demo"
+# Test fill_pattern_demo.sspec - image pattern fills demo
+
+# Verify title exists
+assert title("Image Pattern Fills"), "Should have title"
+
+# Verify description para
+assert para("Shapes can be filled with images instead of solid colors!"), "Should have description"
+
+# Verify the instruction paras exist
+assert para("Star with image fill:"), "Should have star description"
+assert para("Oval with gradient:"), "Should have oval description"

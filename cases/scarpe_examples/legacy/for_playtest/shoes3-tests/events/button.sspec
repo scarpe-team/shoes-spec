@@ -36,13 +36,11 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for button"
+# Test the button events demo UI elements
+assert_equal "Native button test", para(0).text
+assert_equal "button 1", button(0).text
+assert_equal "button 2", button(1).text
+assert_equal "Happy?", para(1).text
+assert_equal "Estatic", para(2).text
+assert_equal "So-So", para(3).text
+assert_equal "Not really", para(4).text

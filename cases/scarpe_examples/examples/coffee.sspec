@@ -18,13 +18,10 @@ Shoes.app title: "Sleepless", width: 80, height: 120 do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for coffee"
+# DISABLED: Encoding issues + spawns system process (caffeinate)
+skip "coffee.sspec disabled - encoding issues with emoji + spawns caffeinate process"
+
+# Original test:
+# html = dom_html
+# assert html.include?("☕️") || html.include?("☕"), "Expected coffee button"
+# assert html.include?("😪"), "Expected sleepy emoji"

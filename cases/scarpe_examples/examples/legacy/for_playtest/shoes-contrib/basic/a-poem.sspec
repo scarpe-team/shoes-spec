@@ -28,13 +28,12 @@ Shoes.app :width => 280, :height => 350 do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for a-poem"
+# Verify the poem structure and content
+assert_equal "A POEM", banner().text
+
+# Check the "Goes like:" label exists
+paras = para(:all)
+assert paras.any? { |p| p.text.include?("Goes like:") }, "Should have 'Goes like:' label"
+
+# Check the poem content exists  
+assert paras.any? { |p| p.text.include?("the sun") }, "Should contain poem text"

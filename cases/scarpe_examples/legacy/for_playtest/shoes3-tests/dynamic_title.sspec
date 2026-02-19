@@ -30,13 +30,9 @@ Shoes.app(title: "Original Title", width: 350, height: 200) do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for dynamic_title"
+# Test the dynamic title UI elements
+assert_equal "Click buttons to change window title:", para().text
+assert_equal "Title 1", button(0).text
+assert_equal "Title 2", button(1).text
+assert_equal "Counter Title", button(2).text
+assert_equal "Custom Title", button(3).text

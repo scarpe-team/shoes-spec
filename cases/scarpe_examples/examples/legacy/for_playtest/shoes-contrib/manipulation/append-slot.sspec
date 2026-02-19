@@ -13,13 +13,13 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for append-slot"
+# Tests slot.append() with timer
+# Initially shows "Good Morning" para
+# After 3 seconds, appends title + tagline
+
+# Verify initial state
+assert_equal "Good Morning", para().text
+
+# Note: Full test would require waiting 3+ seconds for timer
+# and verifying title/tagline appear via append()
+# For now, we verify the initial render is correct

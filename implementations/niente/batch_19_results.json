@@ -1,0 +1,218 @@
+[
+  {
+    "name": "simple-arc",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/simple/simple-arc.sspec"
+  },
+  {
+    "name": "simple-bounce",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/simple/simple-bounce.sspec"
+  },
+  {
+    "name": "simple-control-sizes",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/simple/simple-control-sizes.sspec"
+  },
+  {
+    "name": "simple-curve",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/simple/simple-curve.sspec"
+  },
+  {
+    "name": "simple-dialogs",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/simple/simple-dialogs.sspec"
+  },
+  {
+    "name": "simple-downloader",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/simple/simple-downloader.sspec"
+  },
+  {
+    "name": "simple-draw",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/simple/simple-draw.sspec"
+  },
+  {
+    "name": "simple-editor",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/simple/simple-editor.sspec"
+  },
+  {
+    "name": "simple-form",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/simple/simple-form.sspec"
+  },
+  {
+    "name": "simple-mask",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/simple/simple-mask.sspec"
+  },
+  {
+    "name": "simple-menu",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/simple/simple-menu.sspec"
+  },
+  {
+    "name": "simple-menu1",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/simple/simple-menu1.sspec"
+  },
+  {
+    "name": "simple-slide",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/simple/simple-slide.sspec"
+  },
+  {
+    "name": "simple-sphere",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/simple/simple-sphere.sspec"
+  },
+  {
+    "name": "simple-sqlite3",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/simple/simple-sqlite3.sspec"
+  },
+  {
+    "name": "simple-video",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/simple/simple-video.sspec"
+  },
+  {
+    "name": "alignment",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/styles/alignment.sspec"
+  },
+  {
+    "name": "attachment",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/styles/attachment.sspec"
+  },
+  {
+    "name": "emphasis",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/styles/emphasis.sspec"
+  },
+  {
+    "name": "gradient-angle",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/styles/gradient-angle.sspec"
+  },
+  {
+    "name": "para-methods",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/styles/para-methods.sspec"
+  },
+  {
+    "name": "para-red-underlined",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/styles/para-red-underlined.sspec"
+  },
+  {
+    "name": "para-style-method",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-contrib/styles/para-style-method.sspec"
+  },
+  {
+    "name": "expert-game-of-life",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-dep-samples/expert-game-of-life.sspec"
+  },
+  {
+    "name": "expert-othello",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-dep-samples/expert-othello.sspec"
+  },
+  {
+    "name": "ask_open_file",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-manual/builtins/ask_open_file.sspec"
+  },
+  {
+    "name": "edit_box",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes-manual/edit_box.sspec"
+  },
+  {
+    "name": "button",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes3-tests/button/button.sspec"
+  },
+  {
+    "name": "combo",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/for_playtest/shoes3-tests/combo/combo.sspec"
+  }
+]

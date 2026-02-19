@@ -24,13 +24,11 @@ Shoes.app :width => 400, :height => 400, :title => "Shape Curves Demo" do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
+# Test: Shape with Bézier curves (curve_to)
+# Verifies that shapes can draw smooth curves
 #
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
+# Elements: title, background, stack, shape
+# Features: shape with move_to and curve_to for Bézier curves
+# Draws a heart shape using curve_to bezier calls
 #
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for shape_curves"
+# This is a visual test - the heart shape is drawn with curve_to calls

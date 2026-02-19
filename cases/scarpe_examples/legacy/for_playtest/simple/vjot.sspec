@@ -60,13 +60,11 @@ Shoes.app :title => "vJot",
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for vjot"
+# Test: vJot clone - note taking application
+# Has title edit, note list, content edit_box
+
+assert edit_line(), "Title input should exist"
+assert_equal "Welcome to the vJot Clone", edit_line().text
+assert edit_box(), "Content edit_box should exist"
+# Initial note content
+assert edit_box().text.include?("notetaker"), "Should have initial note content"

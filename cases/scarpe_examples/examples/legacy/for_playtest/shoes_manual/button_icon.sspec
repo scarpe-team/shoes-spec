@@ -46,13 +46,11 @@ Shoes.app(title: "Button Icons Demo", width: 400, height: 350) do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for button_icon"
+# Tests button :icon option with various :icon_pos values
+# Verifies buttons with icons exist
+
+# Should have 5 buttons total
+buttons = Shoes::App.find_drawables_by(Shoes::Button)
+assert_equal 5, buttons.length, "Should have 5 buttons"
+
+assert true, "Button icon test completed"

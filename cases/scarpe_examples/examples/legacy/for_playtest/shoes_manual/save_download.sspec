@@ -16,13 +16,9 @@
  end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for save_download"
+# Verify download UI elements (actual download depends on network)
+assert stacks().length >= 1, "Expected a stack container"
+assert titles().length >= 1, "Expected a title element"
+assert_includes title().text, "Downloading"
+assert paras().length >= 1, "Expected status para"
+assert_equal "One moment...", para().text

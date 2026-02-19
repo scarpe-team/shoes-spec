@@ -35,13 +35,14 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for download_and_show_image"
+# Test download and display image example - verify initial UI
+html = dom_html
+
+# Title and status should render
+assert html.include?("Downloading Google image") || html.include?("Enter URL"), "Expected title or status para"
+
+# Download button should exist
+assert html.include?("Download Image"), "Expected download button"
+
+# Cute cat URL hint should render
+assert html.include?("cute cat url") || html.include?("freepik"), "Expected URL hint"

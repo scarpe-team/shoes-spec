@@ -26,13 +26,6 @@ Shoes.app :width => 600, :height => 600 do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for bubble-bullseye"
+# Art test - verify ovals are rendered
+ovals = oval(:all)
+assert ovals.count > 0, "Should render multiple ovals for bullseye pattern"

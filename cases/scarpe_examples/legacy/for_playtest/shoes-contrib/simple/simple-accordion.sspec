@@ -79,13 +79,6 @@ END
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for simple-accordion"
+# Accordion uses animate and click for page switching
+# Complex module structure requires visual playtest
+skip "Accordion animation requires manual playtest"

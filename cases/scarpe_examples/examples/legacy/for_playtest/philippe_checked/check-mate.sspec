@@ -19,13 +19,16 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for check-mate"
+# Test check-mate.sspec - checkboxes with names and "Who dat?" button
+
+# Verify the three name paras exist
+assert para("Frances Johnson"), "Should have Frances Johnson"
+assert para("Ignatius J. Reilly"), "Should have Ignatius J. Reilly"
+assert para("Winston Niles Rumfoord"), "Should have Winston Niles Rumfoord"
+
+# Verify button exists
+assert_equal "Who dat?", button().text
+
+# Verify checkboxes exist (3 of them)
+checks = all_checks()
+assert_equal 3, checks.length, "Should have 3 checkboxes"

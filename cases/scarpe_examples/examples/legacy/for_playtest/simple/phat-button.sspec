@@ -11,13 +11,8 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for phat-button"
+# Verify full-page button exists with correct text
+assert_equal "WAT DO", button().text
+# Button should have 100% width/height styles
+assert_equal 1.0, button().style[:width]
+assert_equal 1.0, button().style[:height]

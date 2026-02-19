@@ -16,13 +16,8 @@
  end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for save_download"
+# Tests download with save: option
+# Verifies initial status message
+assert_include para().text, "One moment"
+
+# Note: download completion is async, can't easily test

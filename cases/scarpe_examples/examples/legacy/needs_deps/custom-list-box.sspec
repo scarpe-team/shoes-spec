@@ -57,13 +57,11 @@ Shoes.app {
 }
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for custom-list-box"
+# Custom list_box widget using Observable pattern
+# Requires 'observer' stdlib and Shoes::Widget
+# Verify initial state
+assert_equal "Any selection?", para().text
+assert edit_line()
+assert_equal "ok", buttons()[0].text
+assert_equal "collect", buttons()[1].text
+skip "Requires Shoes::Widget and observer stdlib"

@@ -43,13 +43,9 @@ Shoes.app width: 800, height: 500 do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for manual"
+# Tests Shoes 3 line and column charts side by side:
+# - Line chart with auto_grid: true
+# - Column chart with boundary_box: false
+# - Multiple series per chart
+# - chart_series helper function
+skip "Shoes 3 only: plot widget (line and column combination) not in Scarpe"

@@ -1,0 +1,192 @@
+[
+  {
+    "name": "rectangle",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes_manual/rectangle.sspec"
+  },
+  {
+    "name": "save_download",
+    "status": "fail",
+    "failures": [
+      "unexpected"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes_manual/save_download.sspec"
+  },
+  {
+    "name": "self_check",
+    "status": "fail",
+    "failures": [
+      "unexpected"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes_manual/self_check.sspec"
+  },
+  {
+    "name": "stack",
+    "status": "fail",
+    "failures": [
+      "unexpected"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes_manual/stack.sspec"
+  },
+  {
+    "name": "style_info",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes_manual/style_info.sspec"
+  },
+  {
+    "name": "utf8_support",
+    "status": "error",
+    "failures": [
+      "no result file"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes_manual/utf8_support.sspec"
+  },
+  {
+    "name": "width",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes_manual/width.sspec"
+  },
+  {
+    "name": "basic-edit-box",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/simple/basic-edit-box.sspec"
+  },
+  {
+    "name": "basic-fps",
+    "status": "fail",
+    "failures": [
+      "unexpected"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/simple/basic-fps.sspec"
+  },
+  {
+    "name": "border-cat",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/simple/border-cat.sspec"
+  },
+  {
+    "name": "calc",
+    "status": "fail",
+    "failures": [
+      "unexpected"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/simple/calc.sspec"
+  },
+  {
+    "name": "check-mate",
+    "status": "fail",
+    "failures": [
+      "unexpected"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/simple/check-mate.sspec"
+  },
+  {
+    "name": "clear-slot",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/simple/clear-slot.sspec"
+  },
+  {
+    "name": "clock",
+    "status": "fail",
+    "failures": [
+      "unexpected"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/simple/clock.sspec"
+  },
+  {
+    "name": "gradient-shoes",
+    "status": "fail",
+    "failures": [
+      "unexpected"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/simple/gradient-shoes.sspec"
+  },
+  {
+    "name": "image-icon",
+    "status": "fail",
+    "failures": [
+      "unexpected"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/simple/image-icon.sspec"
+  },
+  {
+    "name": "image",
+    "status": "fail",
+    "failures": [
+      "unexpected"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/simple/image.sspec"
+  },
+  {
+    "name": "list_box-shape-report",
+    "status": "fail",
+    "failures": [
+      "unexpected"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/simple/list_box-shape-report.sspec"
+  },
+  {
+    "name": "list_box",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/simple/list_box.sspec"
+  },
+  {
+    "name": "phat-button",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/simple/phat-button.sspec"
+  },
+  {
+    "name": "simple-calc",
+    "status": "fail",
+    "failures": [
+      "unexpected"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/simple/simple-calc.sspec"
+  },
+  {
+    "name": "sqlite3",
+    "status": "fail",
+    "failures": [
+      "unexpected"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/simple/sqlite3.sspec"
+  },
+  {
+    "name": "stack-width",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/simple/stack-width.sspec"
+  },
+  {
+    "name": "timer",
+    "status": "fail",
+    "failures": [
+      "unexpected"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/simple/timer.sspec"
+  },
+  {
+    "name": "width-introspec",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/simple/width-introspec.sspec"
+  },
+  {
+    "name": "speedometer_app",
+    "status": "fail",
+    "failures": [
+      "unexpected"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/speedometer_app.sspec"
+  }
+]

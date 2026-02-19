@@ -1,0 +1,234 @@
+[
+  {
+    "name": "event5",
+    "status": "error",
+    "failures": [
+      "no result file"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/shoes3_only/events/event5.sspec"
+  },
+  {
+    "name": "event6",
+    "status": "error",
+    "failures": [
+      "no result file"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/shoes3_only/events/event6.sspec"
+  },
+  {
+    "name": "replay",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/shoes3_only/events/replay.sspec"
+  },
+  {
+    "name": "fullscreen",
+    "status": "error",
+    "failures": [
+      "no result file"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/shoes3_only/gapp/fullscreen.sspec"
+  },
+  {
+    "name": "icon",
+    "status": "error",
+    "failures": [
+      "no result file"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/shoes3_only/gapp/icon.sspec"
+  },
+  {
+    "name": "mon1",
+    "status": "error",
+    "failures": [
+      "no result file"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/shoes3_only/gapp/mon1.sspec"
+  },
+  {
+    "name": "settings1",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/shoes3_only/gapp/settings1.sspec"
+  },
+  {
+    "name": "title1",
+    "status": "error",
+    "failures": [
+      "no result file"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/shoes3_only/gapp/title1.sspec"
+  },
+  {
+    "name": "event",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/shoes3_only/menus/event.sspec"
+  },
+  {
+    "name": "menu1",
+    "status": "error",
+    "failures": [
+      "no result file"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/shoes3_only/menus/menu1.sspec"
+  },
+  {
+    "name": "menu2",
+    "status": "error",
+    "failures": [
+      "no result file"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/shoes3_only/menus/menu2.sspec"
+  },
+  {
+    "name": "menu3",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/shoes3_only/menus/menu3.sspec"
+  },
+  {
+    "name": "menu4",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/shoes3_only/menus/menu4.sspec"
+  },
+  {
+    "name": "cstest",
+    "status": "error",
+    "failures": [
+      "no result file"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/shoes3_only/plot/cstest.sspec"
+  },
+  {
+    "name": "gr1",
+    "status": "error",
+    "failures": [
+      "no result file"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/shoes3_only/plot/gr1.sspec"
+  },
+  {
+    "name": "gr2",
+    "status": "error",
+    "failures": [
+      "no result file"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/shoes3_only/plot/gr2.sspec"
+  },
+  {
+    "name": "gr3",
+    "status": "error",
+    "failures": [
+      "no result file"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/shoes3_only/plot/gr3.sspec"
+  },
+  {
+    "name": "gr4",
+    "status": "error",
+    "failures": [
+      "no result file"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/shoes3_only/plot/gr4.sspec"
+  },
+  {
+    "name": "gr5",
+    "status": "error",
+    "failures": [
+      "no result file"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/shoes3_only/plot/gr5.sspec"
+  },
+  {
+    "name": "gr6",
+    "status": "error",
+    "failures": [
+      "no result file"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/shoes3_only/plot/gr6.sspec"
+  },
+  {
+    "name": "gr7",
+    "status": "error",
+    "failures": [
+      "no result file"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/shoes3_only/plot/gr7.sspec"
+  },
+  {
+    "name": "grcsv",
+    "status": "error",
+    "failures": [
+      "no result file"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/shoes3_only/plot/grcsv.sspec"
+  },
+  {
+    "name": "manual",
+    "status": "error",
+    "failures": [
+      "no result file"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/shoes3_only/plot/manual.sspec"
+  },
+  {
+    "name": "simple-chipmunk",
+    "status": "error",
+    "failures": [
+      "no result file"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/shoes3_only/simple-chipmunk.sspec"
+  },
+  {
+    "name": "spinner",
+    "status": "error",
+    "failures": [
+      "no result file"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/shoes3_only/spinner.sspec"
+  },
+  {
+    "name": "svg",
+    "status": "error",
+    "failures": [
+      "no result file"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/shoes3_only/svg.sspec"
+  },
+  {
+    "name": "switch",
+    "status": "error",
+    "failures": [
+      "no result file"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/shoes3_only/switch/switch.sspec"
+  },
+  {
+    "name": "back",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/shoes3_only/systray/back.sspec"
+  },
+  {
+    "name": "note",
+    "status": "fail",
+    "failures": [
+      "exception"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/examples/legacy/shoes3_only/systray/note.sspec"
+  }
+]

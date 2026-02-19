@@ -17,13 +17,6 @@ Shoes.app :width => 408, :height => 346, :resizable => false do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for simple-video"
+# Video player with controls
+# Tests video element and play/pause/stop/hide/show/time methods
+skip "PLAYTEST: Video playback - requires video support and network access"

@@ -70,13 +70,12 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for bronx_army_knife"
+# Test audio recording app (Mac-specific)
+# Requires ffmpeg, basic-pitch for full functionality
+html = dom_html
+
+# Should render initial status
+assert html.include?("nothing recorded") || html.include?("Right now"), "Expected status para"
+
+# Should have record button
+assert html.include?("record") || html.include?("button"), "Expected record button"

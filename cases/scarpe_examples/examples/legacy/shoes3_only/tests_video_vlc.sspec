@@ -190,13 +190,5 @@ Shoes.app title: "Testing Shoes video" do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for tests_video_vlc"
+# Video widget with VLC is Shoes3-only - requires native video playback
+skip "Video widget (VLC) is Shoes3-only - not available in Scarpe"

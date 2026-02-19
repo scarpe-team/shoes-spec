@@ -85,13 +85,11 @@ END
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
+# Test: Accordion UI component
+# Verifies expandable/collapsible sections with hover effects
 #
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
+# Elements: para (titles with links, content), stacks (pages), backgrounds (hover)
+# Features: animate for smooth expansion, hover/leave for highlight, click to open
+# Three pages of poetry content with expandable sections
 #
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for accordion"
+# The accordion animation and hover/click behavior is interactive

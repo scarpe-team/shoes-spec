@@ -34,13 +34,7 @@ Shoes.app :width => 320, :height => 420 do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for form"
+# Verify form Save button exists
+# Note: This form uses external images which may not load in test
+btn = button("Save")
+assert_equal "Save", btn.text

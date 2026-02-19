@@ -32,13 +32,11 @@ Shoes.app width: 300, height: 200 do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for switch"
+# Tests Shoes 3 switch widget (toggle switch):
+# - switch (creates toggle switch)
+# - switch active: true (initial state)
+# - switch font:, stroke: (styling)
+# - switch width: (size)
+# - switch.active? / switch.active=
+# - switch.click { block }
+skip "Shoes 3 only: switch widget not in Scarpe"

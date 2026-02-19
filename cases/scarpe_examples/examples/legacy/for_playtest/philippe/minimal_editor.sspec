@@ -136,13 +136,18 @@ Shoes.app(title: "Minimal Editor", width: 600, height: 400) do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for minimal_editor"
+# Test minimal_editor.sspec - tests Para cursor system
+
+# Verify instruction para
+assert para("Minimal Editor Test (click to position cursor, type to insert)"), "Should have instruction"
+
+# Verify cursor position label exists and shows 0 initially
+assert para("Cursor: "), "Should have cursor label"
+assert para("0"), "Should show initial cursor position 0"
+
+# Verify marker label shows nil
+assert para("Marker: "), "Should have marker label"
+assert para("nil"), "Should show nil marker initially"
+
+# Verify the editor text is loaded
+assert para("Hello, this is a test."), "Should have initial editor text"

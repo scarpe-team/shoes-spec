@@ -85,13 +85,12 @@ END
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for accordion"
+# Test accordion.sspec - accordion widget with poetry pages
+
+# Verify the three page links exist
+assert link("0.0"), "Should have link to page 0.0"
+assert link("0.1"), "Should have link to page 0.1"
+assert link("0.2"), "Should have link to page 0.2"
+
+# Verify first page content is visible (contains "There is a thought")
+assert para("There is a thought"), "First page content should be visible"

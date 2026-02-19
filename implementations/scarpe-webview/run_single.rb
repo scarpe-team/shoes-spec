@@ -9,8 +9,8 @@ app_code = parts[2]&.strip || ""
 test_code = parts[4]&.strip || ""
 
 metadata = {
-  "category" => File.dirname(test_path).sub("../../cases/", ""),
-  "test_name" => File.basename(test_path)
+  "category" => File.dirname(test_path).sub("../../cases/", "").gsub("-", "_"),
+  "test_name" => File.basename(test_path).gsub("-", "_")
 }
 
 puts "=== Running: #{test_path} ==="

@@ -12,13 +12,9 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for width-introspec"
+# Verify button exists with expected text
+assert_equal "Click me", button().text
+# Button should have 100% width style
+assert_equal "100%", button().style[:width]
+# Stack width should be 120
+assert_equal 120, stack().width

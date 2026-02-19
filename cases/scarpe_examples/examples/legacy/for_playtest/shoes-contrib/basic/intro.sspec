@@ -24,13 +24,11 @@ Shoes.app :height => 150, :width => 250 do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for intro"
+# Verify initial state
+assert_equal "Press start to begin timing.", para().text
+
+# Verify buttons exist
+buttons = button(:all)
+assert_equal 2, buttons.count, "Should have Start and Stop buttons"
+assert_equal "Start", buttons[0].text
+assert_equal "Stop", buttons[1].text

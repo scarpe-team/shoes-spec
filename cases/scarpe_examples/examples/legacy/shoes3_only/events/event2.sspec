@@ -50,13 +50,7 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for event2"
+# Multi-window event management
+# Uses Shoes.APPS, w.event=, eval of external scripts
+# Shoes3-only multi-window event system
+skip "Shoes3-only: requires Shoes.APPS and cross-window events"

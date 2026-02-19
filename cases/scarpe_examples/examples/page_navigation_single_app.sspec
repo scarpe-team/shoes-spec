@@ -46,13 +46,21 @@ Shoes.app(title: "Page Navigation Example", width: 300, height: 200) do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for page_navigation_single_app"
+# Test: Page-based navigation with visit()
+# Initial state should be home page
+t = title()
+assert t, "Expected a title"
+assert_includes t.text, "Home", "Should start on Home Page"
+
+p = para()
+assert_includes p.text, "Welcome", "Home page should have welcome text"
+
+# Check navigation buttons exist
+btn_razz = button("Go to Razzmatazz")
+btn_floop = button("Go to FlooperLand")
+assert btn_razz, "Expected Razzmatazz navigation button"
+assert btn_floop, "Expected FlooperLand navigation button"
+
+# Navigate to Razzmatazz
+btn_razz.trigger_click
+assert_includes title().text, "Razzmatazz", "Should be on Razzmatazz page after click"

@@ -1,0 +1,186 @@
+[
+  {
+    "name": "a-poem",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes-contrib/basic/a-poem.sspec"
+  },
+  {
+    "name": "basic-blocks-instances",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes-contrib/basic/basic-blocks-instances.sspec"
+  },
+  {
+    "name": "basic-blocks",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes-contrib/basic/basic-blocks.sspec"
+  },
+  {
+    "name": "basic-slot",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes-contrib/basic/basic-slot.sspec"
+  },
+  {
+    "name": "class-book",
+    "status": "error",
+    "failures": [
+      "no result file"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes-contrib/basic/class-book.sspec"
+  },
+  {
+    "name": "intro",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes-contrib/basic/intro.sspec"
+  },
+  {
+    "name": "two-column",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes-contrib/basic/two-column.sspec"
+  },
+  {
+    "name": "edit_box",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes-contrib/elements/edit_box.sspec"
+  },
+  {
+    "name": "alert",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes-contrib/kernel/alert.sspec"
+  },
+  {
+    "name": "confirm",
+    "status": "error",
+    "failures": [
+      "no result file"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes-contrib/kernel/confirm.sspec"
+  },
+  {
+    "name": "font",
+    "status": "error",
+    "failures": [
+      "no result file"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes-contrib/kernel/font.sspec"
+  },
+  {
+    "name": "simple-sqlite3",
+    "status": "error",
+    "failures": [
+      "no result file"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes-contrib/simple/simple-sqlite3.sspec"
+  },
+  {
+    "name": "expert-game-of-life",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes-dep-samples/expert-game-of-life.sspec"
+  },
+  {
+    "name": "expert-othello",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes-dep-samples/expert-othello.sspec"
+  },
+  {
+    "name": "ask_open_file",
+    "status": "error",
+    "failures": [
+      "no result file"
+    ],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes-manual/builtins/ask_open_file.sspec"
+  },
+  {
+    "name": "editline",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes3-tests/editline/editline.sspec"
+  },
+  {
+    "name": "alert_button",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes_manual/alert_button.sspec"
+  },
+  {
+    "name": "animate",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes_manual/animate.sspec"
+  },
+  {
+    "name": "background_para",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes_manual/background_para.sspec"
+  },
+  {
+    "name": "button_alternative",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes_manual/button_alternative.sspec"
+  },
+  {
+    "name": "checkbox",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes_manual/checkbox.sspec"
+  },
+  {
+    "name": "download",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes_manual/download.sspec"
+  },
+  {
+    "name": "edit_box",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes_manual/edit_box.sspec"
+  },
+  {
+    "name": "editline",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes_manual/editline.sspec"
+  },
+  {
+    "name": "fixed_height",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes_manual/fixed_height.sspec"
+  },
+  {
+    "name": "fixed_width",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes_manual/fixed_width.sspec"
+  },
+  {
+    "name": "image",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes_manual/image.sspec"
+  },
+  {
+    "name": "instance_variable_check",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes_manual/instance_variable_check.sspec"
+  },
+  {
+    "name": "message",
+    "status": "pass",
+    "failures": [],
+    "path": "/Users/nickschwaderer/Progrumms/shoes-spec/cases/scarpe_examples/legacy/working/shoes_manual/message.sspec"
+  }
+]

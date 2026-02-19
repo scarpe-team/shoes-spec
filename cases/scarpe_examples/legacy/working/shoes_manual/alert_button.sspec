@@ -6,13 +6,5 @@
  Shoes.app { button("Click me!") { alert("Good job.") } }
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for alert_button"
+# Verify button exists
+assert_equal "Click me!", button().text

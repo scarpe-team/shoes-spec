@@ -17,13 +17,14 @@ Shoes.app :height => 150, :width => 250 do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for timer"
+# Test timer.sspec - stop watch with Start/Stop buttons
+
+# Verify initial state
+assert button("Start"), "Should have Start button"
+assert button("Stop"), "Should have Stop button"
+assert para(), "Should have instruction para"
+
+# Click Start button
+button("Start").trigger_click
+# The @label should update to show "Stop watch started at..."
+assert_match(/Stop watch started at/, para().text)

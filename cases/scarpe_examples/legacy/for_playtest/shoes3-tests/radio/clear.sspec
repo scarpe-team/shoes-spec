@@ -24,13 +24,8 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for clear"
+# Test the radio clear demo
+assert_equal "Reset", button().text
+assert_equal "Radio-0", para(0).text
+assert_equal "Radio-1", para(1).text
+assert_equal "Radio-2", para(2).text

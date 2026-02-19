@@ -31,13 +31,10 @@ Shoes.app :width => 350, :height => 130 do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for sqlite3"
+# Tests SQLite3 database integration
+paras = find_all("para")
+assert paras.length >= 4, "Should display database rows"
+
+# Should contain UTF-8 data from one of the rows
+texts = paras.map(&:text).join
+assert_include texts, "sample data"

@@ -11,13 +11,13 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
+# This spec requires dialog mocking (ask_open_file, ask_save_file)
+# Currently cannot be tested without dialog stubbing support
 #
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
+# The app:
+# 1. Opens file picker on startup (ask_open_file)
+# 2. Shows file contents in para
+# 3. Button triggers save dialog (ask_save_file)
 #
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for ask_save_file"
+# Required capability: dialog mocking/stubbing
+skip "Requires dialog mocking: ask_open_file/ask_save_file not testable without stubs"

@@ -21,13 +21,8 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for note"
+# Tests Shoes 3 system tray notifications:
+# - systray title:, message:, icon:
+# - app.name (window title)
+# - Notification appears in system notification area
+skip "Shoes 3 only: systray notifications not in Scarpe"

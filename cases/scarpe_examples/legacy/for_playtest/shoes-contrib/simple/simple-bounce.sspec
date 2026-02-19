@@ -28,13 +28,6 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for simple-bounce"
+# Animation test: bouncing image with DVD-style motion
+# Requires: ../../../../../docs/static/shoes-icon.png
+skip "PLAYTEST: Bouncing animation - requires animation & image support"

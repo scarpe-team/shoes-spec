@@ -17,13 +17,11 @@ Shoes.app :height => 150, :width => 250 do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
+# Test: Timer/stopwatch app
+# Verifies start/stop buttons and timing display
 #
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
+# Elements: background (light yellow), buttons (Start, Stop), para (status), stack
+# Features: Time.now for timing, para.replace for status updates
+# Start button records Time.now, Stop shows elapsed seconds
 #
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for timer"
+# This tests button callbacks and time calculation

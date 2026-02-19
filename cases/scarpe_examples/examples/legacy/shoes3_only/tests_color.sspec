@@ -142,13 +142,6 @@ Shoes.app title: "Testing Shoes::Color" do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for tests_color"
+# This is a Shoes3 test harness that uses Shoes.terminal - not available in Scarpe
+# The color tests themselves use Test::Unit within the Shoes app
+skip "Shoes.terminal test harness is Shoes3-only - not available in Scarpe"

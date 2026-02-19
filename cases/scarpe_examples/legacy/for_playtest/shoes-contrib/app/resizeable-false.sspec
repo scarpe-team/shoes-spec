@@ -10,13 +10,15 @@ Shoes.app(:title => "White Circle",
 }
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for resizeable-false"
+# Test: Non-resizable app window
+# Verifies app with :resizable => false
+
+# Check background exists
+assert background(), "Should have background"
+
+# Check oval exists
+assert oval(), "Should have an oval"
+
+# App is 200x200 with resizable: false
+# Title is "White Circle"
+# Background is black, oval is white filled

@@ -56,13 +56,9 @@ Shoes.app(title: "Drag the dot to make a path. Redrag to extend.") do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for path-animation"
+# Path animation with mouse interaction and drawing
+# Uses click/release/motion handlers, animate, oval/rect drawing
+# Verify reset button exists
+assert_equal "reset", button().text
+# Complex animation and mouse tracking - visual test recommended
+skip "Interactive animation with mouse tracking - requires visual verification"

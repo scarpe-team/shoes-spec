@@ -67,13 +67,9 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for b1"
+# Test bloopsaphone pong sounds app
+# Requires bloops gem for full functionality
+html = dom_html
+
+# Should render the play button
+assert html.include?("play 'em all") || html.include?("button"), "Expected play button"

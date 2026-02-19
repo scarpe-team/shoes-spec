@@ -74,13 +74,16 @@ Shoes.app :height => 250, :width => 200, :resizable => false do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for simple-calc"
+# Tests simple calculator app
+buttons = find_all("button")
+assert buttons.length >= 16, "Should have number/operator buttons"
+
+# Initial display should be 0
+assert_include para().text, "0"
+
+# Test: 5 * 4 = 20
+find_button("5").trigger_click
+find_button("*").trigger_click
+find_button("4").trigger_click
+find_button("=").trigger_click
+assert_include para().text, "20"

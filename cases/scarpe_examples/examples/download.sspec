@@ -8,13 +8,8 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for download"
+# Test download with initial state para
+html = dom_html
+
+# The instruction para should render
+assert html.include?("check console") || html.include?("10 secs"), "Expected status para"

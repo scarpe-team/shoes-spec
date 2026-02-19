@@ -11,13 +11,6 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for edit_line-character-count"
+# edit_line with callback is not fully testable in niente
+# Requires user input to test counter functionality
+skip "edit_line character count requires user input - manual playtest"

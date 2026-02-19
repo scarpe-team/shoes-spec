@@ -8,13 +8,8 @@
  end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for width"
+# Verify stack has 150px width
+assert_equal 150, stack().width
+
+# Verify para text
+assert_equal "Now that's precision.", para().text

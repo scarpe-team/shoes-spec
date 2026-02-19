@@ -22,13 +22,15 @@
  end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for group"
+# Tests grouped radio buttons (:films group)
+# Verifies radio group renders with 3 options
+
+# Find all radios in :films group
+radios = Shoes::App.find_drawables_by(Shoes::Radio)
+assert_equal 3, radios.length, "Should have 3 radio buttons"
+
+# Find paras
+paras = Shoes::App.find_drawables_by(Shoes::Para)
+assert paras.length >= 4, "Should have question para plus 3 film title paras"
+
+assert true, "Radio group test completed"

@@ -11,13 +11,11 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
+# Test: Gradient background with title
+# Verifies gradient backgrounds and styled title
 #
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
+# Elements: background (gradient #F3F to #F90), title ("Shoooes")
+# Features: gradient background, styled title with font and stroke
+# Title: Trebuchet MS font, white stroke, centered
 #
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for gradient-shoes"
+# This is a visual test

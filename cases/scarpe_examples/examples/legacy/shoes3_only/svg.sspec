@@ -210,13 +210,12 @@ class SvgTest13 < SvgTestBase
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for svg"
+# Tests Shoes 3 SVG widget:
+# - Shoes::Svg class
+# - svg.width, svg.height, svg.preferred_width, svg.preferred_height
+# - svg.offset_x, svg.offset_y, svg.dpi
+# - svg.handle (Shoes::SvgHandle)
+# - svg.group?("#id") (check for SVG group)
+# - Aspect ratio control (true/false/numeric)
+# Note: This file contains Test::Unit test classes (not typical .sspec)
+skip "Shoes 3 only: SVG widget not in Scarpe"

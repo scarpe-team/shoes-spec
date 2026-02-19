@@ -7,13 +7,9 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for image-icon"
+# Tests loading image from URL
+img = image()
+assert img, "Image element should exist"
+
+# Should have the URL as source
+assert_include img.url, "githubusercontent.com"

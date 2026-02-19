@@ -11,13 +11,8 @@
  end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for animate"
+# Verify animation creates the counter para
+# Check initial state shows STARTING or has already animated
+initial_text = para().text
+assert(initial_text.include?("STARTING") || initial_text.include?("FRAME"), 
+       "Para should show STARTING or FRAME")

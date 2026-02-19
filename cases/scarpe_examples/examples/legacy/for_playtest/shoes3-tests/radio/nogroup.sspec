@@ -13,13 +13,15 @@
  end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for nogroup"
+# Tests ungrouped radio buttons
+# Ungrouped radios each belong to their own implicit group
+
+# Find all radios - should be 3
+radios = Shoes::App.find_drawables_by(Shoes::Radio)
+assert_equal 3, radios.length, "Should have 3 radio buttons"
+
+# Find paras
+paras = Shoes::App.find_drawables_by(Shoes::Para)
+assert paras.length >= 4, "Should have question para plus 3 film paras"
+
+assert true, "Nogroup radio test completed"

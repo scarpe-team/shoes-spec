@@ -27,13 +27,12 @@ Shoes.app :title => "Dictionary, powered by Definr", :width => 370, :height => 3
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for definr"
+# Verify UI structure
+assert caption().text.include?("Define:"), "Should have Define label"
+assert_equal "Go", button().text, "Should have Go button"
+
+# Verify edit_line exists
+assert edit_line(), "Should have input field"
+
+# Verify empty subtitle and para for results
+assert_equal "", subtitle().text, "Subtitle should start empty"

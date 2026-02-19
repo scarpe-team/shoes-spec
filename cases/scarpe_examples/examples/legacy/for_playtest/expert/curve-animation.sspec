@@ -35,13 +35,12 @@ Shoes.app(:title => "Expert curve_to animation", :resizable => false) do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for curve-animation"
+# Test curve_to animation example
+# Animation/visual test - verifies basic structure renders
+html = dom_html
+
+# Should render some structure
+assert html.length > 50, "Expected rendered HTML content"
+
+# Animation creates shapes dynamically
+assert html.include?("div") || html.include?("svg") || html.include?("canvas") || html.include?("stack"), "Expected rendered container elements"

@@ -23,13 +23,12 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for list_box-shape-report"
+# Tests list_box with Report button
+lb = list_box()
+assert lb, "List box should exist"
+
+items = lb.items
+assert_equal ["Square", "Oval", "Rectangle"], items
+
+btn = find_button("Report")
+assert btn, "Report button should exist"

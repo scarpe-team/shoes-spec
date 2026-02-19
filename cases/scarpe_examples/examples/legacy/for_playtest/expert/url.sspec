@@ -41,13 +41,22 @@ end
 Shoes.app :width => 400, :height => 300, :margin => 5
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for url"
+# Test url.sspec - demonstrates URL routing between screens
+
+# Initially on root "/" - setupscreen
+assert para("Welcome to My Demo app"), "Should show welcome message on root"
+assert button("entry"), "Should have entry button"
+assert button("help"), "Should have help button"
+
+# Navigate to entry screen
+button("entry").trigger_click
+assert para("Entry Screen - whats your secret?"), "Should show entry screen"
+assert edit_line(), "Should have edit_line for secret"
+
+# Navigate to help screen
+button("help").trigger_click
+assert para("This page describes MyApp"), "Should show help screen"
+
+# Navigate back home
+button("home").trigger_click
+assert para("Welcome to My Demo app"), "Should return to home screen"

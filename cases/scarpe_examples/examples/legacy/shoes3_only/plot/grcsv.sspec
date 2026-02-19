@@ -223,13 +223,10 @@ Shoes.app width: 620, height: 610 do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for grcsv"
+# Tests Shoes 3 plot with CSV data loading and zoom:
+# - Loading data from CSV files
+# - plot.zoom(begin_index, end_index) for zooming
+# - x_ticks:, y_ticks: options
+# - click: proc for zoom interaction
+# - Keyboard navigation (+/- zoom, arrow scroll)
+skip "Shoes 3 only: plot widget (CSV loading, zoom) not in Scarpe"

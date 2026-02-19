@@ -64,13 +64,9 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for replay"
+# Tests Shoes 3 event replay system:
+# - Loads recorded events from YAML file
+# - Uses Shoes.APPS to access other windows
+# - Uses window.replay_event(ev) to simulate recorded input
+# This is advanced Shoes 3 automation/testing infrastructure.
+skip "Shoes 3 only: event replay system (replay_event) not in Scarpe"

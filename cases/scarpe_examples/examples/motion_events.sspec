@@ -24,13 +24,18 @@ Shoes.app width: 600, height: 600 do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for motion_events"
+# Test: Motion/hover/click event handlers
+# Check UI elements exist
+p = para()
+assert p, "Expected a para"
+assert_includes p.text, "Events", "Para should mention 'Events'"
+
+btn = button("button 1")
+assert btn, "Expected 'button 1' button"
+
+eb = edit_box()
+assert eb, "Expected an edit_box for event log"
+
+# Click the button and check edit_box logs it
+btn.trigger_click
+assert_includes eb.text, "button 1 clicked", "Edit box should log button click"

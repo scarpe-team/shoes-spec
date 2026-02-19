@@ -75,13 +75,25 @@ Shoes.app :height => 250, :width => 200, :resizable => false do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for calc"
+# Test calc.sspec - calculator with number buttons
+
+# Initially display shows 0
+assert_equal "0", para().text
+
+# Press 7
+button("7").trigger_click
+assert_equal "7", para().text
+
+# Press 8 (should show 78)
+button("8").trigger_click
+assert_equal "78", para().text
+
+# Press + then 2 then =
+button("+").trigger_click
+button("2").trigger_click
+button("=").trigger_click
+assert_equal "80", para().text
+
+# Test clear
+button("Clr").trigger_click
+assert_equal "0", para().text

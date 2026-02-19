@@ -12,13 +12,14 @@ Shoes.app do
   end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for Edit_box_Styles"
+# Test edit_box with styling and tooltip
+html = dom_html
+
+# Verify the title para renders
+assert html.include?("Anything:"), "Expected 'Anything:' para"
+
+# Verify the character count para renders
+assert html.include?("characters"), "Expected character count para"
+
+# Verify edit_box is present (lorem ipsum content)
+assert html.include?("Lorem ipsum") || html.include?("edit") || html.include?("textarea"), "Expected edit_box with lorem ipsum"

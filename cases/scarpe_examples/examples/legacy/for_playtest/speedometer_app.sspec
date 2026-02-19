@@ -58,13 +58,11 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for speedometer_app"
+# Speedometer widget using Shoes::Widget
+# Uses complex drawing (oval, line, radial calculations)
+# Verify UI elements
+assert para(:text => "Enter a number between 0 and 100")
+assert_equal "OK", button().text
+assert edit_line()
+# Widget test requires Shoes::Widget support
+skip "Requires Shoes::Widget with complex drawing primitives"

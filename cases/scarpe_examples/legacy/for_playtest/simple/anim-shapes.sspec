@@ -21,13 +21,10 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for anim-shapes"
+# Test: Animated shapes with random movement and confirm dialog
+# Animation moves rects randomly at 24fps
+
+assert button(), "OK button should exist"
+assert_equal "OK", button().text
+# Rects are created but animated - verify they exist
+assert_equal 3, rects().count, "Should have 3 rectangles"

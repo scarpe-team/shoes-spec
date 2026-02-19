@@ -35,13 +35,9 @@ Shoes.app :width => 400, :height => 130 do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for menu"
+# Test: Expandable menu panels widget
+# Four colored panels that expand on hover
+# Uses custom MenuPanel widget with class variable
+
+# Four menu panels created
+assert_equal 4, paras().count, "Should have 4 menu panel paras"

@@ -29,13 +29,6 @@ end
 Shoes.app width: 400, height: 300, title: "Shoes Subclass Test"
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for shoes_subclass_app"
+# Skip: Requires URL routing with class < Shoes inheritance
+# This example uses the classic `class MyBook < Shoes` pattern with url() and visit()
+skip "Requires Shoes subclass inheritance pattern with URL routing"

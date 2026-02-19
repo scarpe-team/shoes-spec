@@ -11,13 +11,15 @@
  }
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for basic_app"
+# Tests basic app with drawing: background, fill, oval
+# Verifies art elements exist
+
+# Verify background exists (black)
+backgrounds = Shoes::App.find_drawables_by(Shoes::Background)
+assert backgrounds.length >= 1, "Should have background"
+
+# Verify oval exists
+ovals = Shoes::App.find_drawables_by(Shoes::Oval)
+assert_equal 1, ovals.length, "Should have exactly one oval"
+
+assert true, "Basic app test completed"

@@ -47,13 +47,17 @@ Shoes.app :width => 400, :height => 300, :title => "Ask & Confirm Demo" do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for ask_confirm_demo"
+# Test ask_confirm_demo.sspec - demonstrates ask() and confirm() dialogs
+# Note: Dialog interactions require special test support
+
+# Verify title exists
+assert title("Ask & Confirm Demo"), "Should have title"
+
+# Verify initial result text
+assert para("Click a button to test dialogs."), "Should have instruction para"
+
+# Verify all buttons exist
+assert button("ask()"), "Should have ask() button"
+assert button("confirm()"), "Should have confirm() button"
+assert button("Clipboard write"), "Should have Clipboard write button"
+assert button("Clipboard read"), "Should have Clipboard read button"

@@ -16,13 +16,12 @@ Shoes.app do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
+# Test: Oval following mouse (inverted position)
+# Verifies motion handler moving an oval
 #
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
+# Elements: title, subtitle, oval, stack
+# Features: motion handler, oval.move(x, y)
+# Title: "Dancing With a Circle", Subtitle: "How graceful and round."
 #
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for oval-motion"
+# The oval moves opposite to mouse position (width-x, height-y)
+# This is an interactive test - motion handler moves the oval

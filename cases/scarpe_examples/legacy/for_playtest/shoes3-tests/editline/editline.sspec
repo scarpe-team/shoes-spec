@@ -31,13 +31,14 @@ Shoes.app height: 300, width: 300 do
 end
 
 ----------- test code
-# TODO: This test needs real assertions!
-# The app runs, but we need to verify behavior.
-#
-# Example assertions:
-#   assert_equal "expected", para().text
-#   button().trigger_click
-#   assert_equal "after click", para().text
-#
-# For now, this is a placeholder that will SKIP:
-skip "TODO: Add assertions for editline"
+# Test the editline demo UI elements
+assert_equal "Normal ", para(0).text
+assert_equal "Font  ", para(1).text
+assert_equal "Stroke ", para(2).text
+assert_equal "Both", para(3).text
+assert_equal "change contents", button().text
+# Test edit_line initial values
+assert_equal "Normal", edit_line(0).text
+assert_equal "Font Is?", edit_line(1).text
+assert_equal "Stroke", edit_line(2).text
+assert_equal "Stroke and Font", edit_line(3).text
