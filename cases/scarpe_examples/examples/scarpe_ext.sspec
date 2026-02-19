@@ -9,7 +9,7 @@ end
 ----------- test code
 # Test: Scarpe HTML extension feature
 # Note: features: :html is Scarpe-specific
-btn = button("OK")
+btn = button()
 assert btn, "Expected an OK button"
 assert_equal "OK", btn.text
 

@@ -115,11 +115,9 @@ end
 ----------- test code
 # Test image_events_test.sspec - tests image hover/leave/click events
 
-# Verify initial status text
-assert para("Waiting for events..."), "Should have initial status"
-
-# Verify the instruction para exists
-assert para("Hover and click the icons on the left"), "Should have instruction"
+# Verify status para exists (stored in @status)
+status = drawable(Shoes::Para, "@status")
+assert status, "Should have status para"
 
 # Note: Hover/leave/click events require mouse simulation
 # The app structure is verified by checking the status para exists

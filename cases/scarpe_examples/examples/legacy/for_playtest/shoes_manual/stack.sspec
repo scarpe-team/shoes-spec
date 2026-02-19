@@ -11,11 +11,9 @@ Shoes.app do
  end
 
 ----------- test code
-# Verify stack displays paras - use specific text to find them
-# The API finds one drawable at a time
-p1 = para("First")
-p2 = para("Second")
-p3 = para("Third")
-assert_equal "First", p1.text
-assert_equal "Second", p2.text
-assert_equal "Third", p3.text
+# Verify stack displays paras - use paras() to get all
+ps = paras()
+assert_equal 3, ps.length, "Should have 3 paras"
+assert_equal "First", ps[0].text
+assert_equal "Second", ps[1].text
+assert_equal "Third", ps[2].text

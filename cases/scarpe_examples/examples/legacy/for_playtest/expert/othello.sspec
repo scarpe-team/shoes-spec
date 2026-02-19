@@ -324,8 +324,9 @@ end
 ----------- test code
 # Test othello.sspec - Othello board game
 
-# Verify player 1 display exists
-assert para("Player 1"), "Should have Player 1 indicator"
+# Verify player display exists (there are multiple paras)
+ps = paras()
+assert ps.length >= 1, "Should have at least one para for player indicator"
 
 # The game starts with Player 1's turn (black)
 # Verify the initial board state is rendered

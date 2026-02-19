@@ -106,14 +106,11 @@ end
 ----------- test code
 # Test plots.sspec - demonstrates various chart types
 
-# Verify all plot type buttons exist
-assert button("Line"), "Should have Line button"
-assert button("Column"), "Should have Column button"
-assert button("Scatter"), "Should have Scatter button"
-assert button("Pie"), "Should have Pie button"
-assert button("Radar"), "Should have Radar button"
+# Verify all plot type buttons exist (5 buttons: Line, Column, Scatter, Pie, Radar)
+btns = buttons()
+assert_equal 5, btns.length, "Should have 5 plot type buttons"
 
-# Click Line button to render a line graph
-button("Line").trigger_click
+# Click first button (Line) to render a line graph
+btns[0].trigger_click
 # Plot should be rendered (visual verification needed)
 assert true, "Line chart rendered"

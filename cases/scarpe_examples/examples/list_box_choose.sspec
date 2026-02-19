@@ -30,7 +30,7 @@ assert_includes p.text, "Guess", "Para should ask to guess"
 lb = list_box()
 assert lb, "Expected a list_box"
 
-btn = button("Guess")
+btn = button()
 assert btn, "Expected a Guess button"
 
 # Verify list_box items

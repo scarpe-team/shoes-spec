@@ -23,7 +23,7 @@ end
 ----------- test code
 # Test: Self/scope inspection in Shoes contexts
 # Note: This writes to /tmp/shoesy_stuff.txt as a side effect
-btn = button("Clickity")
+btn = button()
 assert btn, "Expected 'Clickity' button"
 assert_equal "Clickity", btn.text
 

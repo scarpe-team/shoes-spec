@@ -19,12 +19,18 @@ end
 ----------- test code
 # Test timer.sspec - stop watch with Start/Stop buttons
 
-# Verify initial state
-assert button("Start"), "Should have Start button"
-assert button("Stop"), "Should have Stop button"
-assert para(), "Should have instruction para"
+# Verify buttons exist (Start and Stop)
+btns = buttons()
+assert_equal 2, btns.length, "Should have 2 buttons"
+assert_equal "Start", btns[0].text
+assert_equal "Stop", btns[1].text
+
+# Verify instruction para exists (stored in @label)
+label = drawable(Shoes::Para, "@label")
+assert label, "Should have instruction para"
 
 # Click Start button
-button("Start").trigger_click
+btns[0].trigger_click
 # The @label should update to show "Stop watch started at..."
-assert_match(/Stop watch started at/, para().text)
+label = drawable(Shoes::Para, "@label")
+assert_includes label.text, "Stop watch started", "Label should show timer started"

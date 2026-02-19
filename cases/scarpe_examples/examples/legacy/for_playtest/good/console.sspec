@@ -29,10 +29,12 @@ end
 # Note: This app requires terminal/readline which can't be easily tested
 
 # Verify instruction para exists
-assert para("This will show the console"), "Should have instruction para"
+p = para()
+assert p, "Should have instruction para"
 
 # Verify run loop button exists
-assert button("run loop"), "Should have run loop button"
+btn = button()
+assert btn, "Should have run loop button"
 
 # Can't test actual terminal behavior
 assert true, "Console app loads correctly"

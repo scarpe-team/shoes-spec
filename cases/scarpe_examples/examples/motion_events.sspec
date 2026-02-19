@@ -30,7 +30,7 @@ p = para()
 assert p, "Expected a para"
 assert_includes p.text, "Events", "Para should mention 'Events'"
 
-btn = button("button 1")
+btn = drawable(Shoes::Button, "@btn1")
 assert btn, "Expected 'button 1' button"
 
 eb = edit_box()

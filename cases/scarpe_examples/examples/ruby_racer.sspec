@@ -66,8 +66,8 @@ assert_equal 2, ebs.length, "Expected 2 edit_boxes for code input"
 assert_includes ebs[0].text, "for i in"
 assert_includes ebs[1].text, "times do"
 
-# Check Race button
-btn = button("Race!")
+# Check Race button (stored in @push instance var)
+btn = drawable(Shoes::Button, "@push")
 assert btn, "Expected 'Race!' button"
 
 # Results para should exist
