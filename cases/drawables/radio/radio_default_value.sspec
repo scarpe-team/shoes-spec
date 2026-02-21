@@ -1,0 +1,12 @@
+---
+----------- app code
+Shoes.app do
+  @r = radio :test
+end
+
+----------- test code
+assert_equal false, radio.checked?, "Radio should start unchecked"
+radio.checked = true
+assert_equal true, radio.checked?, "Radio should be checked after setting true"
+radio.checked = false
+assert_equal false, radio.checked?, "Radio should be unchecked after setting false"

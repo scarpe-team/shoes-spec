@@ -46,7 +46,8 @@ GEM
       little-plugger (~> 1.1)
       multi_json (~> 1.14)
     mini_portile2 (2.8.9)
-    minitest (5.22.3)
+    minitest (6.0.1)
+      prism (~> 1.5)
     minitest-reporters (1.6.1)
       ansi
       builder
@@ -56,6 +57,7 @@ GEM
     nokogiri (1.15.7)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
+    prism (1.9.0)
     racc (1.8.1)
     rake (13.3.1)
     ruby-progressbar (1.13.0)
@@ -69,6 +71,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-22
+  arm64-darwin-25
   x86_64-darwin-19
   x86_64-darwin-22
 
